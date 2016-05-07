@@ -36,6 +36,7 @@ static int cardShowInView_Count = 3;
     _cardArray = [[NSMutableArray alloc] init];
     CGFloat gap_y = 20;
     CGFloat delta_ScaleRatio = 0.05;
+    CGFloat delta_AlphaGap = 0.2;
     
     for (int i = 0 ; i < cardShowInView_Count + 1; i++) {
         
@@ -43,6 +44,7 @@ static int cardShowInView_Count = 3;
         cardView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:1];
         [_cardArray addObject:cardView];
         
+        cardView.alpha = 1 - i * delta_AlphaGap;
         [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * i)];
         cardView.transform = CGAffineTransformMakeScale(1 - i * delta_ScaleRatio, 1 - i * delta_ScaleRatio);
         
