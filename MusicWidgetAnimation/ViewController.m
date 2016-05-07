@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "CardView.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, WIDTH * 0.8, HEIGHT * 0.7)];
+    cardView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:cardView];
 }
 
 - (void)didReceiveMemoryWarning {

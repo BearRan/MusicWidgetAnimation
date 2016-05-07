@@ -10,4 +10,9 @@
 
 @interface CardView : UIView
 
+@property (strong, nonatomic) UIImageView   *headImgV;
+@property (strong, nonatomic) UILabel       *mainLabel;
+@property (strong, nonatomic) UILabel       *assignLabel_1;
+@property (strong, nonatomic) UILabel       *assignLabel_2;
+
 @end

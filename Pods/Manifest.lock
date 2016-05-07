@@ -1,0 +1,10 @@
+PODS:
+  - BearSkill (0.0.8)
+
+DEPENDENCIES:
+  - BearSkill
+
+SPEC CHECKSUMS:
+  BearSkill: 120d8a10d8e5101b7ac85b7be36b98332106e98d
+
+COCOAPODS: 0.39.0

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		049DCF99E5C532A672904891 /* libPods-MusicWidgetAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */; };
 		090DA0201CDE0EF90017D3F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA01F1CDE0EF90017D3F0 /* main.m */; };
 		090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0221CDE0EF90017D3F0 /* AppDelegate.m */; };
 		090DA0261CDE0EF90017D3F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0251CDE0EF90017D3F0 /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06CD0D1E06795034DD4A8289 /* Pods-MusicWidgetAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.release.xcconfig"; sourceTree = "<group>"; };
 		090DA01B1CDE0EF90017D3F0 /* MusicWidgetAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicWidgetAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090DA01F1CDE0EF90017D3F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		090DA0211CDE0EF90017D3F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +59,9 @@
 		090DA0521CDE13BB0017D3F0 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		090DA0541CDE13E90017D3F0 /* MusicWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWidgetView.h; sourceTree = "<group>"; };
 		090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWidgetView.m; sourceTree = "<group>"; };
+		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				049DCF99E5C532A672904891 /* libPods-MusicWidgetAnimation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +97,8 @@
 				090DA0371CDE0EF90017D3F0 /* MusicWidgetAnimationTests */,
 				090DA0421CDE0EF90017D3F0 /* MusicWidgetAnimationUITests */,
 				090DA01C1CDE0EF90017D3F0 /* Products */,
+				DB8B218B57954EBA283CDB36 /* Pods */,
+				E137A60E52A4EDF152334759 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +123,7 @@
 				090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */,
 				090DA0511CDE13BB0017D3F0 /* CardView.h */,
 				090DA0521CDE13BB0017D3F0 /* CardView.m */,
+				09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */,
 				090DA0271CDE0EF90017D3F0 /* Main.storyboard */,
 				090DA02A1CDE0EF90017D3F0 /* Assets.xcassets */,
 				090DA02C1CDE0EF90017D3F0 /* LaunchScreen.storyboard */,
@@ -150,6 +159,23 @@
 			path = MusicWidgetAnimationUITests;
 			sourceTree = "<group>";
 		};
+		DB8B218B57954EBA283CDB36 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */,
+				06CD0D1E06795034DD4A8289 /* Pods-MusicWidgetAnimation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E137A60E52A4EDF152334759 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,9 +183,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 090DA0481CDE0EF90017D3F0 /* Build configuration list for PBXNativeTarget "MusicWidgetAnimation" */;
 			buildPhases = (
+				1C4B343F2F6E6D16A4BF13C0 /* Check Pods Manifest.lock */,
 				090DA0171CDE0EF90017D3F0 /* Sources */,
 				090DA0181CDE0EF90017D3F0 /* Frameworks */,
 				090DA0191CDE0EF90017D3F0 /* Resources */,
+				9C27D4B24A9AFCBEAB8CD32C /* Embed Pods Frameworks */,
+				5EBF1131A105B5343A241C94 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +306,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C4B343F2F6E6D16A4BF13C0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5EBF1131A105B5343A241C94 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C27D4B24A9AFCBEAB8CD32C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		090DA0171CDE0EF90017D3F0 /* Sources */ = {
@@ -428,10 +505,12 @@
 		};
 		090DA0491CDE0EF90017D3F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicWidgetAnimation/PrefixHeader.pch";
 				INFOPLIST_FILE = MusicWidgetAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -444,10 +523,12 @@
 		};
 		090DA04A1CDE0EF90017D3F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06CD0D1E06795034DD4A8289 /* Pods-MusicWidgetAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicWidgetAnimation/PrefixHeader.pch";
 				INFOPLIST_FILE = MusicWidgetAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -523,6 +604,7 @@
 				090DA04A1CDE0EF90017D3F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		090DA04B1CDE0EF90017D3F0 /* Build configuration list for PBXNativeTarget "MusicWidgetAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +613,7 @@
 				090DA04D1CDE0EF90017D3F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		090DA04E1CDE0EF90017D3F0 /* Build configuration list for PBXNativeTarget "MusicWidgetAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +622,7 @@
 				090DA0501CDE0EF90017D3F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
