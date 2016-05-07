@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    kPanDir_Null,
+    kPanDir_Right,
+    kPanDir_Left,
+}PanDirection;
+
 @interface MusicWidgetView : UIView
 
 @end
