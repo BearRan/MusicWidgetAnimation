@@ -15,6 +15,8 @@
 		090DA02E1CDE0EF90017D3F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090DA02C1CDE0EF90017D3F0 /* LaunchScreen.storyboard */; };
 		090DA0391CDE0EF90017D3F0 /* MusicWidgetAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0381CDE0EF90017D3F0 /* MusicWidgetAnimationTests.m */; };
 		090DA0441CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */; };
+		090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0521CDE13BB0017D3F0 /* CardView.m */; };
+		090DA0561CDE13E90017D3F0 /* MusicWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		090DA03F1CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicWidgetAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicWidgetAnimationUITests.m; sourceTree = "<group>"; };
 		090DA0451CDE0EF90017D3F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		090DA0511CDE13BB0017D3F0 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
+		090DA0521CDE13BB0017D3F0 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
+		090DA0541CDE13E90017D3F0 /* MusicWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWidgetView.h; sourceTree = "<group>"; };
+		090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWidgetView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
 				090DA0241CDE0EF90017D3F0 /* ViewController.h */,
 				090DA0251CDE0EF90017D3F0 /* ViewController.m */,
+				090DA0541CDE13E90017D3F0 /* MusicWidgetView.h */,
+				090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */,
+				090DA0511CDE13BB0017D3F0 /* CardView.h */,
+				090DA0521CDE13BB0017D3F0 /* CardView.m */,
 				090DA0271CDE0EF90017D3F0 /* Main.storyboard */,
 				090DA02A1CDE0EF90017D3F0 /* Assets.xcassets */,
 				090DA02C1CDE0EF90017D3F0 /* LaunchScreen.storyboard */,
@@ -273,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				090DA0561CDE13E90017D3F0 /* MusicWidgetView.m in Sources */,
 				090DA0261CDE0EF90017D3F0 /* ViewController.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
+				090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
