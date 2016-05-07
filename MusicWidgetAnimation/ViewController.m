@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CardView.h"
+#import "MusicWidgetView.h"
 
 @interface ViewController ()
 
@@ -17,11 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
-    CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, WIDTH * 0.8, HEIGHT * 0.7)];
-    cardView.backgroundColor = [UIColor orangeColor];
-    [self.view addSubview:cardView];
+    MusicWidgetView *musicWidgetView = [[MusicWidgetView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    musicWidgetView.backgroundColor = [UIColor orangeColor];
+    [self.view addSubview:musicWidgetView];
+
 }
 
 - (void)didReceiveMemoryWarning {

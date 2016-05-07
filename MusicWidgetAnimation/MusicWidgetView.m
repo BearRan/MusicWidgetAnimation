@@ -25,6 +25,7 @@ static int cardShowInView_Count = 3;
     
     if (self) {
         
+        [self createUI];
     }
     
     return self;
@@ -33,12 +34,26 @@ static int cardShowInView_Count = 3;
 - (void)createUI
 {
     _cardArray = [[NSMutableArray alloc] init];
+    CGFloat gap_y = 20;
+    CGFloat delta_ScaleRatio = 0.05;
     
     for (int i = 0 ; i < cardShowInView_Count + 1; i++) {
+        
         CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, WIDTH * 0.8, HEIGHT * 0.7)];
-        cardView.backgroundColor = [UIColor orangeColor];
-        [self addSubview:cardView];
+        cardView.backgroundColor = [[UIColor redColor] colorWithAlphaComponent:1];
         [_cardArray addObject:cardView];
+        
+        [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * i)];
+        cardView.transform = CGAffineTransformMakeScale(1 - i * delta_ScaleRatio, 1 - i * delta_ScaleRatio);
+        
+        if (i > 0) {
+            [self insertSubview:cardView belowSubview:_cardArray[i - 1]];
+        }else{
+            [self addSubview:cardView];
+        }
+        
+        
+        
     }
 }
 
