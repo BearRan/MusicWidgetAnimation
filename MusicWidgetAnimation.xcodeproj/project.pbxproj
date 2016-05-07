@@ -18,6 +18,7 @@
 		090DA0441CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */; };
 		090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0521CDE13BB0017D3F0 /* CardView.m */; };
 		090DA0561CDE13E90017D3F0 /* MusicWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */; };
+		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		090DA0541CDE13E90017D3F0 /* MusicWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWidgetView.h; sourceTree = "<group>"; };
 		090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWidgetView.m; sourceTree = "<group>"; };
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
+		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
 		0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +126,8 @@
 				090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */,
 				090DA0511CDE13BB0017D3F0 /* CardView.h */,
 				090DA0521CDE13BB0017D3F0 /* CardView.m */,
+				09E44EA41CDE255400101712 /* AppConstant.h */,
+				09E44EA51CDE255400101712 /* AppConstant.m */,
 				09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */,
 				090DA0271CDE0EF90017D3F0 /* Main.storyboard */,
 				090DA02A1CDE0EF90017D3F0 /* Assets.xcassets */,
@@ -365,6 +370,7 @@
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
 				090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
+				09E44EA61CDE255400101712 /* AppConstant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,8 @@
     
     if (self) {
         
+        self.layer.cornerRadius = 5;
+        
         _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
         _headImgV.layer.cornerRadius = _headImgV.height / 2.0;
         _headImgV.backgroundColor = [UIColor blueColor];

@@ -14,5 +14,6 @@
 
 #import "UIView+BearSet.h"
 #import "BearConstants.h"
+#import "AppConstant.h"
 
 #endif /* PrefixHeader_pch */

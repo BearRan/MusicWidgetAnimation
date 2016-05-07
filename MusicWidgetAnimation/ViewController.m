@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     MusicWidgetView *musicWidgetView = [[MusicWidgetView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
-    musicWidgetView.backgroundColor = [UIColor orangeColor];
+    musicWidgetView.backgroundColor = ys_302e35;
     [self.view addSubview:musicWidgetView];
 
 }
