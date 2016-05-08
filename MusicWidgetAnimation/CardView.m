@@ -31,6 +31,14 @@
         
         _assignLabel_2 = [[UILabel alloc] init];
         [self addSubview:_assignLabel_2];
+        
+        //  缩放动画
+        _scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        _scaleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
+        _scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
+        _scaleAnimation.fillMode = kCAFillModeForwards;
+        _scaleAnimation.removedOnCompletion = NO;
+        _scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     }
     
     return self;

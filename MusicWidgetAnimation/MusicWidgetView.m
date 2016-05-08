@@ -71,8 +71,11 @@ static CGFloat  animationDuration       = 0.2;
 - (void)updateCardsWithAnimation:(BOOL)animation
 {
     if (animation) {
-        [UIView animateWithDuration:animationDuration animations:^{
+        
+        [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             [self updateCardsDetail];
+        } completion:^(BOOL finished) {
+            
         }];
     }else{
         [self updateCardsDetail];
@@ -113,8 +116,13 @@ static CGFloat  animationDuration       = 0.2;
     CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
     cardView_willAppear.alpha = 1 - cardShowInView_Count * delta_AlphaGap;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * cardShowInView_Count)];
-    cardView_willAppear.transform = CGAffineTransformMakeScale(1 - cardShowInView_Count * delta_ScaleRatio, 1 - cardShowInView_Count * delta_ScaleRatio);
     cardView_willAppear.hidden = YES;
+    
+    //  缩放动画
+    cardView_willAppear.scaleAnimation.fromValue = cardView_willAppear.scaleAnimation.toValue;
+    cardView_willAppear.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - cardShowInView_Count * delta_ScaleRatio];
+    cardView_willAppear.scaleAnimation.duration = animationDuration;
+    [cardView_willAppear.layer addAnimation:cardView_willAppear.scaleAnimation forKey:cardView_willAppear.scaleAnimation.keyPath];
     
     
     //  中间可见的cardView
@@ -129,7 +137,12 @@ static CGFloat  animationDuration       = 0.2;
         cardView.hidden = NO;
         cardView.alpha = 1 - j * delta_AlphaGap;
         [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * j)];
-        cardView.transform = CGAffineTransformMakeScale(1 - j * delta_ScaleRatio, 1 - j * delta_ScaleRatio);
+
+        //  缩放动画
+        cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
+        cardView.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - j * delta_ScaleRatio];
+        cardView.scaleAnimation.duration = animationDuration;
+        [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
         
         //  手势移交
         if (j == 0) {

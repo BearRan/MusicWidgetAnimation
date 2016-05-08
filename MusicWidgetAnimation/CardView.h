@@ -15,4 +15,6 @@
 @property (strong, nonatomic) UILabel       *assignLabel_1;
 @property (strong, nonatomic) UILabel       *assignLabel_2;
 
+@property (strong, nonatomic) CABasicAnimation  *scaleAnimation;
+
 @end
