@@ -57,6 +57,12 @@ static CGFloat  animationDuration       = 0.2;
         if (i == 1) {
             cardView.backgroundColor = [UIColor redColor];
         }
+        
+        if (i > 0) {
+            [self insertSubview:cardView belowSubview:_cardArray[i - 1]];
+        }else{
+            [self addSubview:cardView];
+        }
     }
     
     [self updateCardsViewWithAnimation:NO];
@@ -92,7 +98,23 @@ static CGFloat  animationDuration       = 0.2;
     }
     
     
+    //  即将消失的cardView
+    CardView *cardView_willDisappear = _cardArray[cardWillDisappear_index];
+    cardView_willDisappear.hidden = YES;
+    if (panDir == kPanDir_Left){
+        [cardView_willDisappear setMaxX:0];
+    }
+    else if (panDir == kPanDir_Right) {
+        [cardView_willDisappear setX:self.width];
+    }
     
+    
+    //  即将显示的cardView
+    CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
+    cardView_willAppear.alpha = 1 - cardShowInView_Count * delta_AlphaGap;
+    [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * cardShowInView_Count)];
+    cardView_willAppear.transform = CGAffineTransformMakeScale(1 - cardShowInView_Count * delta_ScaleRatio, 1 - cardShowInView_Count * delta_ScaleRatio);
+    cardView_willAppear.hidden = YES;
     
     
     //  可见的中间三个cardView
@@ -116,37 +138,12 @@ static CGFloat  animationDuration       = 0.2;
             [cardView addGestureRecognizer:_panGesture];
         }
         
-        
-        
-        if (i > 0) {
-            [self insertSubview:cardView belowSubview:_cardArray[i - 1]];
-        }else{
-            [self addSubview:cardView];
+        //  即将显示的view插入在最后一个可见cardView的下方
+        if (j == cardShowInView_Count - 1) {
+             [self insertSubview:cardView_willAppear belowSubview:cardView];
         }
 
     }
-    
-    //  即将消失的cardView
-    CardView *cardView_willDisappear = _cardArray[cardWillDisappear_index];
-    cardView_willDisappear.hidden = YES;
-    if (panDir == kPanDir_Left){
-        [cardView_willDisappear setMaxX:0];
-    }
-    else if (panDir == kPanDir_Right) {
-        [cardView_willDisappear setX:self.width];
-    }
-    
-    
-    //  即将显示的cardView
-    CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
-    cardView_willAppear.alpha = 1 - cardShowInView_Count * delta_AlphaGap;
-    [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * cardShowInView_Count)];
-    cardView_willAppear.transform = CGAffineTransformMakeScale(1 - cardShowInView_Count * delta_ScaleRatio, 1 - cardShowInView_Count * delta_ScaleRatio);
-    cardView_willAppear.hidden = YES;
-}
-
-- (void)nextShowViewReady
-{
     
 }
 
