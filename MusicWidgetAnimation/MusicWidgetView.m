@@ -9,7 +9,7 @@
 #import "MusicWidgetView.h"
 #import "CardView.h"
 
-static int      cardShowInView_Count    = 3;
+static int      cardShowInView_Count    = 6;
 static CGFloat  animationDuration       = 0.2;
 
 
@@ -65,10 +65,10 @@ static CGFloat  animationDuration       = 0.2;
         }
     }
     
-    [self updateCardsViewWithAnimation:NO];
+    [self updateCardsWithAnimation:NO];
 }
 
-- (void)updateCardsViewWithAnimation:(BOOL)animation
+- (void)updateCardsWithAnimation:(BOOL)animation
 {
     if (animation) {
         [UIView animateWithDuration:animationDuration animations:^{
@@ -117,7 +117,7 @@ static CGFloat  animationDuration       = 0.2;
     cardView_willAppear.hidden = YES;
     
     
-    //  可见的中间三个cardView
+    //  中间可见的cardView
     for (int j = 0 ; j < cardShowInView_Count; j++) {
         
         int i = j + _cardIndex;
@@ -126,7 +126,6 @@ static CGFloat  animationDuration       = 0.2;
         }
         
         CardView *cardView = _cardArray[i];
-        
         cardView.hidden = NO;
         cardView.alpha = 1 - j * delta_AlphaGap;
         [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * j)];
@@ -198,8 +197,6 @@ static CGFloat  animationDuration       = 0.2;
         case UIGestureRecognizerStateEnded:
         {
             
-            
-            
             switch (panDir) {
                 case kPanDir_Left:
                 {
@@ -229,9 +226,11 @@ static CGFloat  animationDuration       = 0.2;
             break;
     }
     
+    //  存储历史X值
     lastPositionX = position.x;
 }
 
+//  从左侧消失
 - (void)disappearToLeft:(UIPanGestureRecognizer *)panGesture
 {
     if (self.cardIndex + 1 > [_cardArray count]) {
@@ -241,6 +240,7 @@ static CGFloat  animationDuration       = 0.2;
     }
 }
 
+//  从右侧消失
 - (void)disappearToRight:(UIPanGestureRecognizer *)panGesture
 {
     if (self.cardIndex + 1 > [_cardArray count]) {
@@ -248,11 +248,6 @@ static CGFloat  animationDuration       = 0.2;
     }else{
         self.cardIndex = self.cardIndex + 1;
     }
-}
-
-- (void)pushNextCard:(UIPanGestureRecognizer *)panGesture
-{
-    
 }
 
 
@@ -263,7 +258,7 @@ static CGFloat  animationDuration       = 0.2;
 {
     _cardIndex = cardIndex;
     
-    [self updateCardsViewWithAnimation:YES];
+    [self updateCardsWithAnimation:YES];
 }
 
 /*
