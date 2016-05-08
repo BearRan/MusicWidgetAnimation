@@ -92,20 +92,7 @@ static CGFloat  animationDuration       = 0.2;
     }
     
     
-    //  即将消失的cardView
-    CardView *cardView_willDisappear = _cardArray[cardWillDisappear_index];
-    cardView_willDisappear.hidden = YES;
-    if (panDir == kPanDir_Left){
-        [cardView_willDisappear setMaxX:0];
-    }
-    else if (panDir == kPanDir_Right) {
-        [cardView_willDisappear setX:self.width];
-    }
     
-    
-    //  即将显示的cardView
-    CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
-    cardView_willAppear.hidden = YES;
     
     
     //  可见的中间三个cardView
@@ -119,8 +106,7 @@ static CGFloat  animationDuration       = 0.2;
         CardView *cardView = _cardArray[i];
         
         cardView.hidden = NO;
-        CGFloat alpha_f = 1 - j * delta_AlphaGap;
-        cardView.alpha = alpha_f;
+        cardView.alpha = 1 - j * delta_AlphaGap;
         [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * j)];
         cardView.transform = CGAffineTransformMakeScale(1 - j * delta_ScaleRatio, 1 - j * delta_ScaleRatio);
         
@@ -139,6 +125,29 @@ static CGFloat  animationDuration       = 0.2;
         }
 
     }
+    
+    //  即将消失的cardView
+    CardView *cardView_willDisappear = _cardArray[cardWillDisappear_index];
+    cardView_willDisappear.hidden = YES;
+    if (panDir == kPanDir_Left){
+        [cardView_willDisappear setMaxX:0];
+    }
+    else if (panDir == kPanDir_Right) {
+        [cardView_willDisappear setX:self.width];
+    }
+    
+    
+    //  即将显示的cardView
+    CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
+    cardView_willAppear.alpha = 1 - cardShowInView_Count * delta_AlphaGap;
+    [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * cardShowInView_Count)];
+    cardView_willAppear.transform = CGAffineTransformMakeScale(1 - cardShowInView_Count * delta_ScaleRatio, 1 - cardShowInView_Count * delta_ScaleRatio);
+    cardView_willAppear.hidden = YES;
+}
+
+- (void)nextShowViewReady
+{
+    
 }
 
 
@@ -256,7 +265,6 @@ static CGFloat  animationDuration       = 0.2;
 - (void)setCardIndex:(int)cardIndex
 {
     _cardIndex = cardIndex;
-    
     
     [self updateCardsViewWithAnimation:YES];
 }
