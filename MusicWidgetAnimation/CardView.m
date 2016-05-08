@@ -41,7 +41,7 @@
     [super layoutSubviews];
     
     _headImgV.image = [UIImage imageNamed:@""];
-    _mainLabel.text = @"ABC";
+//    _mainLabel.text = @"ABC";
     _assignLabel_1.text = @"EFG";
     _assignLabel_2.text = @"HIJ";
     

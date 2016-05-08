@@ -50,6 +50,7 @@ static CGFloat  animationDuration       = 0.2;
         
         CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, WIDTH * 0.8, HEIGHT * 0.7)];
         cardView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:1];
+        cardView.mainLabel.text = [NSString stringWithFormat:@"%d", i];
         [_cardArray addObject:cardView];
         [self addSubview:cardView];
         
@@ -59,26 +60,6 @@ static CGFloat  animationDuration       = 0.2;
     }
     
     [self updateCardsViewWithAnimation:NO];
-    
-//    [self performSelector:@selector(test) withObject:nil afterDelay:2.0];
-}
-
-
-- (void)test
-{
-    [UIView animateWithDuration:0.3 animations:^{
-        CardView *firstView = _cardArray[0];
-        [firstView setX:self.width - 10];
-        
-        CardView *secondView = _cardArray[1];
-        CGPoint tempCenter = CGPointMake(self.width / 2.0, self.height / 2.0);
-        CGAffineTransform scaleTransform = CGAffineTransformMakeScale(1, 1);
-        
-        NSLog(@"scaleTransform.a:%f, scaleTransform.d:%f", scaleTransform.a, scaleTransform.d);
-        
-        [secondView setCenter:tempCenter];
-        secondView.transform = scaleTransform;
-    }];
 }
 
 - (void)updateCardsViewWithAnimation:(BOOL)animation
@@ -111,7 +92,7 @@ static CGFloat  animationDuration       = 0.2;
     }
     
     
-    //  即将消失的
+    //  即将消失的cardView
     CardView *cardView_willDisappear = _cardArray[cardWillDisappear_index];
     cardView_willDisappear.hidden = YES;
     if (panDir == kPanDir_Left){
@@ -122,7 +103,7 @@ static CGFloat  animationDuration       = 0.2;
     }
     
     
-    //  即将显示的
+    //  即将显示的cardView
     CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
     cardView_willAppear.hidden = YES;
     
@@ -137,16 +118,19 @@ static CGFloat  animationDuration       = 0.2;
         
         CardView *cardView = _cardArray[i];
         
+        cardView.hidden = NO;
+        CGFloat alpha_f = 1 - j * delta_AlphaGap;
+        cardView.alpha = alpha_f;
+        [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * j)];
+        cardView.transform = CGAffineTransformMakeScale(1 - j * delta_ScaleRatio, 1 - j * delta_ScaleRatio);
+        
         //  手势移交
         if (j == 0) {
             [_panGesture.view removeGestureRecognizer:_panGesture];
             [cardView addGestureRecognizer:_panGesture];
         }
         
-        cardView.hidden = NO;
-        cardView.alpha = 1 - i * delta_AlphaGap;
-        [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * j)];
-        cardView.transform = CGAffineTransformMakeScale(1 - j * delta_ScaleRatio, 1 - j * delta_ScaleRatio);
+        
         
         if (i > 0) {
             [self insertSubview:cardView belowSubview:_cardArray[i - 1]];
@@ -244,12 +228,20 @@ static CGFloat  animationDuration       = 0.2;
 
 - (void)disappearToLeft:(UIPanGestureRecognizer *)panGesture
 {
-    self.cardIndex = self.cardIndex + 1;
+    if (self.cardIndex + 1 > [_cardArray count]) {
+        self.cardIndex = 0;
+    }else{
+        self.cardIndex = self.cardIndex + 1;
+    }
 }
 
 - (void)disappearToRight:(UIPanGestureRecognizer *)panGesture
 {
-    self.cardIndex = self.cardIndex + 1;
+    if (self.cardIndex + 1 > [_cardArray count]) {
+        self.cardIndex = 0;
+    }else{
+        self.cardIndex = self.cardIndex + 1;
+    }
 }
 
 - (void)pushNextCard:(UIPanGestureRecognizer *)panGesture
@@ -264,6 +256,7 @@ static CGFloat  animationDuration       = 0.2;
 - (void)setCardIndex:(int)cardIndex
 {
     _cardIndex = cardIndex;
+    
     
     [self updateCardsViewWithAnimation:YES];
 }
