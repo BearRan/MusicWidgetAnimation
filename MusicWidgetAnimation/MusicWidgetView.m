@@ -41,24 +41,11 @@ static CGFloat  animationDuration       = 0.2;
         
         self.cardIndex = 0;
         panDir = kPanDir_Null;
-        
-#warning DAD
-//        [self test];
     }
     
     return self;
 }
 
-#warning DAD
-- (void)test
-{
-    UIView *viewC = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 200)];
-    viewC.backgroundColor = [UIColor greenColor];
-    [self addSubview:viewC];
-    [viewC BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
-    
-//    [self testRotation:viewC];
-}
 
 - (void)createUI
 {
@@ -173,42 +160,9 @@ static CGFloat  animationDuration       = 0.2;
         if (j == cardShowInView_Count - 1) {
              [self insertSubview:cardView_willAppear belowSubview:cardView];
         }
-        
-        
-//        //  测试旋转
-//        CGAffineTransform transform = CGAffineTransformMakeRotation(45.0 / 180 * M_PI);
-//        [cardView setTransform:transform];
 
     }
     
-}
-
-#warning DAD
-- (void)testRotation:(UIView *)view
-{
-    __block CGFloat i = 0;
-    CGFloat duration = 0.01;   //间隔时间
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
-    
-    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, duration * NSEC_PER_SEC, 0);
-    dispatch_source_set_event_handler(timer, ^{
-        
-        i += 0.1;
-        if (i > 180) {
-            dispatch_source_cancel(timer);  //执行5次后停止
-            NSLog(@"-- end");
-        }else{
-            NSLog(@"-- Method_C i:%f", i);
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                CGAffineTransform transform = CGAffineTransformMakeRotation(1.0 * i / 180 * M_PI);
-                [view setTransform:transform];
-            });
-            
-        }
-    });
-    dispatch_resume(timer);
 }
 
 #pragma mark - TapGesture
@@ -235,13 +189,13 @@ static CGFloat  animationDuration       = 0.2;
     CardView    *gestureView                = (CardView *)panGesture.view;
     
     //  没有历史数据，每次切换页面时，只存储历史值，然后return
-    if (!lastView || ![lastView isEqual:panGesture.view]) {
-        lastView = panGesture.view;
+    if (!lastView || ![lastView isEqual:gestureView]) {
+        lastView = gestureView;
         lastPositionX = position.x;
         return;
     }
 
-    
+    //  计算旋转角度
     CGFloat tanA = (position.x - self.width / 2.0) / (cardView_height / 3.0);
     CGFloat rotation_degree = atan(tanA);
     
@@ -260,7 +214,6 @@ static CGFloat  animationDuration       = 0.2;
         [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
         
     }
-    
     //  平移
     else{
         
@@ -288,7 +241,7 @@ static CGFloat  animationDuration       = 0.2;
         switch (panGesture.state) {
             case UIGestureRecognizerStateChanged:
             {
-                [panGesture.view setX:panGesture.view.x + (position.x - lastPositionX)];
+                [gestureView setX:gestureView.x + (position.x - lastPositionX)];
             }
                 break;
                 
