@@ -130,6 +130,13 @@ static CGFloat  animationDuration       = 0.2;
     cardView_willAppear.scaleAnimation.duration = animationDuration;
     [cardView_willAppear.layer addAnimation:cardView_willAppear.scaleAnimation forKey:cardView_willAppear.scaleAnimation.keyPath];
     
+    //  旋转复位
+    cardView_willAppear.layer.position = CGPointMake(self.width / 2.0, self.height / 2.0 + cardView_height / 2.0);
+    cardView_willAppear.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    cardView_willAppear.rotationAnimation.fromValue = [NSNumber numberWithFloat:0];
+    cardView_willAppear.rotationAnimation.toValue = [NSNumber numberWithFloat:0];
+    [cardView_willAppear.layer addAnimation:cardView_willAppear.rotationAnimation forKey:cardView_willAppear.rotationAnimation.keyPath];
+    
     
     //  中间可见的cardView
     for (int j = 0 ; j < cardShowInView_Count; j++) {
@@ -174,6 +181,7 @@ static CGFloat  animationDuration       = 0.2;
  *  leftThreshold_x:            手势阈值 绝对向左手势
  *  rightThreshold_x:           手势阈值 绝对向右手势
  *  position:                   手势在self中的坐标
+ *  position_translationInSelf: 手势在self中的坐标(只要手势不抬起，就一直记录)
  *  rotationThreshold_degree:   旋转阈值，旋转角度超出该阈值后不再旋转，开始平移操作
  *  gestureView:                当前手势所在view
  */
@@ -185,6 +193,7 @@ static CGFloat  animationDuration       = 0.2;
     CGFloat     leftThreshold_x             = self.width * (1.0 / 4);
     CGFloat     rightThreshold_x            = self.width * (3.0 / 4);
     CGPoint     position                    = [panGesture locationInView:self];
+    CGPoint     position_translationInSelf  = [panGesture translationInView:self];
     CGFloat     rotationThreshold_degree    = 8.0 / 180 * M_PI;
     CardView    *gestureView                = (CardView *)panGesture.view;
     
@@ -196,7 +205,7 @@ static CGFloat  animationDuration       = 0.2;
     }
 
     //  计算旋转角度
-    CGFloat tanA = (position.x - self.width / 2.0) / (cardView_height / 3.0);
+    CGFloat tanA = position_translationInSelf.x / (cardView_height / 3.0);
     CGFloat rotation_degree = atan(tanA);
     
     
