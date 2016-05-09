@@ -220,7 +220,7 @@ static CGFloat  animationDuration       = 0.2;
     CGFloat leftThreshold_x             = self.width * (1.0 / 4);
     CGFloat rightThreshold_x            = self.width * (3.0 / 4);
     CGPoint position                    = [panGesture locationInView:self];
-    CGFloat rotationThreshold_degree    = 25.0 / 180 * M_PI;
+    CGFloat rotationThreshold_degree    = 8.0 / 180 * M_PI;
     CardView *gestureView               = (CardView *)panGesture.view;
     
     //  没有历史数据，每次切换页面时，只存储历史值，然后return
@@ -234,17 +234,16 @@ static CGFloat  animationDuration       = 0.2;
     CGFloat tanA = (position.x - self.width / 2.0) / (cardView_height / 3.0);
     CGFloat rotation_degree = atan(tanA);
     
-    NSLog(@"rotationThreshold_degree:%f", rotationThreshold_degree);
-    NSLog(@"rotation_degree:%f", rotation_degree);
-    NSLog(@"====");
     
     //  旋转
     BOOL res_rotation1 = (rotation_degree > 0 && rotation_degree < rotationThreshold_degree);
     bool res_rotation2 = (rotation_degree < 0 && -rotation_degree < rotationThreshold_degree);
-    if (res_rotation1 || res_rotation2) {
+    if (res_rotation1 || res_rotation2)
+    {
         
-//        gestureView.layer.anchorPoint = CGPointMake(gestureView.width / 2.0, 1.0 * gestureView.height / 3 * 2);
-        
+        gestureView.layer.position = CGPointMake(self.width / 2.0, self.height / 2.0 + cardView_height / 2.0);
+        gestureView.layer.anchorPoint = CGPointMake(0.5, 1);
+
         gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
         gestureView.rotationAnimation.toValue = [NSNumber numberWithFloat:rotation_degree];
         [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
