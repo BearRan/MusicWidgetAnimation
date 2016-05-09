@@ -39,6 +39,15 @@
         _scaleAnimation.fillMode = kCAFillModeForwards;
         _scaleAnimation.removedOnCompletion = NO;
         _scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        
+        //  旋转动画
+        _rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        _rotationAnimation.fromValue = [NSNumber numberWithFloat:0];
+        _rotationAnimation.toValue = [NSNumber numberWithFloat:0];
+        _rotationAnimation.fillMode = kCAFillModeForwards;
+        _rotationAnimation.removedOnCompletion = NO;
+        _rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        
     }
     
     return self;

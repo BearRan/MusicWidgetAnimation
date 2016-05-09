@@ -9,7 +9,7 @@
 #import "MusicWidgetView.h"
 #import "CardView.h"
 
-static int      cardShowInView_Count    = 6;
+static int      cardShowInView_Count    = 4;
 static CGFloat  animationDuration       = 0.2;
 
 
@@ -18,6 +18,8 @@ static CGFloat  animationDuration       = 0.2;
     UIPanGestureRecognizer  *_panGesture;
     NSMutableArray          *_cardArray;
     PanDirection            panDir;
+    CGFloat                 cardView_width;
+    CGFloat                 cardView_height;
 }
 
 @property (assign, nonatomic) int   cardIndex;
@@ -32,13 +34,30 @@ static CGFloat  animationDuration       = 0.2;
     
     if (self) {
         
+        cardView_width = WIDTH * 0.8;
+        cardView_height = HEIGHT * 0.7;
+        
         [self createUI];
         
         self.cardIndex = 0;
         panDir = kPanDir_Null;
+        
+#warning DAD
+//        [self test];
     }
     
     return self;
+}
+
+#warning DAD
+- (void)test
+{
+    UIView *viewC = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 200)];
+    viewC.backgroundColor = [UIColor greenColor];
+    [self addSubview:viewC];
+    [viewC BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
+    
+//    [self testRotation:viewC];
 }
 
 - (void)createUI
@@ -48,7 +67,7 @@ static CGFloat  animationDuration       = 0.2;
     
     for (int i = 0 ; i < cardShowInView_Count + 2; i++) {
         
-        CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, WIDTH * 0.8, HEIGHT * 0.7)];
+        CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height)];
         cardView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:1];
         cardView.mainLabel.text = [NSString stringWithFormat:@"%d", i];
         [_cardArray addObject:cardView];
@@ -154,11 +173,43 @@ static CGFloat  animationDuration       = 0.2;
         if (j == cardShowInView_Count - 1) {
              [self insertSubview:cardView_willAppear belowSubview:cardView];
         }
+        
+        
+//        //  测试旋转
+//        CGAffineTransform transform = CGAffineTransformMakeRotation(45.0 / 180 * M_PI);
+//        [cardView setTransform:transform];
 
     }
     
 }
 
+#warning DAD
+- (void)testRotation:(UIView *)view
+{
+    __block CGFloat i = 0;
+    CGFloat duration = 0.01;   //间隔时间
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+    
+    dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, duration * NSEC_PER_SEC, 0);
+    dispatch_source_set_event_handler(timer, ^{
+        
+        i += 0.1;
+        if (i > 180) {
+            dispatch_source_cancel(timer);  //执行5次后停止
+            NSLog(@"-- end");
+        }else{
+            NSLog(@"-- Method_C i:%f", i);
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                CGAffineTransform transform = CGAffineTransformMakeRotation(1.0 * i / 180 * M_PI);
+                [view setTransform:transform];
+            });
+            
+        }
+    });
+    dispatch_resume(timer);
+}
 
 #pragma mark - TapGesture
 - (void)panGesture_Event:(UIPanGestureRecognizer *)panGesture
@@ -166,78 +217,104 @@ static CGFloat  animationDuration       = 0.2;
     static CGFloat      lastPositionX = 0;
     static UIView       *lastView;
     
-    CGFloat leftThreshold_x     = self.width * (1.0 / 4);
-    CGFloat rightThreshold_x    = self.width * (3.0 / 4);
-    CGPoint position = [panGesture locationInView:self];
-
+    CGFloat leftThreshold_x             = self.width * (1.0 / 4);
+    CGFloat rightThreshold_x            = self.width * (3.0 / 4);
+    CGPoint position                    = [panGesture locationInView:self];
+    CGFloat rotationThreshold_degree    = 25.0 / 180 * M_PI;
+    CardView *gestureView               = (CardView *)panGesture.view;
     
-    //  没有历史数据，每次切换页面时，只赋值，然后return
+    //  没有历史数据，每次切换页面时，只存储历史值，然后return
     if (!lastView || ![lastView isEqual:panGesture.view]) {
         lastView = panGesture.view;
         lastPositionX = position.x;
         return;
     }
+
     
+    CGFloat tanA = (position.x - self.width / 2.0) / (cardView_height / 3.0);
+    CGFloat rotation_degree = atan(tanA);
     
-    //  和历史坐标比较，判断左滑
-    if (lastPositionX > position.x) {
-        panDir = kPanDir_Left;
+    NSLog(@"rotationThreshold_degree:%f", rotationThreshold_degree);
+    NSLog(@"rotation_degree:%f", rotation_degree);
+    NSLog(@"====");
+    
+    //  旋转
+    BOOL res_rotation1 = (rotation_degree > 0 && rotation_degree < rotationThreshold_degree);
+    bool res_rotation2 = (rotation_degree < 0 && -rotation_degree < rotationThreshold_degree);
+    if (res_rotation1 || res_rotation2) {
+        
+//        gestureView.layer.anchorPoint = CGPointMake(gestureView.width / 2.0, 1.0 * gestureView.height / 3 * 2);
+        
+        gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
+        gestureView.rotationAnimation.toValue = [NSNumber numberWithFloat:rotation_degree];
+        [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
+        
     }
-    //  和历史坐标比较，判断右滑
-    else if (lastPositionX < position.x){
-        panDir = kPanDir_Right;
-    }
     
-    
-    //  绝对左滑
-    if (position.x < leftThreshold_x) {
-        panDir = kPanDir_Left;
-    }
-    //  绝对右滑
-    else if (position.x > rightThreshold_x){
-        panDir = kPanDir_Right;
-    }
-    
-    
-    //  判断手势
-    switch (panGesture.state) {
-        case UIGestureRecognizerStateChanged:
-        {
-            [panGesture.view setX:panGesture.view.x + (position.x - lastPositionX)];
+    //  平移
+    else{
+        
+        //  和历史坐标比较，判断左滑
+        if (lastPositionX > position.x) {
+            panDir = kPanDir_Left;
         }
-            break;
-            
-        case UIGestureRecognizerStateEnded:
-        {
-            
-            switch (panDir) {
-                case kPanDir_Left:
-                {
-                    [self disappearToLeft:panGesture];
-                }
-                    break;
-                    
-                case kPanDir_Right:
-                {
-                    [self disappearToRight:panGesture];
-                }
-                    break;
-                    
-                case kPanDir_Null:
-                {
-                    nil;
-                }
-                    break;
-                    
-                default:
-                    break;
+        //  和历史坐标比较，判断右滑
+        else if (lastPositionX < position.x){
+            panDir = kPanDir_Right;
+        }
+        
+        
+        //  绝对左滑
+        if (position.x < leftThreshold_x) {
+            panDir = kPanDir_Left;
+        }
+        //  绝对右滑
+        else if (position.x > rightThreshold_x){
+            panDir = kPanDir_Right;
+        }
+        
+        
+        //  判断手势
+        switch (panGesture.state) {
+            case UIGestureRecognizerStateChanged:
+            {
+                [panGesture.view setX:panGesture.view.x + (position.x - lastPositionX)];
             }
+                break;
+                
+            case UIGestureRecognizerStateEnded:
+            {
+                
+                switch (panDir) {
+                    case kPanDir_Left:
+                    {
+                        [self disappearToLeft:panGesture];
+                    }
+                        break;
+                        
+                    case kPanDir_Right:
+                    {
+                        [self disappearToRight:panGesture];
+                    }
+                        break;
+                        
+                    case kPanDir_Null:
+                    {
+                        nil;
+                    }
+                        break;
+                        
+                    default:
+                        break;
+                }
+            }
+                break;
+                
+            default:
+                break;
         }
-            break;
-            
-        default:
-            break;
     }
+    
     
     //  存储历史X值
     lastPositionX = position.x;
