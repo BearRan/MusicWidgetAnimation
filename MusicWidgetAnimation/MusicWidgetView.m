@@ -212,16 +212,27 @@ static CGFloat  animationDuration       = 0.2;
 }
 
 #pragma mark - TapGesture
+/**
+ *
+ *  lastPositionX:              上一次的X值
+ *  lastView:                   上一次处理的view
+ *
+ *  leftThreshold_x:            手势阈值 绝对向左手势
+ *  rightThreshold_x:           手势阈值 绝对向右手势
+ *  position:                   手势在self中的坐标
+ *  rotationThreshold_degree:   旋转阈值，旋转角度超出该阈值后不再旋转，开始平移操作
+ *  gestureView:                当前手势所在view
+ */
 - (void)panGesture_Event:(UIPanGestureRecognizer *)panGesture
 {
     static CGFloat      lastPositionX = 0;
     static UIView       *lastView;
     
-    CGFloat leftThreshold_x             = self.width * (1.0 / 4);
-    CGFloat rightThreshold_x            = self.width * (3.0 / 4);
-    CGPoint position                    = [panGesture locationInView:self];
-    CGFloat rotationThreshold_degree    = 8.0 / 180 * M_PI;
-    CardView *gestureView               = (CardView *)panGesture.view;
+    CGFloat     leftThreshold_x             = self.width * (1.0 / 4);
+    CGFloat     rightThreshold_x            = self.width * (3.0 / 4);
+    CGPoint     position                    = [panGesture locationInView:self];
+    CGFloat     rotationThreshold_degree    = 8.0 / 180 * M_PI;
+    CardView    *gestureView                = (CardView *)panGesture.view;
     
     //  没有历史数据，每次切换页面时，只存储历史值，然后return
     if (!lastView || ![lastView isEqual:panGesture.view]) {
