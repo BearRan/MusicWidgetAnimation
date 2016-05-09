@@ -9,7 +9,7 @@
 #import "MusicWidgetView.h"
 #import "CardView.h"
 
-static int      cardShowInView_Count    = 4;
+static int      cardShowInView_Count    = 3;
 static CGFloat  animationDuration       = 0.2;
 
 
@@ -131,7 +131,6 @@ static CGFloat  animationDuration       = 0.2;
     [cardView_willAppear.layer addAnimation:cardView_willAppear.scaleAnimation forKey:cardView_willAppear.scaleAnimation.keyPath];
     
     //  旋转复位
-    cardView_willAppear.layer.position = CGPointMake(self.width / 2.0, self.height / 2.0 + cardView_height / 2.0);
     cardView_willAppear.layer.anchorPoint = CGPointMake(0.5, 0.5);
     cardView_willAppear.rotationAnimation.fromValue = [NSNumber numberWithFloat:0];
     cardView_willAppear.rotationAnimation.toValue = [NSNumber numberWithFloat:0];
@@ -171,6 +170,7 @@ static CGFloat  animationDuration       = 0.2;
     }
     
 }
+
 
 #pragma mark - TapGesture
 /**
