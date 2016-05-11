@@ -95,11 +95,12 @@ static CGFloat  animationDuration       = 0.2;
     CGFloat delta_AlphaGap      = 0.25;
     
     int cardAll_count = (int)[_cardArray count];
-    int cardWillDisappear_index = _cardIndex - 1;
-    int cardWillAppear_index = _cardIndex + cardShowInView_Count;
+    int cardWillDisappear_index = _cardIndex + cardAll_count - 1;
+    int cardWillAppear_index = _cardIndex + cardAll_count - 2;
     
-    if (_cardIndex == 0) {
-        cardWillDisappear_index = cardAll_count - 1;
+    NSLog(@"_cardIndex:%d", _cardIndex);
+    if (cardWillDisappear_index >= cardAll_count) {
+        cardWillDisappear_index -= cardAll_count;
     }
     
     if (cardWillAppear_index >= cardAll_count) {
@@ -116,6 +117,8 @@ static CGFloat  animationDuration       = 0.2;
     else if (panDir == kPanDir_Right) {
         [cardView_willDisappear setX:self.width];
     }
+    NSLog(@"cardView_willDisappear.mainLabel:%@", cardView_willDisappear.mainLabel.text);
+    NSLog(@"frame:%@", NSStringFromCGRect(cardView_willDisappear.frame));
     
     
     //  即将显示的cardView
@@ -123,6 +126,9 @@ static CGFloat  animationDuration       = 0.2;
     cardView_willAppear.alpha = 1 - cardShowInView_Count * delta_AlphaGap;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * cardShowInView_Count)];
     cardView_willAppear.hidden = YES;
+    
+    NSLog(@"cardView_willAppear.mainLabel.text:%@", cardView_willAppear.mainLabel.text);
+    NSLog(@"====");
     
     //  缩放动画
     cardView_willAppear.scaleAnimation.fromValue = cardView_willAppear.scaleAnimation.toValue;
@@ -317,7 +323,7 @@ static CGFloat  animationDuration       = 0.2;
 //  从左侧消失
 - (void)disappearToLeft:(UIPanGestureRecognizer *)panGesture
 {
-    if (self.cardIndex + 1 > [_cardArray count]) {
+    if (self.cardIndex + 2 > [_cardArray count]) {
         self.cardIndex = 0;
     }else{
         self.cardIndex = self.cardIndex + 1;
@@ -327,7 +333,7 @@ static CGFloat  animationDuration       = 0.2;
 //  从右侧消失
 - (void)disappearToRight:(UIPanGestureRecognizer *)panGesture
 {
-    if (self.cardIndex + 1 > [_cardArray count]) {
+    if (self.cardIndex + 2 > [_cardArray count]) {
         self.cardIndex = 0;
     }else{
         self.cardIndex = self.cardIndex + 1;
