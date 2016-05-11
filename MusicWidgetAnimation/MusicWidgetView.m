@@ -226,6 +226,28 @@ static CGFloat  animationDuration       = 0.2;
     //  平移
     else{
         
+        //  旋转最终角度校对
+        BOOL res_1 = (gestureView.rotationAnimation.toValue != [NSNumber numberWithFloat:rotationThreshold_degree]);
+        BOOL res_2 = (gestureView.rotationAnimation.toValue != [NSNumber numberWithFloat:-rotationThreshold_degree]);
+        BOOL res_3 = (rotation_degree > 0);
+        if ((res_3 && res_1) || (!res_3 && res_2)) {
+            
+            NSNumber *toValue = [NSNumber numberWithFloat:rotationThreshold_degree];
+            if (res_3 && res_1) {
+                
+                toValue = [NSNumber numberWithFloat:rotationThreshold_degree];
+            }else if (!res_3 && res_2){
+                toValue = [NSNumber numberWithFloat:-rotationThreshold_degree];
+            }
+            
+            gestureView.layer.position = CGPointMake(gestureView.layer.position.x, self.height / 2.0 + cardView_height / 2.0);
+            gestureView.layer.anchorPoint = CGPointMake(0.5, 1);
+            
+            gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
+            gestureView.rotationAnimation.toValue = toValue;
+            [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
+        }
+        
         //  和历史坐标比较，判断左滑
         if (lastPositionX > position.x) {
             panDir = kPanDir_Left;
