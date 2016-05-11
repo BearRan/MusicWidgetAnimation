@@ -41,13 +41,20 @@
         _scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         
         //  旋转动画
-        _rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+        _rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
         _rotationAnimation.fromValue = [NSNumber numberWithFloat:0];
         _rotationAnimation.toValue = [NSNumber numberWithFloat:0];
         _rotationAnimation.fillMode = kCAFillModeForwards;
         _rotationAnimation.removedOnCompletion = NO;
         _rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
         
+        //  翻转动画
+        _flipAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+        _flipAnimation.fromValue = [NSNumber numberWithFloat:0];
+        _flipAnimation.toValue = [NSNumber numberWithFloat:M_PI];
+        _flipAnimation.fillMode = kCAFillModeForwards;
+        _flipAnimation.removedOnCompletion = NO;
+        _flipAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     }
     
     return self;

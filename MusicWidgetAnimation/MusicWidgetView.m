@@ -17,6 +17,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 @interface MusicWidgetView ()
 {
     UIPanGestureRecognizer  *_panGesture;
+    UITapGestureRecognizer  *_tapGesture;
     NSMutableArray          *_cardArray;
     PanDirection            panDir;
     CGFloat                 cardView_width;
@@ -52,6 +53,8 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 - (void)createUI
 {
     _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture_Event:)];
+    _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture_Event:)];
+    _tapGesture.numberOfTapsRequired = 1;
     _cardArray = [[NSMutableArray alloc] init];
     
     for (int i = 0 ; i < cardShowInView_Count + 2; i++) {
@@ -169,6 +172,9 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         if (j == 0) {
             [_panGesture.view removeGestureRecognizer:_panGesture];
             [cardView addGestureRecognizer:_panGesture];
+            
+            [_tapGesture.view removeGestureRecognizer:_tapGesture];
+            [cardView addGestureRecognizer:_tapGesture];
         }
         
         //  即将显示的view插入在最后一个可见cardView的下方
@@ -181,7 +187,17 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 }
 
 
-#pragma mark - TapGesture
+#pragma mark - Gesture
+
+- (void)tapGesture_Event:(UITapGestureRecognizer *)tapGesture
+{
+    CardView *cardView = (CardView *)tapGesture.view;
+    
+    cardView.flipAnimation.duration = animationDuration;
+    [cardView.layer addAnimation:cardView.flipAnimation forKey:cardView.flipAnimation.keyPath];
+    NSLog(@"card:%@", cardView.mainLabel.text);
+}
+
 /**
  *
  *  lastPositionX:              上一次的X值
