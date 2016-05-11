@@ -12,6 +12,7 @@
 static int      cardShowInView_Count    = 3;
 static CGFloat  animationDuration       = 0.2;
 
+typedef void (^UpdateCardsAnimationFinish_Block)();
 
 @interface MusicWidgetView ()
 {
@@ -20,6 +21,7 @@ static CGFloat  animationDuration       = 0.2;
     PanDirection            panDir;
     CGFloat                 cardView_width;
     CGFloat                 cardView_height;
+    UpdateCardsAnimationFinish_Block _updateCardsAnimationFinish_Block;
 }
 
 @property (assign, nonatomic) int   cardIndex;
@@ -81,12 +83,16 @@ static CGFloat  animationDuration       = 0.2;
         [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             [self updateCardsDetail];
         } completion:^(BOOL finished) {
-            
+            if (_updateCardsAnimationFinish_Block) {
+                _updateCardsAnimationFinish_Block();
+            }
         }];
     }else{
         [self updateCardsDetail];
     }
 }
+
+
 
 - (void)updateCardsDetail
 {
@@ -94,11 +100,10 @@ static CGFloat  animationDuration       = 0.2;
     CGFloat delta_ScaleRatio    = 0.08;
     CGFloat delta_AlphaGap      = 0.25;
     
-    int cardAll_count = (int)[_cardArray count];
+    int cardAll_count           = (int)[_cardArray count];
     int cardWillDisappear_index = _cardIndex + cardAll_count - 1;
-    int cardWillAppear_index = _cardIndex + cardAll_count - 2;
+    int cardWillAppear_index    = _cardIndex + cardAll_count - 2;
     
-    NSLog(@"_cardIndex:%d", _cardIndex);
     if (cardWillDisappear_index >= cardAll_count) {
         cardWillDisappear_index -= cardAll_count;
     }
@@ -110,25 +115,23 @@ static CGFloat  animationDuration       = 0.2;
     
     //  即将消失的cardView
     CardView *cardView_willDisappear = _cardArray[cardWillDisappear_index];
-    cardView_willDisappear.hidden = YES;
     if (panDir == kPanDir_Left){
         [cardView_willDisappear setMaxX:0];
     }
     else if (panDir == kPanDir_Right) {
         [cardView_willDisappear setX:self.width];
     }
-    NSLog(@"cardView_willDisappear.mainLabel:%@", cardView_willDisappear.mainLabel.text);
-    NSLog(@"frame:%@", NSStringFromCGRect(cardView_willDisappear.frame));
-    
     
     //  即将显示的cardView
     CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
     cardView_willAppear.alpha = 1 - cardShowInView_Count * delta_AlphaGap;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * cardShowInView_Count)];
-    cardView_willAppear.hidden = YES;
     
-    NSLog(@"cardView_willAppear.mainLabel.text:%@", cardView_willAppear.mainLabel.text);
-    NSLog(@"====");
+    
+    _updateCardsAnimationFinish_Block = ^{
+        cardView_willDisappear.hidden = YES;
+        cardView_willAppear.hidden = YES;
+    };
     
     //  缩放动画
     cardView_willAppear.scaleAnimation.fromValue = cardView_willAppear.scaleAnimation.toValue;
