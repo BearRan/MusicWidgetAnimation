@@ -20,6 +20,7 @@
         label.text = @"123";
         label.backgroundColor = [UIColor orangeColor];
         [self addSubview:label];
+        
     }
     
     return self;

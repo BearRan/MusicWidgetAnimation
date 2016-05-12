@@ -199,21 +199,49 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     NSUInteger index_back = [cardView.subviews indexOfObject:cardView.backBgView];
     NSUInteger index_front = [cardView.subviews indexOfObject:cardView.frontBgView];
     
+    
     //  翻转后，back模式
     if (index_back < index_front) {
+        
         cardView.cardStatus = kCardStatus_Back;
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:cardView cache:YES];
+        
+        cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
+        cardView.scaleAnimation.toValue  =[NSNumber numberWithFloat:2.0];
+        cardView.scaleAnimation.duration = animationDuration_Flip;
+        cardView.scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
     }
     //  翻转后，front模式
     else{
+        
         cardView.cardStatus = kCardStatus_Front;
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cardView cache:YES];
+        
+        cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
+        cardView.scaleAnimation.toValue  =[NSNumber numberWithFloat:0.8];
+        cardView.scaleAnimation.duration = animationDuration_Flip;
+        cardView.scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
     }
     
+//    [cardView setWidth_DonotMoveCenter:WIDTH];
+//    [cardView setHeight_DonotMoveCenter:HEIGHT]
+    
+//    cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
+//    cardView.scaleAnimation.toValue  =[NSNumber numberWithFloat:1.2];
+//    cardView.scaleAnimation.duration = animationDuration_Flip;
+//    [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
+    
     [cardView exchangeSubviewAtIndex:index_back withSubviewAtIndex:index_front];
-    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cardView cache:YES];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationWillStartSelector:@selector(flipAnimationWillStart_Event)];
     [UIView setAnimationDidStopSelector:@selector(flipAnimationDidStop_Event)];
     [UIView commitAnimations];
+    
+    
+    
+    
     
     
     
