@@ -22,6 +22,7 @@
     if (self) {
         
         self.layer.cornerRadius = 5;
+        self.layer.masksToBounds = YES;
        
         //  _backBgView
         _backBgView = [[UIView alloc] initWithFrame:self.bounds];

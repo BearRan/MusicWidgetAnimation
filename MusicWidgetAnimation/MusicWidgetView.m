@@ -65,10 +65,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         [_cardArray addObject:cardView];
         [self addSubview:cardView];
         
-        if (i == 1) {
-            cardView.backgroundColor = [UIColor redColor];
-        }
-        
         if (i > 0) {
             [self insertSubview:cardView belowSubview:_cardArray[i - 1]];
         }else{
