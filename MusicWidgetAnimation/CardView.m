@@ -23,7 +23,9 @@
         
         self.layer.cornerRadius = 5;
         self.layer.masksToBounds = YES;
-       
+        self.cardStatus = kCardStatus_Front;
+        
+        
         //  _backBgView
         _backBgView = [[UIView alloc] initWithFrame:self.bounds];
         _backBgView.backgroundColor = [UIColor greenColor];
@@ -86,11 +88,6 @@
 {
     _cardViewBack = [[CardViewBack alloc] initWithFrame:self.frame];
     [_backBgView addSubview:_cardViewBack];
-    
-    CALayer *layer = _cardViewBack.layer;
-    CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
-    rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI, 0.0f, 1.0f, 0.0f);
-    layer.transform = rotationAndPerspectiveTransform;
 }
 
 - (void)layoutSubviews

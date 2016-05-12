@@ -9,8 +9,9 @@
 #import "MusicWidgetView.h"
 #import "CardView.h"
 
-static int      cardShowInView_Count    = 3;
-static CGFloat  animationDuration       = 0.2;
+static int      cardShowInView_Count        = 3;
+static CGFloat  animationDuration_Normal    = 0.2;
+static CGFloat  animationDuration_Flip      = 2;
 
 typedef void (^UpdateCardsAnimationFinish_Block)();
 
@@ -25,7 +26,8 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     UpdateCardsAnimationFinish_Block _updateCardsAnimationFinish_Block;
 }
 
-@property (assign, nonatomic) int   cardIndex;
+@property (assign, nonatomic) int       cardIndex;
+@property (strong, nonatomic) CardView  *cardView_Now;
 
 @end
 
@@ -79,7 +81,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 {
     if (animation) {
         
-        [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:animationDuration_Normal delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             [self updateCardsDetail];
         } completion:^(BOOL finished) {
             if (_updateCardsAnimationFinish_Block) {
@@ -135,7 +137,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     //  缩放动画
     cardView_willAppear.scaleAnimation.fromValue = cardView_willAppear.scaleAnimation.toValue;
     cardView_willAppear.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - cardShowInView_Count * delta_ScaleRatio];
-    cardView_willAppear.scaleAnimation.duration = animationDuration;
+    cardView_willAppear.scaleAnimation.duration = animationDuration_Normal;
     [cardView_willAppear.layer addAnimation:cardView_willAppear.scaleAnimation forKey:cardView_willAppear.scaleAnimation.keyPath];
     
     //  旋转复位
@@ -161,7 +163,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         //  缩放动画
         cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
         cardView.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - j * delta_ScaleRatio];
-        cardView.scaleAnimation.duration = animationDuration;
+        cardView.scaleAnimation.duration = animationDuration_Normal;
         [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
         
         //  手势移交
@@ -189,9 +191,37 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 {
     CardView *cardView = (CardView *)tapGesture.view;
     
-    cardView.flipAnimation.duration = animationDuration;
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [UIView beginAnimations:nil context:context];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:animationDuration_Flip];
+    
+    NSUInteger index_back = [cardView.subviews indexOfObject:cardView.backBgView];
+    NSUInteger index_front = [cardView.subviews indexOfObject:cardView.frontBgView];
+    
+    //  翻转后，back模式
+    if (index_back < index_front) {
+        cardView.cardStatus = kCardStatus_Back;
+    }
+    //  翻转后，front模式
+    else{
+        cardView.cardStatus = kCardStatus_Front;
+    }
+    
+    [cardView exchangeSubviewAtIndex:index_back withSubviewAtIndex:index_front];
+    [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cardView cache:YES];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationWillStartSelector:@selector(flipAnimationWillStart_Event)];
+    [UIView setAnimationDidStopSelector:@selector(flipAnimationDidStop_Event)];
+    [UIView commitAnimations];
+    
+    
+    
+//    cardView.flipAnimation.duration = animationDuration_Normal;
+//    cardView.flipAnimation.fromValue = 0;
+//    cardView.flipAnimation.toValue = [NSNumber numberWithFloat:M_PI/2.0];
 //    [cardView.layer addAnimation:cardView.flipAnimation forKey:cardView.flipAnimation.keyPath];
-    NSLog(@"card:%@", cardView.mainLabel.text);
+//    NSLog(@"card:%@", cardView.mainLabel.text);
     
 //    CATransform3D transform = CATransform3DMakeTranslation(0.0f, 0.0f, -15.0f);
 //    transform = CATransform3DRotate(transform, (CGFloat)M_PI + 0.4f, 0.0f, 0.0f, 1.0f);
@@ -211,38 +241,48 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     
     
-    id animationsBlock = ^{
-        
-        CATransform3D transform = CATransform3DIdentity;
-//        transform = CATransform3DMakeTranslation(0.0f, 0.0f, -15.0f);
-//        transform = CATransform3DRotate(transform, (CGFloat)M_PI + 0.4f, 0.0f, 0.0f, 1.0f);
-//        transform = CATransform3DRotate(transform, (CGFloat)M_PI_4, 1.0f, 0.0f, 0.0f);
-//        transform = CATransform3DRotate(transform, -0.4f, 0.0f, 1.0f, 0.0f);
-        transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
-//        transform = CATransform3DScale(transform, 3.0f, 3.0f, 3.0f);
-        
-        
-        CALayer *layer = cardView.layer;
-        CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
-        rotationAndPerspectiveTransform.m34 = 1.0 / 500;
-        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI, 1.0f, 0.0f, 0.0f);
-        
-        
-        rotationAndPerspectiveTransform = transform;
-        layer.transform = rotationAndPerspectiveTransform;
-    };
-    [UIView animateWithDuration:2.25
-                          delay:0.0
-                        options: UIViewAnimationOptionCurveEaseInOut
-                     animations:animationsBlock
-                     completion:^(BOOL finished) {
-                         
-                         NSUInteger index_1 = [cardView.subviews indexOfObject:cardView.frontBgView];
-                         NSUInteger index_2 = [cardView.subviews indexOfObject:cardView.backBgView];
-                         [cardView exchangeSubviewAtIndex:index_1 withSubviewAtIndex:index_2];
-                     }];
+//    id animationsBlock = ^{
+//        
+//        CATransform3D transform = CATransform3DIdentity;
+////        transform = CATransform3DMakeTranslation(0.0f, 0.0f, -15.0f);
+////        transform = CATransform3DRotate(transform, (CGFloat)M_PI + 0.4f, 0.0f, 0.0f, 1.0f);
+////        transform = CATransform3DRotate(transform, (CGFloat)M_PI_4, 1.0f, 0.0f, 0.0f);
+////        transform = CATransform3DRotate(transform, -0.4f, 0.0f, 1.0f, 0.0f);
+//        transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
+////        transform = CATransform3DScale(transform, 3.0f, 3.0f, 3.0f);
+//        
+//        
+//        CALayer *layer = cardView.layer;
+//        CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
+//        rotationAndPerspectiveTransform.m34 = 1.0 / 500;
+//        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI, 1.0f, 0.0f, 0.0f);
+//        
+//        
+//        rotationAndPerspectiveTransform = transform;
+//        layer.transform = rotationAndPerspectiveTransform;
+//    };
+//    [UIView animateWithDuration:2.25
+//                          delay:0.0
+//                        options: UIViewAnimationOptionCurveEaseInOut
+//                     animations:animationsBlock
+//                     completion:^(BOOL finished) {
+//                         
+//                         NSUInteger index_1 = [cardView.subviews indexOfObject:cardView.frontBgView];
+//                         NSUInteger index_2 = [cardView.subviews indexOfObject:cardView.backBgView];
+//                         [cardView exchangeSubviewAtIndex:index_1 withSubviewAtIndex:index_2];
+//                     }];
     
     
+}
+
+- (void)flipAnimationWillStart_Event
+{
+    [_cardView_Now removeGestureRecognizer:_panGesture];
+}
+
+- (void)flipAnimationDidStop_Event
+{
+    [_cardView_Now addGestureRecognizer:_panGesture];
 }
 
 /**
@@ -268,6 +308,12 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGPoint     position_translationInSelf  = [panGesture translationInView:self];
     CGFloat     rotationThreshold_degree    = 8.0 / 180 * M_PI;
     CardView    *gestureView                = (CardView *)panGesture.view;
+    
+    
+    //  back模式，return
+    if (gestureView.cardStatus == kCardStatus_Back) {
+        return;
+    }
     
     //  没有历史数据，每次切换页面时，只存储历史值，然后return
     if (!lastView || ![lastView isEqual:gestureView]) {
@@ -414,6 +460,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 {
     _cardIndex = cardIndex;
     
+    _cardView_Now = _cardArray[_cardIndex];
     [self updateCardsWithAnimation:YES];
 }
 

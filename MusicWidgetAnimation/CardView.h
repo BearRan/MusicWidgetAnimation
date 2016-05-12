@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum {
+    kCardStatus_Front,
+    kCardStatus_Back,
+}CardStatus;
+
 @class CardViewBack;
 
 @interface CardView : UIView
@@ -22,7 +27,8 @@
 @property (strong, nonatomic) CABasicAnimation  *rotationAnimation;
 @property (strong, nonatomic) CABasicAnimation  *flipAnimation;
 
-@property (strong, nonatomic) UIView  *frontBgView;
-@property (strong, nonatomic) UIView  *backBgView;
+@property (strong, nonatomic) UIView        *frontBgView;
+@property (strong, nonatomic) UIView        *backBgView;
+@property (assign, nonatomic) CardStatus    cardStatus;
 
 @end
