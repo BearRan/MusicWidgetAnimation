@@ -60,7 +60,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     for (int i = 0 ; i < cardShowInView_Count + 2; i++) {
         
         CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height)];
-        cardView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:1];
+        cardView.backgroundColor = [UIColor whiteColor];
         cardView.mainLabel.text = [NSString stringWithFormat:@"%d", i];
         [_cardArray addObject:cardView];
         [self addSubview:cardView];
@@ -194,8 +194,59 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CardView *cardView = (CardView *)tapGesture.view;
     
     cardView.flipAnimation.duration = animationDuration;
-    [cardView.layer addAnimation:cardView.flipAnimation forKey:cardView.flipAnimation.keyPath];
+//    [cardView.layer addAnimation:cardView.flipAnimation forKey:cardView.flipAnimation.keyPath];
     NSLog(@"card:%@", cardView.mainLabel.text);
+    
+//    CATransform3D transform = CATransform3DMakeTranslation(0.0f, 0.0f, -15.0f);
+//    transform = CATransform3DRotate(transform, (CGFloat)M_PI + 0.4f, 0.0f, 0.0f, 1.0f);
+//    transform = CATransform3DRotate(transform, (CGFloat)M_PI_4, 1.0f, 0.0f, 0.0f);
+//    transform = CATransform3DRotate(transform, -0.4f, 0.0f, 1.0f, 0.0f);
+//    transform = CATransform3DScale(transform, 3.0f, 3.0f, 3.0f);
+//    cardView.transform = transform;
+    
+//    UIViewAnimationOptions trans = UIViewAnimationOptionTransitionFlipFromLeft;
+//    [cardView transitionFromView:cardView
+//                        toView:cardView
+//                      duration:2.0
+//                       options:trans
+//                    completion:^(BOOL finished) {
+//                        
+//                    }];
+    
+    
+    
+    id animationsBlock = ^{
+        
+        CATransform3D transform = CATransform3DIdentity;
+//        transform = CATransform3DMakeTranslation(0.0f, 0.0f, -15.0f);
+//        transform = CATransform3DRotate(transform, (CGFloat)M_PI + 0.4f, 0.0f, 0.0f, 1.0f);
+//        transform = CATransform3DRotate(transform, (CGFloat)M_PI_4, 1.0f, 0.0f, 0.0f);
+//        transform = CATransform3DRotate(transform, -0.4f, 0.0f, 1.0f, 0.0f);
+        transform = CATransform3DRotate(transform, M_PI, 0, 1, 0);
+//        transform = CATransform3DScale(transform, 3.0f, 3.0f, 3.0f);
+        
+        
+        CALayer *layer = cardView.layer;
+        CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
+        rotationAndPerspectiveTransform.m34 = 1.0 / 500;
+        rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI, 1.0f, 0.0f, 0.0f);
+        
+        
+        rotationAndPerspectiveTransform = transform;
+        layer.transform = rotationAndPerspectiveTransform;
+    };
+    [UIView animateWithDuration:2.25
+                          delay:0.0
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:animationsBlock
+                     completion:^(BOOL finished) {
+                         
+                         NSUInteger index_1 = [cardView.subviews indexOfObject:cardView.frontBgView];
+                         NSUInteger index_2 = [cardView.subviews indexOfObject:cardView.backBgView];
+                         [cardView exchangeSubviewAtIndex:index_1 withSubviewAtIndex:index_2];
+                     }];
+    
+    
 }
 
 /**

@@ -18,6 +18,7 @@
 		090DA0441CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */; };
 		090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0521CDE13BB0017D3F0 /* CardView.m */; };
 		090DA0561CDE13E90017D3F0 /* MusicWidgetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */; };
+		093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4A951CE4A49C00DE4875 /* CardViewBack.m */; };
 		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,8 @@
 		090DA0521CDE13BB0017D3F0 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		090DA0541CDE13E90017D3F0 /* MusicWidgetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MusicWidgetView.h; sourceTree = "<group>"; };
 		090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MusicWidgetView.m; sourceTree = "<group>"; };
+		093F4A941CE4A49C00DE4875 /* CardViewBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewBack.h; sourceTree = "<group>"; };
+		093F4A951CE4A49C00DE4875 /* CardViewBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewBack.m; sourceTree = "<group>"; };
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				090DA0551CDE13E90017D3F0 /* MusicWidgetView.m */,
 				090DA0511CDE13BB0017D3F0 /* CardView.h */,
 				090DA0521CDE13BB0017D3F0 /* CardView.m */,
+				093F4A941CE4A49C00DE4875 /* CardViewBack.h */,
+				093F4A951CE4A49C00DE4875 /* CardViewBack.m */,
 				09E44EA41CDE255400101712 /* AppConstant.h */,
 				09E44EA51CDE255400101712 /* AppConstant.m */,
 				09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */,
@@ -366,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				090DA0561CDE13E90017D3F0 /* MusicWidgetView.m in Sources */,
+				093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */,
 				090DA0261CDE0EF90017D3F0 /* ViewController.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
 				090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */,

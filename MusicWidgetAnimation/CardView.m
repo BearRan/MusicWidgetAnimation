@@ -7,6 +7,11 @@
 //
 
 #import "CardView.h"
+#import "CardViewBack.h"
+
+@interface CardView ()
+
+@end
 
 @implementation CardView
 
@@ -17,20 +22,36 @@
     if (self) {
         
         self.layer.cornerRadius = 5;
+       
+        //  _backBgView
+        _backBgView = [[UIView alloc] initWithFrame:self.bounds];
+        _backBgView.backgroundColor = [UIColor greenColor];
+        [self addSubview:_backBgView];
         
+        [self initSetBackView];
+        
+        
+        //  _frontBgView
+        _frontBgView = [[UIView alloc] initWithFrame:self.bounds];
+        _frontBgView.backgroundColor = [UIColor brownColor];
+        [self addSubview:_frontBgView];
+        
+        
+        //  components
         _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
         _headImgV.layer.cornerRadius = _headImgV.height / 2.0;
         _headImgV.backgroundColor = [UIColor blueColor];
-        [self addSubview:_headImgV];
+        [_frontBgView addSubview:_headImgV];
         
         _mainLabel = [[UILabel alloc] init];
-        [self addSubview:_mainLabel];
+        [_frontBgView addSubview:_mainLabel];
         
         _assignLabel_1 = [[UILabel alloc] init];
-        [self addSubview:_assignLabel_1];
+        [_frontBgView addSubview:_assignLabel_1];
         
         _assignLabel_2 = [[UILabel alloc] init];
-        [self addSubview:_assignLabel_2];
+        [_frontBgView addSubview:_assignLabel_2];
+        
         
         //  缩放动画
         _scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
@@ -58,6 +79,17 @@
     }
     
     return self;
+}
+
+- (void)initSetBackView
+{
+    _cardViewBack = [[CardViewBack alloc] initWithFrame:self.frame];
+    [_backBgView addSubview:_cardViewBack];
+    
+    CALayer *layer = _cardViewBack.layer;
+    CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
+    rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI, 0.0f, 1.0f, 0.0f);
+    layer.transform = rotationAndPerspectiveTransform;
 }
 
 - (void)layoutSubviews

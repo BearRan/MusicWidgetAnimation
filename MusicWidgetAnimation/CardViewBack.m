@@ -1,0 +1,38 @@
+//
+//  CardViewBack.m
+//  MusicWidgetAnimation
+//
+//  Created by Bear on 16/5/12.
+//  Copyright © 2016年 Bear. All rights reserved.
+//
+
+#import "CardViewBack.h"
+
+@implementation CardViewBack
+
+- (instancetype)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
+        label.text = @"123";
+        label.backgroundColor = [UIColor orangeColor];
+        [self addSubview:label];
+    }
+    
+    return self;
+}
+
+
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+
+@end
