@@ -184,6 +184,17 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
 }
 
+- (void)setBigSize:(UIView *)view
+{
+    [view setWidth_DonotMoveCenter:WIDTH];
+    [view setHeight_DonotMoveCenter:HEIGHT];
+}
+
+- (void)setSmallSize:(UIView *)view
+{
+    [view setWidth_DonotMoveCenter:cardView_width];
+    [view setHeight_DonotMoveCenter:cardView_height];
+}
 
 #pragma mark - Gesture
 
@@ -206,11 +217,10 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         cardView.cardStatus = kCardStatus_Back;
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:cardView cache:YES];
         
-        cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
-        cardView.scaleAnimation.toValue  =[NSNumber numberWithFloat:2.0];
-        cardView.scaleAnimation.duration = animationDuration_Flip;
-        cardView.scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
+        [self setBigSize:cardView];
+        [self setBigSize:cardView.frontBgView];
+        [self setBigSize:cardView.backBgView];
+        [self setBigSize:(UIView *)cardView.cardViewBack];
     }
     //  翻转后，front模式
     else{
@@ -218,20 +228,11 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         cardView.cardStatus = kCardStatus_Front;
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cardView cache:YES];
         
-        cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
-        cardView.scaleAnimation.toValue  =[NSNumber numberWithFloat:0.8];
-        cardView.scaleAnimation.duration = animationDuration_Flip;
-        cardView.scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
+        [self setSmallSize:cardView];
+        [self setSmallSize:cardView.frontBgView];
+        [self setSmallSize:cardView.backBgView];
+        [self setSmallSize:(UIView *)cardView.cardViewBack];
     }
-    
-//    [cardView setWidth_DonotMoveCenter:WIDTH];
-//    [cardView setHeight_DonotMoveCenter:HEIGHT]
-    
-//    cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
-//    cardView.scaleAnimation.toValue  =[NSNumber numberWithFloat:1.2];
-//    cardView.scaleAnimation.duration = animationDuration_Flip;
-//    [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
     
     [cardView exchangeSubviewAtIndex:index_back withSubviewAtIndex:index_front];
     [UIView setAnimationDelegate:self];
