@@ -202,6 +202,9 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 {
     CardView *cardView = (CardView *)tapGesture.view;
     
+    cardView.layer.position = CGPointMake(self.width / 2.0, self.height / 2.0);
+    cardView.layer.anchorPoint = CGPointMake(0.5, 0.5);
+    
     CGContextRef context = UIGraphicsGetCurrentContext();
     [UIView beginAnimations:nil context:context];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
@@ -355,19 +358,32 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGFloat tanA = position_translationInSelf.x / (cardView_height / 3.0);
     CGFloat rotation_degree = atan(tanA);
     
-    
     //  旋转
     BOOL res_rotation1 = (rotation_degree > 0 && rotation_degree < rotationThreshold_degree);
     bool res_rotation2 = (rotation_degree < 0 && -rotation_degree < rotationThreshold_degree);
     if (res_rotation1 || res_rotation2)
     {
+        //  手势改变
+        if (panGesture.state == UIGestureRecognizerStateChanged) {
+            gestureView.layer.position = CGPointMake(self.width / 2.0, self.height / 2.0 + cardView_height / 2.0);
+            gestureView.layer.anchorPoint = CGPointMake(0.5, 1);
+            
+            gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
+            gestureView.rotationAnimation.toValue = [NSNumber numberWithFloat:rotation_degree];
+            [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
+        }
+        //  手势结束
+        else if (panGesture.state == UIGestureRecognizerStateEnded){
+            
+            //  仍然有旋转角度
+            if (gestureView.rotationAnimation.toValue != [NSNumber numberWithFloat:0]) {
+                gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
+                gestureView.rotationAnimation.toValue = [NSNumber numberWithFloat:0];
+                [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
+            }
+        }
         
-        gestureView.layer.position = CGPointMake(self.width / 2.0, self.height / 2.0 + cardView_height / 2.0);
-        gestureView.layer.anchorPoint = CGPointMake(0.5, 1);
-
-        gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
-        gestureView.rotationAnimation.toValue = [NSNumber numberWithFloat:rotation_degree];
-        [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
+        
         
     }
     //  平移
@@ -456,7 +472,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         }
     }
     
-    
+
     //  存储历史X值
     lastPositionX = position.x;
 }
