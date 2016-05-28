@@ -42,13 +42,24 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
         
-        [self createUI];
-        
         self.cardIndex = 0;
         panDir = kPanDir_Null;
     }
     
     return self;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+
+    static BOOL firstCreateUI = YES;
+    if (firstCreateUI == YES) {
+        
+        [self createUI];
+        firstCreateUI = NO;
+    }
+
 }
 
 
@@ -133,7 +144,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         cardView_willDisappear.hidden = YES;
         cardView_willAppear.hidden = YES;
     };
-    
+
     //  缩放动画
     cardView_willAppear.scaleAnimation.fromValue = cardView_willAppear.scaleAnimation.toValue;
     cardView_willAppear.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - cardShowInView_Count * delta_ScaleRatio];
@@ -177,7 +188,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         
         //  即将显示的view插入在最后一个可见cardView的下方
         if (j == cardShowInView_Count - 1) {
-             [self insertSubview:cardView_willAppear belowSubview:cardView];
+            [self insertSubview:cardView_willAppear belowSubview:cardView];
         }
 
     }
@@ -334,8 +345,8 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     static CGFloat      lastPositionX = 0;
     static UIView       *lastView;
     
-    CGFloat     leftThreshold_x             = self.width * (1.0 / 4);
-    CGFloat     rightThreshold_x            = self.width * (3.0 / 4);
+    CGFloat     leftThreshold_x             = self.width * (2.0 / 4);
+    CGFloat     rightThreshold_x            = self.width * (2.0 / 4);
     CGPoint     position                    = [panGesture locationInView:self];
     CGPoint     position_translationInSelf  = [panGesture translationInView:self];
     CGFloat     rotationThreshold_degree    = 8.0 / 180 * M_PI;
@@ -508,13 +519,5 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     _cardView_Now = _cardArray[_cardIndex];
     [self updateCardsWithAnimation:YES];
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
