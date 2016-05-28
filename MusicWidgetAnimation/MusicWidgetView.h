@@ -16,4 +16,9 @@ typedef enum {
 
 @interface MusicWidgetView : UIView
 
+
+@property (assign, nonatomic) int      cardShowInView_Count;        //可见的卡片数量
+@property (assign, nonatomic) CGFloat  animationDuration_Normal;    //普通动画时间
+@property (assign, nonatomic) CGFloat  animationDuration_Flip;      //翻转动画时间
+
 @end

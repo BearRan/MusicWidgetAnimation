@@ -20,6 +20,10 @@
     
     MusicWidgetView *musicWidgetView = [[MusicWidgetView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     musicWidgetView.backgroundColor = ys_302e35;
+//    musicWidgetView.cardShowInView_Count = 6;
+//    musicWidgetView.animationDuration_Normal = 2.0;
+//    musicWidgetView.animationDuration_Flip = 1.0;
+    
     [self.view addSubview:musicWidgetView];
 
 }

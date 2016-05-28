@@ -9,10 +9,6 @@
 #import "MusicWidgetView.h"
 #import "CardView.h"
 
-static int      cardShowInView_Count        = 3;
-static CGFloat  animationDuration_Normal    = 0.2;
-static CGFloat  animationDuration_Flip      = 2;
-
 typedef void (^UpdateCardsAnimationFinish_Block)();
 
 @interface MusicWidgetView ()
@@ -38,6 +34,11 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     self = [super initWithFrame:frame];
     
     if (self) {
+        
+        //  默认参数配置
+        _cardShowInView_Count        = 3;
+        _animationDuration_Normal    = 0.2;
+        _animationDuration_Flip      = 2;
         
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
@@ -70,7 +71,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     _tapGesture.numberOfTapsRequired = 1;
     _cardArray = [[NSMutableArray alloc] init];
     
-    for (int i = 0 ; i < cardShowInView_Count + 2; i++) {
+    for (int i = 0 ; i < _cardShowInView_Count + 2; i++) {
         
         CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height)];
         cardView.backgroundColor = [UIColor whiteColor];
@@ -92,7 +93,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 {
     if (animation) {
         
-        [UIView animateWithDuration:animationDuration_Normal delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        [UIView animateWithDuration:_animationDuration_Normal delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
             [self updateCardsDetail];
         } completion:^(BOOL finished) {
             if (_updateCardsAnimationFinish_Block) {
@@ -136,8 +137,8 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     //  即将显示的cardView
     CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
-    cardView_willAppear.alpha = 1 - cardShowInView_Count * delta_AlphaGap;
-    [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * cardShowInView_Count)];
+    cardView_willAppear.alpha = 1 - _cardShowInView_Count * delta_AlphaGap;
+    [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * _cardShowInView_Count)];
     
     
     _updateCardsAnimationFinish_Block = ^{
@@ -147,8 +148,8 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 
     //  缩放动画
     cardView_willAppear.scaleAnimation.fromValue = cardView_willAppear.scaleAnimation.toValue;
-    cardView_willAppear.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - cardShowInView_Count * delta_ScaleRatio];
-    cardView_willAppear.scaleAnimation.duration = animationDuration_Normal;
+    cardView_willAppear.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - _cardShowInView_Count * delta_ScaleRatio];
+    cardView_willAppear.scaleAnimation.duration = _animationDuration_Normal;
     [cardView_willAppear.layer addAnimation:cardView_willAppear.scaleAnimation forKey:cardView_willAppear.scaleAnimation.keyPath];
     
     //  旋转复位
@@ -159,7 +160,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     
     //  中间可见的cardView
-    for (int j = 0 ; j < cardShowInView_Count; j++) {
+    for (int j = 0 ; j < _cardShowInView_Count; j++) {
         
         int i = j + _cardIndex;
         if (i >= cardAll_count) {
@@ -174,7 +175,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         //  缩放动画
         cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
         cardView.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - j * delta_ScaleRatio];
-        cardView.scaleAnimation.duration = animationDuration_Normal;
+        cardView.scaleAnimation.duration = _animationDuration_Normal;
         [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
         
         //  手势移交
@@ -187,7 +188,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         }
         
         //  即将显示的view插入在最后一个可见cardView的下方
-        if (j == cardShowInView_Count - 1) {
+        if (j == _cardShowInView_Count - 1) {
             [self insertSubview:cardView_willAppear belowSubview:cardView];
         }
 
@@ -219,7 +220,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGContextRef context = UIGraphicsGetCurrentContext();
     [UIView beginAnimations:nil context:context];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:animationDuration_Flip];
+    [UIView setAnimationDuration:_animationDuration_Flip];
     
     NSUInteger index_back = [cardView.subviews indexOfObject:cardView.backBgView];
     NSUInteger index_front = [cardView.subviews indexOfObject:cardView.frontBgView];
@@ -260,7 +261,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     
     
-//    cardView.flipAnimation.duration = animationDuration_Normal;
+//    cardView.flipAnimation.duration = _animationDuration_Normal;
 //    cardView.flipAnimation.fromValue = 0;
 //    cardView.flipAnimation.toValue = [NSNumber numberWithFloat:M_PI/2.0];
 //    [cardView.layer addAnimation:cardView.flipAnimation forKey:cardView.flipAnimation.keyPath];
