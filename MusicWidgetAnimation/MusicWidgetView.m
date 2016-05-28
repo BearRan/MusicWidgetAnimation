@@ -41,6 +41,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         _animationDuration_Flip     = 2;
         _cardRotateWhenPan          = YES;
         _cardRotateMaxAngle         = 8.0;
+        _cardAlphaGapValue          = 0.25;
         
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
@@ -113,7 +114,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 {
     CGFloat gap_y               = 25;
     CGFloat delta_ScaleRatio    = 0.08;
-    CGFloat delta_AlphaGap      = 0.25;
     
     int cardAll_count           = (int)[_cardArray count];
     int cardWillDisappear_index = _cardIndex + cardAll_count - 1;
@@ -139,7 +139,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     //  即将显示的cardView
     CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
-    cardView_willAppear.alpha = 1 - _cardShowInView_Count * delta_AlphaGap;
+    cardView_willAppear.alpha = 1 - _cardShowInView_Count * _cardAlphaGapValue;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * _cardShowInView_Count)];
     
     
@@ -171,7 +171,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         
         CardView *cardView = _cardArray[i];
         cardView.hidden = NO;
-        cardView.alpha = 1 - j * delta_AlphaGap;
+        cardView.alpha = 1 - j * _cardAlphaGapValue;
         [cardView setCenter:CGPointMake(self.width / 2.0, self.height / 2.0 - gap_y * j)];
 
         //  缩放动画

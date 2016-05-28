@@ -23,5 +23,6 @@ typedef enum {
 @property (assign, nonatomic) int       cardShowInView_Count;       //可见的卡片数量
 @property (assign, nonatomic) BOOL      cardRotateWhenPan;          //卡片拖动时是否可旋转
 @property (assign, nonatomic) CGFloat   cardRotateMaxAngle;         //卡片可旋转的最大角度(角度制，如，90，180)
+@property (assign, nonatomic) CGFloat   cardAlphaGapValue;          //相邻卡片alpha差值
 
 @end

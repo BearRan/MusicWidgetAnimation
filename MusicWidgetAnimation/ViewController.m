@@ -25,6 +25,7 @@
 //    musicWidgetView.animationDuration_Flip = 1.0;
 //    musicWidgetView.cardRotateWhenPan = NO;
 //    musicWidgetView.cardRotateMaxAngle = 45;
+//    musicWidgetView.cardAlphaGapValue = 0.1;
 
     [self.view addSubview:musicWidgetView];
 
