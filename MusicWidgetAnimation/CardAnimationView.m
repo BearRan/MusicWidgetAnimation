@@ -44,6 +44,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         _cardAlphaGapValue          = 0.25;
         _cardOffSetPoint            = CGPointMake(0, 25);
         _cardScaleRatio             = 0.08;
+        _cardFlyMaxDistance         = 40;
         
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
@@ -354,7 +355,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGFloat     rotationThreshold_degree    = 1.0 * _cardRotateMaxAngle / 180 * M_PI;
     CardView    *gestureView                = (CardView *)panGesture.view;
     
-    
     //  back模式，return
     if (gestureView.cardStatus == kCardStatus_Back) {
         return;
@@ -371,10 +371,16 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGFloat tanA = position_translationInSelf.x / (cardView_height / 3.0);
     CGFloat rotation_degree = atan(tanA);
     
+    //  cardViewCell偏移位置绝对值
+    CGFloat cardViewABSOffX = position.x - self.width / 2.0;
+    if (cardViewABSOffX < 0) {
+        cardViewABSOffX = -cardViewABSOffX;
+    }
+    
     //  旋转
     BOOL res_rotation1 = (rotation_degree > 0 && rotation_degree < rotationThreshold_degree);
-    bool res_rotation2 = (rotation_degree < 0 && -rotation_degree < rotationThreshold_degree);
-    if ((res_rotation1 || res_rotation2) && _cardRotateWhenPan)
+    BOOL res_rotation2 = (rotation_degree < 0 && -rotation_degree < rotationThreshold_degree);
+    if (_cardRotateWhenPan == YES && (res_rotation1 || res_rotation2))
     {
         //  手势改变
         if (panGesture.state == UIGestureRecognizerStateChanged) {
@@ -395,10 +401,26 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
                 [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
             }
         }
+    }
+    
+    //  平移没有超出阈值的情况
+    else if (_cardRotateWhenPan == NO && cardViewABSOffX < _cardFlyMaxDistance)
+    {
+        //  手势改变
+        if (panGesture.state == UIGestureRecognizerStateChanged) {
         
-        
+            [gestureView setX:gestureView.x + (position.x - lastPositionX)];
+        }
+        //  手势结束
+        else if (panGesture.state == UIGestureRecognizerStateEnded){
+            
+            [UIView animateWithDuration:_animationDuration_Normal animations: ^(){
+                [gestureView setCenterX:self.width / 2.0];
+            }];
+        }
         
     }
+    
     //  平移
     else{
         

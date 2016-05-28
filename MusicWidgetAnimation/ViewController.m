@@ -29,6 +29,7 @@
 //    cardAnimationView.cardAlphaGapValue = 0.1;
 //    cardAnimationView.cardOffSetPoint = CGPointMake(25, 40);
 //    cardAnimationView.cardScaleRatio  = 0.15;
+    cardAnimationView.cardFlyMaxDistance = 80;
 
     [self.view addSubview:cardAnimationView];
 
