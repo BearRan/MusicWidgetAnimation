@@ -45,7 +45,7 @@
     
     CardView *cardView = (CardView *)[cardAnimationView dequeueReusableCardViewCellWithIdentifier:cardViewID_Str];
     if (!cardView) {
-        cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height)];
+        cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height) reuseIdentifier:cardViewID_Str];
     }
     
     cardView.backgroundColor = [UIColor whiteColor];
