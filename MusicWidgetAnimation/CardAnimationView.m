@@ -89,9 +89,10 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         
         CardView *cardView;
         if ([_delegate respondsToSelector:@selector(cardViewInCardAnimationView:AtIndex:)]) {
-            cardView = (CardView *)[_delegate cardViewInCardAnimationView:self AtIndex:(int)_cardNextIndex_logic];
-            _cardNextIndex_logic ++;
+            cardView = (CardView *)[_delegate cardViewInCardAnimationView:self AtIndex:i];
         }
+        _cardNextIndex_logic = _cardShowInView_Count;
+        
         if ([_delegate respondsToSelector:@selector(numberOfCardsInCardAnimationView:)]) {
             _cards_AllCount = [_delegate numberOfCardsInCardAnimationView:self];
         }
@@ -153,15 +154,20 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     }
     
     //  即将显示的cardView
-    _cardDisplayArray[cardWillAppear_index] = [self getCardViewInCardAnimationView:self AtIndex:(int)_cardNextIndex_logic++];
-    CardView *cardView_willAppear = _cardDisplayArray[cardWillAppear_index];
+    CardView *cardView_willAppear;
+    if (_cardNextIndex_logic < _cards_AllCount) {
+        _cardDisplayArray[cardWillAppear_index] = [self getCardViewInCardAnimationView:self AtIndex:(int)_cardNextIndex_logic++];
+        cardView_willAppear = _cardDisplayArray[cardWillAppear_index];
+    }else{
+        _cardDisplayArray[cardWillAppear_index] = [CardView new];
+    }
     cardView_willAppear.alpha = 1 - _cardShowInView_Count * _cardAlphaGapValue;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * _cardShowInView_Count, self.height / 2.0 - _cardOffSetPoint.y * _cardShowInView_Count)];
     
     
     _updateCardsAnimationFinish_Block = ^{
-        cardView_willDisappear.hidden = YES;
-        cardView_willAppear.hidden = YES;
+        cardView_willDisappear.alpha = 0;
+        cardView_willAppear.alpha = 0;
     };
 
     //  缩放动画
