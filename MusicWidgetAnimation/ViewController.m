@@ -22,7 +22,7 @@
     CardAnimationView *cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     cardAnimationView.delegate = self;
     cardAnimationView.backgroundColor = ys_302e35;
-//    cardAnimationView.cardShowInView_Count = 6;
+    cardAnimationView.cardShowInView_Count = 6;
 //    cardAnimationView.animationDuration_Normal = 2.0;
 //    cardAnimationView.animationDuration_Flip = 1.0;
 //    cardAnimationView.cardRotateWhenPan = NO;
@@ -31,6 +31,7 @@
 //    cardAnimationView.cardOffSetPoint = CGPointMake(25, 40);
 //    cardAnimationView.cardScaleRatio  = 0.15;
 //    cardAnimationView.cardFlyMaxDistance = 80;
+    cardAnimationView.cardCycleShow = YES;
 
     [self.view addSubview:cardAnimationView];
 
@@ -55,7 +56,7 @@
 
 - (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView
 {
-    return 20;
+    return 10;
 }
 
 - (void)didReceiveMemoryWarning {

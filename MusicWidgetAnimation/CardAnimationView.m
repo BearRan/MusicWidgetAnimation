@@ -153,11 +153,21 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         [cardView_willDisappear setX:self.width];
     }
     
+    //  旧的即将显示的view
+    CardView *oldWillDisplayView = _cardDisplayArray[cardWillAppear_index];
+    oldWillDisplayView.alpha = 0;
+    
     //  即将显示的cardView
     CardView *cardView_willAppear;
     if (_cardNextIndex_logic < _cards_AllCount) {
         _cardDisplayArray[cardWillAppear_index] = [self getCardViewInCardAnimationView:self AtIndex:(int)_cardNextIndex_logic++];
         cardView_willAppear = _cardDisplayArray[cardWillAppear_index];
+        
+        if (_cardCycleShow == YES) {
+            if (_cardNextIndex_logic >= _cards_AllCount) {
+                _cardNextIndex_logic = 0;
+            }
+        }
     }else{
         _cardDisplayArray[cardWillAppear_index] = [CardView new];
     }
