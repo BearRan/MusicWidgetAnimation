@@ -24,6 +24,7 @@ typedef enum {
 @property (assign, nonatomic) BOOL      cardRotateWhenPan;          //卡片拖动时是否可旋转
 @property (assign, nonatomic) CGFloat   cardRotateMaxAngle;         //卡片可旋转的最大角度(角度制，如，90，180)
 @property (assign, nonatomic) CGFloat   cardAlphaGapValue;          //相邻卡片alpha差值
-@property (assign, nonatomic) CGPoint   cardOffSetPoint;            //相邻卡片位置设定
+@property (assign, nonatomic) CGPoint   cardOffSetPoint;            //相邻卡片偏移位置设定
+@property (assign, nonatomic) CGFloat   cardScaleRatio;             //相邻卡片缩放比例
 
 @end

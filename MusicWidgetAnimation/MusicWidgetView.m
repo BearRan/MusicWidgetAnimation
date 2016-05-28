@@ -43,6 +43,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         _cardRotateMaxAngle         = 8.0;
         _cardAlphaGapValue          = 0.25;
         _cardOffSetPoint            = CGPointMake(0, 25);
+        _cardScaleRatio             = 0.08;
         
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
@@ -113,8 +114,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 
 - (void)updateCardsDetail
 {
-    CGFloat delta_ScaleRatio    = 0.08;
-    
     int cardAll_count           = (int)[_cardArray count];
     int cardWillDisappear_index = _cardIndex + cardAll_count - 1;
     int cardWillAppear_index    = _cardIndex + cardAll_count - 2;
@@ -150,7 +149,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 
     //  缩放动画
     cardView_willAppear.scaleAnimation.fromValue = cardView_willAppear.scaleAnimation.toValue;
-    cardView_willAppear.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - _cardShowInView_Count * delta_ScaleRatio];
+    cardView_willAppear.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - _cardShowInView_Count * _cardScaleRatio];
     cardView_willAppear.scaleAnimation.duration = _animationDuration_Normal;
     [cardView_willAppear.layer addAnimation:cardView_willAppear.scaleAnimation forKey:cardView_willAppear.scaleAnimation.keyPath];
     
@@ -176,7 +175,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 
         //  缩放动画
         cardView.scaleAnimation.fromValue = cardView.scaleAnimation.toValue;
-        cardView.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - j * delta_ScaleRatio];
+        cardView.scaleAnimation.toValue = [NSNumber numberWithFloat:1 - j * _cardScaleRatio];
         cardView.scaleAnimation.duration = _animationDuration_Normal;
         [cardView.layer addAnimation:cardView.scaleAnimation forKey:cardView.scaleAnimation.keyPath];
         

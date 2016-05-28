@@ -26,7 +26,8 @@
 //    musicWidgetView.cardRotateWhenPan = NO;
 //    musicWidgetView.cardRotateMaxAngle = 45;
 //    musicWidgetView.cardAlphaGapValue = 0.1;
-//    musicWidgetView.cardOffSetPoint = CGPointMake(-15, -30);
+//    musicWidgetView.cardOffSetPoint = CGPointMake(25, 40);
+//    musicWidgetView.cardScaleRatio  = 0.15;
 
     [self.view addSubview:musicWidgetView];
 
