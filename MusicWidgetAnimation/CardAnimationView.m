@@ -599,7 +599,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 }
 
 #pragma mark - reuse
-#warning Modify
 - (CardViewCell *)getCardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
 {
     CardView *cardView;
