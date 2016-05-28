@@ -23,6 +23,7 @@
 //    musicWidgetView.cardShowInView_Count = 6;
 //    musicWidgetView.animationDuration_Normal = 2.0;
 //    musicWidgetView.animationDuration_Flip = 1.0;
+    musicWidgetView.cardRotateWhenPan = NO;
     
     [self.view addSubview:musicWidgetView];
 

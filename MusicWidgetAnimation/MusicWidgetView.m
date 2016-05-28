@@ -36,9 +36,10 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     if (self) {
         
         //  默认参数配置
-        _cardShowInView_Count        = 3;
-        _animationDuration_Normal    = 0.2;
-        _animationDuration_Flip      = 2;
+        _cardShowInView_Count       = 3;
+        _animationDuration_Normal   = 0.2;
+        _animationDuration_Flip     = 2;
+        _cardRotateWhenPan          = YES;
         
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
@@ -373,7 +374,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     //  旋转
     BOOL res_rotation1 = (rotation_degree > 0 && rotation_degree < rotationThreshold_degree);
     bool res_rotation2 = (rotation_degree < 0 && -rotation_degree < rotationThreshold_degree);
-    if (res_rotation1 || res_rotation2)
+    if ((res_rotation1 || res_rotation2) && _cardRotateWhenPan)
     {
         //  手势改变
         if (panGesture.state == UIGestureRecognizerStateChanged) {
@@ -401,27 +402,30 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     //  平移
     else{
         
-        //  旋转最终角度校对
-        BOOL res_1 = (gestureView.rotationAnimation.toValue != [NSNumber numberWithFloat:rotationThreshold_degree]);
-        BOOL res_2 = (gestureView.rotationAnimation.toValue != [NSNumber numberWithFloat:-rotationThreshold_degree]);
-        BOOL res_3 = (rotation_degree > 0);
-        if ((res_3 && res_1) || (!res_3 && res_2)) {
-            
-            NSNumber *toValue = [NSNumber numberWithFloat:rotationThreshold_degree];
-            if (res_3 && res_1) {
+        if (_cardRotateWhenPan == YES) {
+            //  旋转最终角度校对
+            BOOL res_1 = (gestureView.rotationAnimation.toValue != [NSNumber numberWithFloat:rotationThreshold_degree]);
+            BOOL res_2 = (gestureView.rotationAnimation.toValue != [NSNumber numberWithFloat:-rotationThreshold_degree]);
+            BOOL res_3 = (rotation_degree > 0);
+            if ((res_3 && res_1) || (!res_3 && res_2)) {
                 
-                toValue = [NSNumber numberWithFloat:rotationThreshold_degree];
-            }else if (!res_3 && res_2){
-                toValue = [NSNumber numberWithFloat:-rotationThreshold_degree];
+                NSNumber *toValue = [NSNumber numberWithFloat:rotationThreshold_degree];
+                if (res_3 && res_1) {
+                    
+                    toValue = [NSNumber numberWithFloat:rotationThreshold_degree];
+                }else if (!res_3 && res_2){
+                    toValue = [NSNumber numberWithFloat:-rotationThreshold_degree];
+                }
+                
+                gestureView.layer.position = CGPointMake(gestureView.layer.position.x, self.height / 2.0 + cardView_height / 2.0);
+                gestureView.layer.anchorPoint = CGPointMake(0.5, 1);
+                
+                gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
+                gestureView.rotationAnimation.toValue = toValue;
+                [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
             }
-            
-            gestureView.layer.position = CGPointMake(gestureView.layer.position.x, self.height / 2.0 + cardView_height / 2.0);
-            gestureView.layer.anchorPoint = CGPointMake(0.5, 1);
-            
-            gestureView.rotationAnimation.fromValue = gestureView.rotationAnimation.toValue;
-            gestureView.rotationAnimation.toValue = toValue;
-            [gestureView.layer addAnimation:gestureView.rotationAnimation forKey:gestureView.rotationAnimation.keyPath];
         }
+        
         
         //  和历史坐标比较，判断左滑
         if (lastPositionX > position.x) {
