@@ -73,7 +73,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         [self createUI];
         firstCreateUI = NO;
     }
-
 }
 
 
@@ -175,9 +174,15 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * _cardShowInView_Count, self.height / 2.0 - _cardOffSetPoint.y * _cardShowInView_Count)];
     
     
+    //  动画执行完之后的处理，（设置为hidden=YES后，会影响复用机制，所以动画执行完后hidden=NO）
+    cardView_willDisappear.hidden = YES;
+    cardView_willAppear.hidden = YES;
+    
     _updateCardsAnimationFinish_Block = ^{
         cardView_willDisappear.alpha = 0;
         cardView_willAppear.alpha = 0;
+        cardView_willDisappear.hidden = NO;
+        cardView_willAppear.hidden = NO;
     };
 
     //  缩放动画
