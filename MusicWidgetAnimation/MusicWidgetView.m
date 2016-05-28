@@ -40,6 +40,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         _animationDuration_Normal   = 0.2;
         _animationDuration_Flip     = 2;
         _cardRotateWhenPan          = YES;
+        _cardRotateMaxAngle         = 8.0;
         
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
@@ -351,7 +352,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGFloat     rightThreshold_x            = self.width * (2.0 / 4);
     CGPoint     position                    = [panGesture locationInView:self];
     CGPoint     position_translationInSelf  = [panGesture translationInView:self];
-    CGFloat     rotationThreshold_degree    = 8.0 / 180 * M_PI;
+    CGFloat     rotationThreshold_degree    = 1.0 * _cardRotateMaxAngle / 180 * M_PI;
     CardView    *gestureView                = (CardView *)panGesture.view;
     
     

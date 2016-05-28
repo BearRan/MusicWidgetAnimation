@@ -23,8 +23,9 @@
 //    musicWidgetView.cardShowInView_Count = 6;
 //    musicWidgetView.animationDuration_Normal = 2.0;
 //    musicWidgetView.animationDuration_Flip = 1.0;
-    musicWidgetView.cardRotateWhenPan = NO;
-    
+//    musicWidgetView.cardRotateWhenPan = NO;
+//    musicWidgetView.cardRotateMaxAngle = 45;
+
     [self.view addSubview:musicWidgetView];
 
 }
