@@ -1,5 +1,5 @@
 //
-//  MusicWidgetView.h
+//  CardAnimationView.h
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/5/7.
@@ -14,9 +14,16 @@ typedef enum {
     kPanDir_Left,
 }PanDirection;
 
-@interface MusicWidgetView : UIView
+@protocol CardAnimationViewDelegate <NSObject>
 
+@required
+- (UIView *)cardViewFrontAtIndex:(int)index;
 
+@end
+
+@interface CardAnimationView : UIView
+
+@property (weak, nonatomic) id<CardAnimationViewDelegate> delegate;
 
 @property (assign, nonatomic) CGFloat   animationDuration_Normal;   //普通动画时间
 @property (assign, nonatomic) CGFloat   animationDuration_Flip;     //翻转动画时间

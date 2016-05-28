@@ -1,17 +1,17 @@
 //
-//  MusicWidgetView.m
+//  CardAnimationView.m
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/5/7.
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "MusicWidgetView.h"
+#import "CardAnimationView.h"
 #import "CardView.h"
 
 typedef void (^UpdateCardsAnimationFinish_Block)();
 
-@interface MusicWidgetView ()
+@interface CardAnimationView ()
 {
     UIPanGestureRecognizer  *_panGesture;
     UITapGestureRecognizer  *_tapGesture;
@@ -27,7 +27,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 
 @end
 
-@implementation MusicWidgetView
+@implementation CardAnimationView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
