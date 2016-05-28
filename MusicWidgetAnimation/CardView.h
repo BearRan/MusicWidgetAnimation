@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CardViewCell.h"
 
 typedef enum {
     kCardStatus_Front,
@@ -15,7 +16,7 @@ typedef enum {
 
 @class CardViewBack;
 
-@interface CardView : UIView
+@interface CardView : CardViewCell
 
 @property (strong, nonatomic) CardViewBack  *cardViewBack;
 @property (strong, nonatomic) UIImageView   *headImgV;

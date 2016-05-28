@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CardAnimationView.h"
+#import "CardView.h"
 
 @interface ViewController () <CardAnimationViewDelegate>
 
@@ -24,21 +25,38 @@
 //    cardAnimationView.cardShowInView_Count = 6;
 //    cardAnimationView.animationDuration_Normal = 2.0;
 //    cardAnimationView.animationDuration_Flip = 1.0;
-    cardAnimationView.cardRotateWhenPan = NO;
+//    cardAnimationView.cardRotateWhenPan = NO;
 //    cardAnimationView.cardRotateMaxAngle = 45;
 //    cardAnimationView.cardAlphaGapValue = 0.1;
 //    cardAnimationView.cardOffSetPoint = CGPointMake(25, 40);
 //    cardAnimationView.cardScaleRatio  = 0.15;
-    cardAnimationView.cardFlyMaxDistance = 80;
+//    cardAnimationView.cardFlyMaxDistance = 80;
 
     [self.view addSubview:cardAnimationView];
 
 }
 
-//- (UIView *)cardViewFrontAtIndex:(int)index
-//{
-//    
-//}
+- (CardViewCell *)cardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
+{
+    CGFloat cardView_width = WIDTH * 0.8;
+    CGFloat cardView_height = HEIGHT * 0.7;
+    NSString *cardViewID_Str = @"cardViewID_Str";
+    
+    CardView *cardView = (CardView *)[cardAnimationView dequeueReusableCardViewCellWithIdentifier:cardViewID_Str];
+    if (!cardView) {
+        cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height)];
+    }
+    
+    cardView.backgroundColor = [UIColor whiteColor];
+    cardView.mainLabel.text = [NSString stringWithFormat:@"%d", index];
+    
+    return cardView;
+}
+
+- (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView
+{
+    return 20;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

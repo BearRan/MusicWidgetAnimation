@@ -15,14 +15,20 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 {
     UIPanGestureRecognizer  *_panGesture;
     UITapGestureRecognizer  *_tapGesture;
-    NSMutableArray          *_cardArray;
     PanDirection            panDir;
+    
+    NSMutableArray          *_cardDisplayArray;
+    NSMutableArray          *_reuseArray;
+    NSInteger               _cards_AllCount;
+    NSInteger               _cardNextIndex_logic;       //card实际索引
+    
     CGFloat                 cardView_width;
     CGFloat                 cardView_height;
+    
     UpdateCardsAnimationFinish_Block _updateCardsAnimationFinish_Block;
 }
 
-@property (assign, nonatomic) int       cardIndex;
+@property (assign, nonatomic) int       cardIndex_show; //card显示索引
 @property (strong, nonatomic) CardView  *cardView_Now;
 
 @end
@@ -49,8 +55,9 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         cardView_width = WIDTH * 0.8;
         cardView_height = HEIGHT * 0.7;
         
-        self.cardIndex = 0;
+        self.cardIndex_show = 0;
         panDir = kPanDir_Null;
+        _reuseArray = [NSMutableArray new];
     }
     
     return self;
@@ -75,18 +82,26 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture_Event:)];
     _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture_Event:)];
     _tapGesture.numberOfTapsRequired = 1;
-    _cardArray = [[NSMutableArray alloc] init];
+    _cardDisplayArray = [[NSMutableArray alloc] init];
+    _cardNextIndex_logic = 0;
     
     for (int i = 0 ; i < _cardShowInView_Count + 2; i++) {
         
-        CardView *cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height)];
-        cardView.backgroundColor = [UIColor whiteColor];
-        cardView.mainLabel.text = [NSString stringWithFormat:@"%d", i];
-        [_cardArray addObject:cardView];
+        CardView *cardView;
+        if ([_delegate respondsToSelector:@selector(cardViewInCardAnimationView:AtIndex:)]) {
+            cardView = (CardView *)[_delegate cardViewInCardAnimationView:self AtIndex:(int)_cardNextIndex_logic];
+            _cardNextIndex_logic ++;
+        }
+        if ([_delegate respondsToSelector:@selector(numberOfCardsInCardAnimationView:)]) {
+            _cards_AllCount = [_delegate numberOfCardsInCardAnimationView:self];
+        }
+        //  初次创建全部放入_reuseArray
+        [_reuseArray addObject:cardView];
+        [_cardDisplayArray addObject:cardView];
         [self addSubview:cardView];
         
         if (i > 0) {
-            [self insertSubview:cardView belowSubview:_cardArray[i - 1]];
+            [self insertSubview:cardView belowSubview:_cardDisplayArray[i - 1]];
         }else{
             [self addSubview:cardView];
         }
@@ -115,9 +130,9 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 
 - (void)updateCardsDetail
 {
-    int cardAll_count           = (int)[_cardArray count];
-    int cardWillDisappear_index = _cardIndex + cardAll_count - 1;
-    int cardWillAppear_index    = _cardIndex + cardAll_count - 2;
+    int cardAll_count           = (int)[_cardDisplayArray count];
+    int cardWillDisappear_index = _cardIndex_show + cardAll_count - 1;
+    int cardWillAppear_index    = _cardIndex_show + cardAll_count - 2;
     
     if (cardWillDisappear_index >= cardAll_count) {
         cardWillDisappear_index -= cardAll_count;
@@ -129,7 +144,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     
     //  即将消失的cardView
-    CardView *cardView_willDisappear = _cardArray[cardWillDisappear_index];
+    CardView *cardView_willDisappear = _cardDisplayArray[cardWillDisappear_index];
     if (panDir == kPanDir_Left){
         [cardView_willDisappear setMaxX:0];
     }
@@ -138,7 +153,8 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     }
     
     //  即将显示的cardView
-    CardView *cardView_willAppear = _cardArray[cardWillAppear_index];
+    _cardDisplayArray[cardWillAppear_index] = [self getCardViewInCardAnimationView:self AtIndex:(int)_cardNextIndex_logic++];
+    CardView *cardView_willAppear = _cardDisplayArray[cardWillAppear_index];
     cardView_willAppear.alpha = 1 - _cardShowInView_Count * _cardAlphaGapValue;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * _cardShowInView_Count, self.height / 2.0 - _cardOffSetPoint.y * _cardShowInView_Count)];
     
@@ -164,12 +180,12 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     //  中间可见的cardView
     for (int j = 0 ; j < _cardShowInView_Count; j++) {
         
-        int i = j + _cardIndex;
+        int i = j + _cardIndex_show;
         if (i >= cardAll_count) {
             i -= cardAll_count;
         }
         
-        CardView *cardView = _cardArray[i];
+        CardView *cardView = _cardDisplayArray[i];
         cardView.hidden = NO;
         cardView.alpha = 1 - j * _cardAlphaGapValue;
         [cardView setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * j, self.height / 2.0 - _cardOffSetPoint.y * j)];
@@ -421,7 +437,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         
     }
     
-    //  平移
+    //
     else{
         
         if (_cardRotateWhenPan == YES) {
@@ -518,33 +534,108 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 //  从左侧消失
 - (void)disappearToLeft:(UIPanGestureRecognizer *)panGesture
 {
-    if (self.cardIndex + 2 > [_cardArray count]) {
-        self.cardIndex = 0;
+    if (self.cardIndex_show + 2 > [_cardDisplayArray count]) {
+        self.cardIndex_show = 0;
     }else{
-        self.cardIndex = self.cardIndex + 1;
+        self.cardIndex_show = self.cardIndex_show + 1;
     }
 }
 
 //  从右侧消失
 - (void)disappearToRight:(UIPanGestureRecognizer *)panGesture
 {
-    if (self.cardIndex + 2 > [_cardArray count]) {
-        self.cardIndex = 0;
+    if (self.cardIndex_show + 2 > [_cardDisplayArray count]) {
+        self.cardIndex_show = 0;
     }else{
-        self.cardIndex = self.cardIndex + 1;
+        self.cardIndex_show = self.cardIndex_show + 1;
     }
 }
 
 
-#pragma mark - 重写cardIndex
+#pragma mark - 重写cardIndex_show
 
-@synthesize cardIndex = _cardIndex;
-- (void)setCardIndex:(int)cardIndex
+@synthesize cardIndex_show = _cardIndex_show;
+- (void)setCardIndex_show:(int)cardIndex_show
 {
-    _cardIndex = cardIndex;
+    _cardIndex_show = cardIndex_show;
     
-    _cardView_Now = _cardArray[_cardIndex];
+    _cardView_Now = _cardDisplayArray[_cardIndex_show];
     [self updateCardsWithAnimation:YES];
+}
+
+#pragma mark - reuse
+#warning Modify
+- (CardViewCell *)getCardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
+{
+    CardView *cardView;
+    
+    if ([_delegate respondsToSelector:@selector(cardViewInCardAnimationView:AtIndex:)]) {
+        cardView = (CardView *)[_delegate cardViewInCardAnimationView:self AtIndex:index];
+    }
+    
+    BOOL needAdd = YES;
+    for (int i = 0; i < [_reuseArray count]; i++) {
+        CardViewCell *tempCell = _reuseArray[i];
+        if ([tempCell.reuseIdentifier isEqualToString:cardView.reuseIdentifier]) {
+            needAdd = NO;
+        }
+    }
+    
+    if (needAdd == YES) {
+        [_reuseArray addObject:cardView];
+    }
+    
+    return cardView;
+}
+
+- (CardViewCell *)dequeueReusableCardViewCellWithIdentifier:(NSString *)CellIdentifier
+{
+    for (CardViewCell *cardViewCell in _reuseArray) {
+        if (cardViewCell != nil && ![self isDisplayedInSelf:cardViewCell]) {
+            return cardViewCell;
+        }
+    }
+    
+    return nil;
+}
+
+// 判断View是否显示在屏幕上
+- (BOOL)isDisplayedInSelf:(UIView *)view
+{
+    if (view == nil) {
+        return FALSE;
+    }
+    
+    CGRect screenRect = [UIScreen mainScreen].bounds;
+    
+    // 转换view对应window的Rect
+    CGRect rect = [view convertRect:view.frame fromView:self];
+    if (CGRectIsEmpty(rect) || CGRectIsNull(rect)) {
+        return FALSE;
+    }
+    
+    // 若view 隐藏
+    if (view.hidden) {
+        return FALSE;
+    }
+    
+    // 若没有superview
+    if (view.superview == nil) {
+        return FALSE;
+    }
+    
+    // 若size为CGrectZero
+    if (CGSizeEqualToSize(rect.size, CGSizeZero)) {
+        return  FALSE;
+    }
+    
+    // 获取 该view与window 交叉的 Rect
+    CGRect intersectionRect = CGRectIntersection(rect, screenRect);
+    if (CGRectIsEmpty(intersectionRect) || CGRectIsNull(intersectionRect)) {
+        return FALSE;
+    }
+    
+    return TRUE;
 }
 
 @end

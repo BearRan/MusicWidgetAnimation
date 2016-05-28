@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CardViewCell;
+@class CardAnimationView;
 
 typedef enum {
     kPanDir_Null,
@@ -17,7 +19,8 @@ typedef enum {
 @protocol CardAnimationViewDelegate <NSObject>
 
 @required
-- (UIView *)cardViewFrontAtIndex:(int)index;
+- (CardViewCell *)cardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index;
+- (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView;
 
 @end
 
@@ -35,5 +38,9 @@ typedef enum {
 @property (assign, nonatomic) BOOL      cardRotateWhenPan;          //卡片拖动时是否可旋转
 @property (assign, nonatomic) CGFloat   cardRotateMaxAngle;         //卡片可旋转时:卡片可旋转的最大角度(角度制，如，90，180)
 @property (assign, nonatomic) CGFloat   cardFlyMaxDistance;         //卡片不可旋转时:卡片移动超过某一值时就飞走的阈值
+
+
+//  reuse
+- (CardViewCell *)dequeueReusableCardViewCellWithIdentifier:(NSString *)CellIdentifier;
 
 @end

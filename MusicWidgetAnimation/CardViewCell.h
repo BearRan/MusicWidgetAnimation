@@ -10,4 +10,8 @@
 
 @interface CardViewCell : UIView
 
+@property (strong, nonatomic) NSString  *reuseIdentifier;
+
+- (instancetype)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier;
+
 @end
