@@ -21,6 +21,7 @@ typedef enum {
 @required
 - (CardViewCell *)cardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index;
 - (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView;
+- (void)cardViewWillShowWithIndex:(NSInteger)index;
 
 @end
 

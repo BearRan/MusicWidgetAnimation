@@ -37,6 +37,8 @@
 
 }
 
+
+#pragma mark - CardAnimationView delegate
 - (CardViewCell *)cardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
 {
     CGFloat cardView_width = WIDTH * 0.8;
@@ -56,7 +58,12 @@
 
 - (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView
 {
-    return 10;
+    return 20;
+}
+
+- (void)cardViewWillShowWithIndex:(NSInteger)index
+{
+    NSLog(@"index:%ld", (long)index);
 }
 
 - (void)didReceiveMemoryWarning {

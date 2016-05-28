@@ -20,7 +20,8 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     NSMutableArray          *_cardDisplayArray;
     NSMutableArray          *_reuseArray;
     NSInteger               _cards_AllCount;
-    NSInteger               _cardNextIndex_logic;       //card实际索引
+    NSInteger               _cardNextIndex_logic;       //card实际索引,willAppear
+    NSInteger               _cardNowIndex_logic;        //card实际索引，当前显示的
     
     CGFloat                 cardView_width;
     CGFloat                 cardView_height;
@@ -83,6 +84,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     _tapGesture.numberOfTapsRequired = 1;
     _cardDisplayArray = [[NSMutableArray alloc] init];
     _cardNextIndex_logic = 0;
+    _cardNowIndex_logic = 0;
     
     for (int i = 0 ; i < _cardShowInView_Count + 2; i++) {
         
@@ -156,9 +158,22 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CardView *oldWillDisplayView = _cardDisplayArray[cardWillAppear_index];
     oldWillDisplayView.alpha = 0;
     
+    if ([_delegate respondsToSelector:(@selector(cardViewWillShowWithIndex:))]) {
+        [_delegate cardViewWillShowWithIndex:_cardNowIndex_logic++];
+        
+        if (_cardCycleShow == YES) {
+            if (_cardNowIndex_logic >= _cards_AllCount) {
+                _cardNowIndex_logic = 0;
+            }
+        }
+    }
+    
     //  即将显示的cardView
     CardView *cardView_willAppear;
     if (_cardNextIndex_logic < _cards_AllCount) {
+        
+        
+        
         _cardDisplayArray[cardWillAppear_index] = [self getCardViewInCardAnimationView:self AtIndex:(int)_cardNextIndex_logic++];
         cardView_willAppear = _cardDisplayArray[cardWillAppear_index];
         
@@ -618,6 +633,11 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     }
     
     return nil;
+}
+
+- (void)cardViewWillShowWithIndex:(NSInteger)index
+{
+
 }
 
 // 判断View是否显示在屏幕上
