@@ -23,13 +23,13 @@
     cardAnimationView.delegate = self;
     cardAnimationView.backgroundColor = ys_302e35;
     cardAnimationView.cardShowInView_Count = 6;
-//    cardAnimationView.animationDuration_Normal = 2.0;
-//    cardAnimationView.animationDuration_Flip = 1.0;
-//    cardAnimationView.cardRotateWhenPan = NO;
-//    cardAnimationView.cardRotateMaxAngle = 45;
-//    cardAnimationView.cardAlphaGapValue = 0.1;
-//    cardAnimationView.cardOffSetPoint = CGPointMake(25, 40);
-//    cardAnimationView.cardScaleRatio  = 0.15;
+    cardAnimationView.animationDuration_Normal = 0.7;
+    cardAnimationView.animationDuration_Flip = 1.0;
+    cardAnimationView.cardRotateWhenPan = NO;
+    cardAnimationView.cardRotateMaxAngle = 45;
+    cardAnimationView.cardAlphaGapValue = 0.1;
+    cardAnimationView.cardOffSetPoint = CGPointMake(25, 40);
+    cardAnimationView.cardScaleRatio  = 0.15;
 //    cardAnimationView.cardFlyMaxDistance = 80;
     cardAnimationView.cardCycleShow = YES;
 

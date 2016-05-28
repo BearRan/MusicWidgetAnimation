@@ -124,14 +124,11 @@
 		090DA01D1CDE0EF90017D3F0 /* MusicWidgetAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				092CB0161CFA055C00827977 /* CardAnimationView */,
 				090DA0211CDE0EF90017D3F0 /* AppDelegate.h */,
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
 				090DA0241CDE0EF90017D3F0 /* ViewController.h */,
 				090DA0251CDE0EF90017D3F0 /* ViewController.m */,
-				090DA0541CDE13E90017D3F0 /* CardAnimationView.h */,
-				090DA0551CDE13E90017D3F0 /* CardAnimationView.m */,
-				092CB0131CF9CD2900827977 /* CardViewCell.h */,
-				092CB0141CF9CD2900827977 /* CardViewCell.m */,
 				090DA0511CDE13BB0017D3F0 /* CardView.h */,
 				090DA0521CDE13BB0017D3F0 /* CardView.m */,
 				093F4A941CE4A49C00DE4875 /* CardViewBack.h */,
@@ -172,6 +169,17 @@
 				090DA0451CDE0EF90017D3F0 /* Info.plist */,
 			);
 			path = MusicWidgetAnimationUITests;
+			sourceTree = "<group>";
+		};
+		092CB0161CFA055C00827977 /* CardAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				090DA0541CDE13E90017D3F0 /* CardAnimationView.h */,
+				090DA0551CDE13E90017D3F0 /* CardAnimationView.m */,
+				092CB0131CF9CD2900827977 /* CardViewCell.h */,
+				092CB0141CF9CD2900827977 /* CardViewCell.m */,
+			);
+			name = CardAnimationView;
 			sourceTree = "<group>";
 		};
 		DB8B218B57954EBA283CDB36 /* Pods */ = {
@@ -532,7 +540,7 @@
 				INFOPLIST_FILE = MusicWidgetAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuntu.text.BearSkillDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuntu.text.BearSkillDemo-xr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -550,7 +558,7 @@
 				INFOPLIST_FILE = MusicWidgetAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yuntu.text.BearSkillDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuntu.text.BearSkillDemo-xr";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
