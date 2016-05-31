@@ -10,6 +10,11 @@
 #import "CardViewBack.h"
 
 @interface CardView ()
+{
+    UITapGestureRecognizer  *_tapGesture;
+    CGFloat                 cardView_width;
+    CGFloat                 cardView_height;
+}
 
 @end
 
@@ -20,6 +25,16 @@
     self = [super initWithFrame:frame reuseIdentifier:reuseIdentifier];
     
     if (self) {
+        
+        cardView_width = self.width;
+        cardView_height = self.height;
+        
+        _animationDuration_Flip     = 2;
+        
+        _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture_Event:)];
+        _tapGesture.numberOfTapsRequired = 1;
+        [self addGestureRecognizer:_tapGesture];
+        
         [self createUI];
     }
     
@@ -111,6 +126,75 @@
     
     [_assignLabel_2 sizeToFit];
     [_assignLabel_2 BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_assignLabel_1 parentRelation:NO distance:20 center:YES];
+}
+
+
+#pragma mark - Gesture
+
+- (void)tapGesture_Event:(UITapGestureRecognizer *)tapGesture
+{
+    CardView *cardView = (CardView *)tapGesture.view;
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [UIView beginAnimations:nil context:context];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
+    [UIView setAnimationDuration:_animationDuration_Flip];
+    
+    NSUInteger index_back = [cardView.subviews indexOfObject:cardView.backBgView];
+    NSUInteger index_front = [cardView.subviews indexOfObject:cardView.frontBgView];
+    
+    
+    //  翻转后，back模式
+    if (index_back < index_front) {
+        
+        cardView.cardStatus = kCardStatus_Back;
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:cardView cache:YES];
+        
+        [self setBigSize:cardView];
+        [self setBigSize:cardView.frontBgView];
+        [self setBigSize:cardView.backBgView];
+        [self setBigSize:(UIView *)cardView.cardViewBack];
+    }
+    //  翻转后，front模式
+    else{
+        
+        cardView.cardStatus = kCardStatus_Front;
+        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cardView cache:YES];
+        
+        [self setSmallSize:cardView];
+        [self setSmallSize:cardView.frontBgView];
+        [self setSmallSize:cardView.backBgView];
+        [self setSmallSize:(UIView *)cardView.cardViewBack];
+    }
+    
+    [cardView exchangeSubviewAtIndex:index_back withSubviewAtIndex:index_front];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationWillStartSelector:@selector(flipAnimationWillStart_Event)];
+    [UIView setAnimationDidStopSelector:@selector(flipAnimationDidStop_Event)];
+    [UIView commitAnimations];
+}
+
+- (void)flipAnimationWillStart_Event
+{
+//    [_cardView_Now removeGestureRecognizer:_panGesture];
+}
+
+- (void)flipAnimationDidStop_Event
+{
+//    [_cardView_Now addGestureRecognizer:_panGesture];
+}
+
+- (void)setBigSize:(UIView *)view
+{
+//    view.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
+    [view setWidth_DonotMoveCenter:WIDTH];
+    [view setHeight_DonotMoveCenter:HEIGHT];
+}
+
+- (void)setSmallSize:(UIView *)view
+{
+    [view setWidth_DonotMoveCenter:cardView_width];
+    [view setHeight_DonotMoveCenter:cardView_height];
 }
 
 /*

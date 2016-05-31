@@ -18,6 +18,8 @@ typedef enum {
 
 @interface CardView : CardViewCell
 
+@property (assign, nonatomic) CGFloat   animationDuration_Flip;     //翻转动画时间
+
 @property (strong, nonatomic) CardViewBack  *cardViewBack;
 @property (strong, nonatomic) UIImageView   *headImgV;
 @property (strong, nonatomic) UILabel       *mainLabel;

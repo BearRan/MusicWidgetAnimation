@@ -14,7 +14,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 @interface CardAnimationView ()
 {
     UIPanGestureRecognizer  *_panGesture;
-    UITapGestureRecognizer  *_tapGesture;
     PanDirection            panDir;
     
     NSMutableArray          *_cardDisplayArray;
@@ -45,7 +44,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         //  默认参数配置
         _cardShowInView_Count       = 3;
         _animationDuration_Normal   = 0.2;
-        _animationDuration_Flip     = 2;
         _cardRotateWhenPan          = YES;
         _cardRotateMaxAngle         = 8.0;
         _cardAlphaGapValue          = 0.25;
@@ -80,8 +78,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 - (void)createUI
 {
     _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGesture_Event:)];
-    _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture_Event:)];
-    _tapGesture.numberOfTapsRequired = 1;
     _cardDisplayArray = [[NSMutableArray alloc] init];
     _cardNextIndex_logic = 0;
     _cardNowIndex_logic = 0;
@@ -235,9 +231,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
         if (j == 0) {
             [_panGesture.view removeGestureRecognizer:_panGesture];
             [cardView addGestureRecognizer:_panGesture];
-            
-            [_tapGesture.view removeGestureRecognizer:_tapGesture];
-            [cardView addGestureRecognizer:_tapGesture];
         }
         
         //  即将显示的view插入在最后一个可见cardView的下方
@@ -249,75 +242,6 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
 }
 
-- (void)setBigSize:(UIView *)view
-{
-    [view setWidth_DonotMoveCenter:WIDTH];
-    [view setHeight_DonotMoveCenter:HEIGHT];
-}
-
-- (void)setSmallSize:(UIView *)view
-{
-    [view setWidth_DonotMoveCenter:cardView_width];
-    [view setHeight_DonotMoveCenter:cardView_height];
-}
-
-#pragma mark - Gesture
-
-- (void)tapGesture_Event:(UITapGestureRecognizer *)tapGesture
-{
-    CardView *cardView = (CardView *)tapGesture.view;
-    
-    cardView.layer.position = CGPointMake(self.width / 2.0, self.height / 2.0);
-    cardView.layer.anchorPoint = CGPointMake(0.5, 0.5);
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [UIView beginAnimations:nil context:context];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    [UIView setAnimationDuration:_animationDuration_Flip];
-    
-    NSUInteger index_back = [cardView.subviews indexOfObject:cardView.backBgView];
-    NSUInteger index_front = [cardView.subviews indexOfObject:cardView.frontBgView];
-    
-    
-    //  翻转后，back模式
-    if (index_back < index_front) {
-        
-        cardView.cardStatus = kCardStatus_Back;
-        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:cardView cache:YES];
-        
-        [self setBigSize:cardView];
-        [self setBigSize:cardView.frontBgView];
-        [self setBigSize:cardView.backBgView];
-        [self setBigSize:(UIView *)cardView.cardViewBack];
-    }
-    //  翻转后，front模式
-    else{
-        
-        cardView.cardStatus = kCardStatus_Front;
-        [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cardView cache:YES];
-        
-        [self setSmallSize:cardView];
-        [self setSmallSize:cardView.frontBgView];
-        [self setSmallSize:cardView.backBgView];
-        [self setSmallSize:(UIView *)cardView.cardViewBack];
-    }
-    
-    [cardView exchangeSubviewAtIndex:index_back withSubviewAtIndex:index_front];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationWillStartSelector:@selector(flipAnimationWillStart_Event)];
-    [UIView setAnimationDidStopSelector:@selector(flipAnimationDidStop_Event)];
-    [UIView commitAnimations];
-}
-
-- (void)flipAnimationWillStart_Event
-{
-    [_cardView_Now removeGestureRecognizer:_panGesture];
-}
-
-- (void)flipAnimationDidStop_Event
-{
-    [_cardView_Now addGestureRecognizer:_panGesture];
-}
 
 /**
  *

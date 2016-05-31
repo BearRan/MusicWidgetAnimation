@@ -30,7 +30,6 @@ typedef enum {
 @property (weak, nonatomic) id<CardAnimationViewDelegate> delegate;
 
 @property (assign, nonatomic) CGFloat   animationDuration_Normal;   //普通动画时间
-@property (assign, nonatomic) CGFloat   animationDuration_Flip;     //翻转动画时间
 @property (assign, nonatomic) int       cardShowInView_Count;       //可见的卡片数量
 @property (assign, nonatomic) CGFloat   cardAlphaGapValue;          //相邻卡片alpha差值
 @property (assign, nonatomic) CGPoint   cardOffSetPoint;            //相邻卡片偏移位置设定
