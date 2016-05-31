@@ -12,6 +12,10 @@
 
 @property (strong, nonatomic) NSString  *reuseIdentifier;
 
+@property (strong, nonatomic) CABasicAnimation  *scaleAnimation;
+@property (strong, nonatomic) CABasicAnimation  *rotationAnimation;
+@property (strong, nonatomic) CABasicAnimation  *flipAnimation;
+
 - (instancetype)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

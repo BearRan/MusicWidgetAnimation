@@ -16,17 +16,33 @@
     
     if (self) {
         self.reuseIdentifier = reuseIdentifier;
+        
+        //  缩放动画
+        _scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        _scaleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
+        _scaleAnimation.toValue = [NSNumber numberWithFloat:1.0];
+        _scaleAnimation.fillMode = kCAFillModeForwards;
+        _scaleAnimation.removedOnCompletion = NO;
+        _scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        
+        //  旋转动画
+        _rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+        _rotationAnimation.fromValue = [NSNumber numberWithFloat:0];
+        _rotationAnimation.toValue = [NSNumber numberWithFloat:0];
+        _rotationAnimation.fillMode = kCAFillModeForwards;
+        _rotationAnimation.removedOnCompletion = NO;
+        _rotationAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        
+        //  翻转动画
+        _flipAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
+        _flipAnimation.fromValue = [NSNumber numberWithFloat:0];
+        _flipAnimation.toValue = [NSNumber numberWithFloat:M_PI];
+        _flipAnimation.fillMode = kCAFillModeForwards;
+        _flipAnimation.removedOnCompletion = NO;
+        _flipAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     }
     
     return self;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

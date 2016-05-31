@@ -7,7 +7,7 @@
 //
 
 #import "CardAnimationView.h"
-#import "CardView.h"
+#import "CardViewCell.h"
 
 typedef void (^UpdateCardsAnimationFinish_Block)();
 
@@ -29,7 +29,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 }
 
 @property (assign, nonatomic) int       cardIndex_show; //card显示索引
-@property (strong, nonatomic) CardView  *cardView_Now;
+@property (strong, nonatomic) CardViewCell  *cardView_Now;
 
 @end
 
@@ -84,9 +84,9 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     for (int i = 0 ; i < _cardShowInView_Count + 2; i++) {
         
-        CardView *cardView;
+        CardViewCell *cardView;
         if ([_delegate respondsToSelector:@selector(cardViewInCardAnimationView:AtIndex:)]) {
-            cardView = (CardView *)[_delegate cardViewInCardAnimationView:self AtIndex:i];
+            cardView = (CardViewCell *)[_delegate cardViewInCardAnimationView:self AtIndex:i];
         }
         _cardNextIndex_logic = _cardShowInView_Count;
         
@@ -142,7 +142,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     
     //  即将消失的cardView
-    CardView *cardView_willDisappear = _cardDisplayArray[cardWillDisappear_index];
+    CardViewCell *cardView_willDisappear = _cardDisplayArray[cardWillDisappear_index];
     if (panDir == kPanDir_Left){
         [cardView_willDisappear setMaxX:0];
     }
@@ -151,7 +151,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     }
     
     //  旧的即将显示的view
-    CardView *oldWillDisplayView = _cardDisplayArray[cardWillAppear_index];
+    CardViewCell *oldWillDisplayView = _cardDisplayArray[cardWillAppear_index];
     oldWillDisplayView.alpha = 0;
     
     if ([_delegate respondsToSelector:(@selector(cardViewWillShowWithIndex:))]) {
@@ -165,7 +165,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     }
     
     //  即将显示的cardView
-    CardView *cardView_willAppear;
+    CardViewCell *cardView_willAppear;
     if (_cardNextIndex_logic < _cards_AllCount) {
         
         
@@ -179,7 +179,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
             }
         }
     }else{
-        _cardDisplayArray[cardWillAppear_index] = [CardView new];
+        _cardDisplayArray[cardWillAppear_index] = [CardViewCell new];
     }
     cardView_willAppear.alpha = 1 - _cardShowInView_Count * _cardAlphaGapValue;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * _cardShowInView_Count, self.height / 2.0 - _cardOffSetPoint.y * _cardShowInView_Count)];
@@ -216,7 +216,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
             i -= cardAll_count;
         }
         
-        CardView *cardView = _cardDisplayArray[i];
+        CardViewCell *cardView = _cardDisplayArray[i];
         cardView.hidden = NO;
         cardView.alpha = 1 - j * _cardAlphaGapValue;
         [cardView setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * j, self.height / 2.0 - _cardOffSetPoint.y * j)];
@@ -265,7 +265,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGPoint     position                    = [panGesture locationInView:self];
     CGPoint     position_translationInSelf  = [panGesture translationInView:self];
     CGFloat     rotationThreshold_degree    = 1.0 * _cardRotateMaxAngle / 180 * M_PI;
-    CardView    *gestureView                = (CardView *)panGesture.view;
+    CardViewCell    *gestureView                = (CardViewCell *)panGesture.view;
     
 //    //  back模式，return
 //    if (gestureView.cardStatus == kCardStatus_Back) {
@@ -462,10 +462,10 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 #pragma mark - reuse
 - (CardViewCell *)getCardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
 {
-    CardView *cardView;
+    CardViewCell *cardView;
     
     if ([_delegate respondsToSelector:@selector(cardViewInCardAnimationView:AtIndex:)]) {
-        cardView = (CardView *)[_delegate cardViewInCardAnimationView:self AtIndex:index];
+        cardView = (CardViewCell *)[_delegate cardViewInCardAnimationView:self AtIndex:index];
     }
     
     BOOL needAdd = YES;

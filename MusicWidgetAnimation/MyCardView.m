@@ -27,7 +27,7 @@
         cardView_width = self.width;
         cardView_height = self.height;
         
-        _animationDuration_Flip     = 2;
+        _animationDuration_Flip = 0.8;
         
         _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGesture_Event:)];
         _tapGesture.numberOfTapsRequired = 1;

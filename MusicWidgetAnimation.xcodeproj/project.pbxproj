@@ -16,7 +16,6 @@
 		090DA02E1CDE0EF90017D3F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090DA02C1CDE0EF90017D3F0 /* LaunchScreen.storyboard */; };
 		090DA0391CDE0EF90017D3F0 /* MusicWidgetAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0381CDE0EF90017D3F0 /* MusicWidgetAnimationTests.m */; };
 		090DA0441CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */; };
-		090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0521CDE13BB0017D3F0 /* CardView.m */; };
 		090DA0561CDE13E90017D3F0 /* CardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0551CDE13E90017D3F0 /* CardAnimationView.m */; };
 		092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CB0141CF9CD2900827977 /* CardViewCell.m */; };
 		093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4A951CE4A49C00DE4875 /* CardViewBack.m */; };
@@ -60,8 +59,6 @@
 		090DA03F1CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicWidgetAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicWidgetAnimationUITests.m; sourceTree = "<group>"; };
 		090DA0451CDE0EF90017D3F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		090DA0511CDE13BB0017D3F0 /* CardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardView.h; sourceTree = "<group>"; };
-		090DA0521CDE13BB0017D3F0 /* CardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardView.m; sourceTree = "<group>"; };
 		090DA0541CDE13E90017D3F0 /* CardAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardAnimationView.h; sourceTree = "<group>"; };
 		090DA0551CDE13E90017D3F0 /* CardAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardAnimationView.m; sourceTree = "<group>"; };
 		092CB0131CF9CD2900827977 /* CardViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewCell.h; sourceTree = "<group>"; };
@@ -186,8 +183,6 @@
 				090DA0551CDE13E90017D3F0 /* CardAnimationView.m */,
 				092CB0131CF9CD2900827977 /* CardViewCell.h */,
 				092CB0141CF9CD2900827977 /* CardViewCell.m */,
-				090DA0511CDE13BB0017D3F0 /* CardView.h */,
-				090DA0521CDE13BB0017D3F0 /* CardView.m */,
 			);
 			name = CardAnimationView;
 			sourceTree = "<group>";
@@ -399,7 +394,6 @@
 				090DA0261CDE0EF90017D3F0 /* ViewController.m in Sources */,
 				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
-				090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
 				092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */,
 				09E44EA61CDE255400101712 /* AppConstant.m in Sources */,
