@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "CardAnimationView.h"
-#import "CardView.h"
+#import "MyCardView.h"
 
 @interface ViewController () <CardAnimationViewDelegate>
 
@@ -45,9 +45,9 @@
     CGFloat cardView_height = HEIGHT * 0.7;
     NSString *cardViewID_Str = @"cardViewID_Str";
     
-    CardView *cardView = (CardView *)[cardAnimationView dequeueReusableCardViewCellWithIdentifier:cardViewID_Str];
+    MyCardView *cardView = (MyCardView *)[cardAnimationView dequeueReusableCardViewCellWithIdentifier:cardViewID_Str];
     if (!cardView) {
-        cardView = [[CardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height) reuseIdentifier:cardViewID_Str];
+        cardView = [[MyCardView alloc] initWithFrame:CGRectMake(0, 0, cardView_width, cardView_height) reuseIdentifier:cardViewID_Str];
     }
     
     cardView.backgroundColor = [UIColor whiteColor];

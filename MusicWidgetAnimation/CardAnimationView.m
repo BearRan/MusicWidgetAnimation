@@ -267,10 +267,10 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGFloat     rotationThreshold_degree    = 1.0 * _cardRotateMaxAngle / 180 * M_PI;
     CardView    *gestureView                = (CardView *)panGesture.view;
     
-    //  back模式，return
-    if (gestureView.cardStatus == kCardStatus_Back) {
-        return;
-    }
+//    //  back模式，return
+//    if (gestureView.cardStatus == kCardStatus_Back) {
+//        return;
+//    }
     
     //  没有历史数据，每次切换页面时，只存储历史值，然后return
     if (!lastView || ![lastView isEqual:gestureView]) {
