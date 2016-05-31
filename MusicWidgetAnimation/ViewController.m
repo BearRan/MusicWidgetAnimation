@@ -51,7 +51,7 @@
     }
     
     cardView.backgroundColor = [UIColor whiteColor];
-    cardView.mainLabel.text = [NSString stringWithFormat:@"%d--1", index];
+    cardView.cardViewFront.mainLabel.text = [NSString stringWithFormat:@"%d--1", index];
     
     return cardView;
 }

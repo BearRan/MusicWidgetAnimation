@@ -21,6 +21,7 @@
 		092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CB0141CF9CD2900827977 /* CardViewCell.m */; };
 		093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4A951CE4A49C00DE4875 /* CardViewBack.m */; };
 		097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85AF1CFDD7D10082FA05 /* MyCardView.m */; };
+		097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B21CFDDD510082FA05 /* CardViewFront.m */; };
 		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		093F4A951CE4A49C00DE4875 /* CardViewBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewBack.m; sourceTree = "<group>"; };
 		097A85AE1CFDD7D10082FA05 /* MyCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCardView.h; sourceTree = "<group>"; };
 		097A85AF1CFDD7D10082FA05 /* MyCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardView.m; sourceTree = "<group>"; };
+		097A85B11CFDDD510082FA05 /* CardViewFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewFront.h; sourceTree = "<group>"; };
+		097A85B21CFDDD510082FA05 /* CardViewFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewFront.m; sourceTree = "<group>"; };
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				090DA0251CDE0EF90017D3F0 /* ViewController.m */,
 				097A85AE1CFDD7D10082FA05 /* MyCardView.h */,
 				097A85AF1CFDD7D10082FA05 /* MyCardView.m */,
+				097A85B11CFDDD510082FA05 /* CardViewFront.h */,
+				097A85B21CFDDD510082FA05 /* CardViewFront.m */,
 				093F4A941CE4A49C00DE4875 /* CardViewBack.h */,
 				093F4A951CE4A49C00DE4875 /* CardViewBack.m */,
 				09E44EA41CDE255400101712 /* AppConstant.h */,
@@ -392,6 +397,7 @@
 				093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */,
 				097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */,
 				090DA0261CDE0EF90017D3F0 /* ViewController.m in Sources */,
+				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
 				090DA0531CDE13BB0017D3F0 /* CardView.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,

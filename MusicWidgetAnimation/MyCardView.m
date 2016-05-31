@@ -8,6 +8,7 @@
 
 #import "MyCardView.h"
 #import "CardViewBack.h"
+#import "CardViewFront.h"
 
 
 @implementation MyCardView
@@ -45,35 +46,11 @@
     self.layer.cornerRadius = 5;
     self.layer.masksToBounds = YES;
     
+    _cardViewBack = [[CardViewBack alloc] initWithFrame:self.frame];
+    [self addSubview:_cardViewBack];
     
-    //  _backBgView
-    _backBgView = [[UIView alloc] initWithFrame:self.bounds];
-    _backBgView.backgroundColor = [UIColor greenColor];
-    [self addSubview:_backBgView];
-    
-    [self initSetBackView];
-    
-    
-    //  _frontBgView
-    _frontBgView = [[UIView alloc] initWithFrame:self.bounds];
-    _frontBgView.backgroundColor = [UIColor brownColor];
-    [self addSubview:_frontBgView];
-    
-    
-    //  components
-    _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-    _headImgV.layer.cornerRadius = _headImgV.height / 2.0;
-    _headImgV.backgroundColor = [UIColor blueColor];
-    [_frontBgView addSubview:_headImgV];
-    
-    _mainLabel = [[UILabel alloc] init];
-    [_frontBgView addSubview:_mainLabel];
-    
-    _assignLabel_1 = [[UILabel alloc] init];
-    [_frontBgView addSubview:_assignLabel_1];
-    
-    _assignLabel_2 = [[UILabel alloc] init];
-    [_frontBgView addSubview:_assignLabel_2];
+    _cardViewFront = [[CardViewFront alloc] initWithFrame:self.frame];
+    [self addSubview:_cardViewFront];
 }
 
 #pragma mark - Gesture
@@ -87,8 +64,8 @@
     [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationDuration:_animationDuration_Flip];
     
-    NSUInteger index_back = [cardView.subviews indexOfObject:cardView.backBgView];
-    NSUInteger index_front = [cardView.subviews indexOfObject:cardView.frontBgView];
+    NSUInteger index_back = [cardView.subviews indexOfObject:cardView.cardViewBack];
+    NSUInteger index_front = [cardView.subviews indexOfObject:cardView.cardViewFront];
     
     
     //  翻转后，back模式
@@ -98,8 +75,6 @@
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromRight forView:cardView cache:YES];
         
         [self setBigSize:cardView];
-        [self setBigSize:cardView.frontBgView];
-        [self setBigSize:cardView.backBgView];
         [self setBigSize:(UIView *)cardView.cardViewBack];
     }
     //  翻转后，front模式
@@ -109,8 +84,6 @@
         [UIView setAnimationTransition:UIViewAnimationTransitionFlipFromLeft forView:cardView cache:YES];
         
         [self setSmallSize:cardView];
-        [self setSmallSize:cardView.frontBgView];
-        [self setSmallSize:cardView.backBgView];
         [self setSmallSize:(UIView *)cardView.cardViewBack];
     }
     
@@ -142,33 +115,6 @@
 {
     [view setWidth_DonotMoveCenter:cardView_width];
     [view setHeight_DonotMoveCenter:cardView_height];
-}
-
-- (void)initSetBackView
-{
-    _cardViewBack = [[CardViewBack alloc] initWithFrame:self.frame];
-    [_backBgView addSubview:_cardViewBack];
-}
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    
-    _headImgV.image = [UIImage imageNamed:@""];
-    //    _mainLabel.text = @"ABC";
-    _assignLabel_1.text = @"EFG";
-    _assignLabel_2.text = @"HIJ";
-    
-    [_headImgV BearSetRelativeLayoutWithDirection:kDIR_UP destinationView:nil parentRelation:YES distance:50 center:YES];
-    
-    [_mainLabel sizeToFit];
-    [_mainLabel BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_headImgV parentRelation:NO distance:30 center:YES];
-    
-    [_assignLabel_1 sizeToFit];
-    [_assignLabel_1 BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_mainLabel parentRelation:NO distance:20 center:YES];
-    
-    [_assignLabel_2 sizeToFit];
-    [_assignLabel_2 BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_assignLabel_1 parentRelation:NO distance:20 center:YES];
 }
 
 @end

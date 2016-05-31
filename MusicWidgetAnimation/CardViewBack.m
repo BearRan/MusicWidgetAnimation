@@ -16,6 +16,8 @@
     
     if (self) {
         
+        self.backgroundColor = [UIColor whiteColor];
+        
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 100, 100, 100)];
         label.text = @"123";
         label.backgroundColor = [UIColor orangeColor];
