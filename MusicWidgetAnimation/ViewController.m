@@ -32,6 +32,7 @@
 //    cardAnimationView.cardScaleRatio  = 0.15;
 //    cardAnimationView.cardFlyMaxDistance = 80;
     cardAnimationView.cardCycleShow = YES;
+//    cardAnimationView.cardPanEnable = NO;
 
     [self.view addSubview:cardAnimationView];
 
