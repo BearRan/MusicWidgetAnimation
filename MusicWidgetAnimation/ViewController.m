@@ -13,6 +13,7 @@
 @interface ViewController () <CardAnimationViewDelegate>
 {
     NSArray *_imageArray;
+    UIImageView *_bgImageView;
 }
 
 @end
@@ -21,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     
     _imageArray = @[@"TestImage_1",
                     @"TestImage_2",
@@ -41,9 +44,14 @@
                     @"TestImage_17",
                     @"TestImage_18"];
     
+    _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
+    _bgImageView.image = [UIImage imageNamed:_imageArray[0]];
+    [self.view addSubview:_bgImageView];
+    
     CardAnimationView *cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     cardAnimationView.delegate = self;
-    cardAnimationView.backgroundColor = ys_302e35;
+    cardAnimationView.backgroundColor = [UIColor clearColor];
     cardAnimationView.cardShowInView_Count = 6;
 //    cardAnimationView.animationDuration_Normal = 0.7;
 //    cardAnimationView.animationDuration_Flip = 1.0;
@@ -88,6 +96,7 @@
 - (void)cardViewWillShowWithIndex:(NSInteger)index
 {
     NSLog(@"index:%ld", (long)index);
+    _bgImageView.image = [UIImage imageNamed:_imageArray[index]];
 }
 
 - (void)didReceiveMemoryWarning {
