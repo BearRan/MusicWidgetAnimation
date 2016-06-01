@@ -11,6 +11,9 @@
 #import "MyCardView.h"
 
 @interface ViewController () <CardAnimationViewDelegate>
+{
+    NSArray *_imageArray;
+}
 
 @end
 
@@ -18,6 +21,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _imageArray = @[@"TestImage_1",
+                    @"TestImage_2",
+                    @"TestImage_3",
+                    @"TestImage_4",
+                    @"TestImage_5",
+                    @"TestImage_6",
+                    @"TestImage_7",
+                    @"TestImage_8",
+                    @"TestImage_9",
+                    @"TestImage_10",
+                    @"TestImage_11",
+                    @"TestImage_12",
+                    @"TestImage_13",
+                    @"TestImage_14",
+                    @"TestImage_15",
+                    @"TestImage_16",
+                    @"TestImage_17",
+                    @"TestImage_18"];
     
     CardAnimationView *cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     cardAnimationView.delegate = self;
@@ -53,13 +75,14 @@
     
     cardView.backgroundColor = [UIColor whiteColor];
     cardView.cardViewFront.mainLabel.text = [NSString stringWithFormat:@"%d--1", index];
+    cardView.cardViewFront.headImgV.image = [UIImage imageNamed:_imageArray[index]];
     
     return cardView;
 }
 
 - (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView
 {
-    return 20;
+    return [_imageArray count];
 }
 
 - (void)cardViewWillShowWithIndex:(NSInteger)index

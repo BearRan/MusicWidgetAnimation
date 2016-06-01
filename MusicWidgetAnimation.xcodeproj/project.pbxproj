@@ -10,7 +10,6 @@
 		049DCF99E5C532A672904891 /* libPods-MusicWidgetAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */; };
 		090DA0201CDE0EF90017D3F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA01F1CDE0EF90017D3F0 /* main.m */; };
 		090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0221CDE0EF90017D3F0 /* AppDelegate.m */; };
-		090DA0261CDE0EF90017D3F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0251CDE0EF90017D3F0 /* ViewController.m */; };
 		090DA0291CDE0EF90017D3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090DA0271CDE0EF90017D3F0 /* Main.storyboard */; };
 		090DA02B1CDE0EF90017D3F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090DA02A1CDE0EF90017D3F0 /* Assets.xcassets */; };
 		090DA02E1CDE0EF90017D3F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090DA02C1CDE0EF90017D3F0 /* LaunchScreen.storyboard */; };
@@ -21,6 +20,7 @@
 		093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4A951CE4A49C00DE4875 /* CardViewBack.m */; };
 		097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85AF1CFDD7D10082FA05 /* MyCardView.m */; };
 		097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B21CFDDD510082FA05 /* CardViewFront.m */; };
+		097A85B51CFE64890082FA05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B41CFE64890082FA05 /* ViewController.m */; };
 		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,6 @@
 		090DA0211CDE0EF90017D3F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		090DA0221CDE0EF90017D3F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		090DA0241CDE0EF90017D3F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		090DA0251CDE0EF90017D3F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		090DA0281CDE0EF90017D3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		090DA02A1CDE0EF90017D3F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		090DA02D1CDE0EF90017D3F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		097A85AF1CFDD7D10082FA05 /* MyCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCardView.m; sourceTree = "<group>"; };
 		097A85B11CFDDD510082FA05 /* CardViewFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewFront.h; sourceTree = "<group>"; };
 		097A85B21CFDDD510082FA05 /* CardViewFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewFront.m; sourceTree = "<group>"; };
+		097A85B41CFE64890082FA05 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				090DA0211CDE0EF90017D3F0 /* AppDelegate.h */,
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
 				090DA0241CDE0EF90017D3F0 /* ViewController.h */,
-				090DA0251CDE0EF90017D3F0 /* ViewController.m */,
+				097A85B41CFE64890082FA05 /* ViewController.m */,
 				097A85AE1CFDD7D10082FA05 /* MyCardView.h */,
 				097A85AF1CFDD7D10082FA05 /* MyCardView.m */,
 				097A85B11CFDDD510082FA05 /* CardViewFront.h */,
@@ -388,10 +388,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				097A85B51CFE64890082FA05 /* ViewController.m in Sources */,
 				090DA0561CDE13E90017D3F0 /* CardAnimationView.m in Sources */,
 				093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */,
 				097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */,
-				090DA0261CDE0EF90017D3F0 /* ViewController.m in Sources */,
 				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,

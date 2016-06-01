@@ -27,6 +27,8 @@
     //  components
     _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     _headImgV.layer.cornerRadius = _headImgV.height / 2.0;
+    _headImgV.layer.masksToBounds = YES;
+    _headImgV.contentMode = UIViewContentModeScaleAspectFill;
     _headImgV.backgroundColor = [UIColor blueColor];
     [self addSubview:_headImgV];
     
@@ -44,7 +46,7 @@
 {
     [super layoutSubviews];
     
-    _headImgV.image = [UIImage imageNamed:@""];
+//    _headImgV.image = [UIImage imageNamed:@""];
     //    _mainLabel.text = @"ABC";
     _assignLabel_1.text = @"EFG";
     _assignLabel_2.text = @"HIJ";
