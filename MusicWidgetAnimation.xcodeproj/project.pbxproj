@@ -21,6 +21,7 @@
 		097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85AF1CFDD7D10082FA05 /* MyCardView.m */; };
 		097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B21CFDDD510082FA05 /* CardViewFront.m */; };
 		097A85B51CFE64890082FA05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B41CFE64890082FA05 /* ViewController.m */; };
+		09DC7D971D00FAFB00ABC0FC /* ExchangeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC7D961D00FAFB00ABC0FC /* ExchangeImageView.m */; };
 		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		097A85B11CFDDD510082FA05 /* CardViewFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewFront.h; sourceTree = "<group>"; };
 		097A85B21CFDDD510082FA05 /* CardViewFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewFront.m; sourceTree = "<group>"; };
 		097A85B41CFE64890082FA05 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		09DC7D951D00FAFB00ABC0FC /* ExchangeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeImageView.h; sourceTree = "<group>"; };
+		09DC7D961D00FAFB00ABC0FC /* ExchangeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeImageView.m; sourceTree = "<group>"; };
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
 				090DA0241CDE0EF90017D3F0 /* ViewController.h */,
 				097A85B41CFE64890082FA05 /* ViewController.m */,
+				09DC7D951D00FAFB00ABC0FC /* ExchangeImageView.h */,
+				09DC7D961D00FAFB00ABC0FC /* ExchangeImageView.m */,
 				097A85AE1CFDD7D10082FA05 /* MyCardView.h */,
 				097A85AF1CFDD7D10082FA05 /* MyCardView.m */,
 				097A85B11CFDDD510082FA05 /* CardViewFront.h */,
@@ -395,6 +400,7 @@
 				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
+				09DC7D971D00FAFB00ABC0FC /* ExchangeImageView.m in Sources */,
 				092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */,
 				09E44EA61CDE255400101712 /* AppConstant.m in Sources */,
 			);

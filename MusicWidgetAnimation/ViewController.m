@@ -9,11 +9,12 @@
 #import "ViewController.h"
 #import "CardAnimationView.h"
 #import "MyCardView.h"
+#import "ExchangeImageView.h"
 
 @interface ViewController () <CardAnimationViewDelegate>
 {
     NSArray *_imageArray;
-    UIImageView *_bgImageView;
+    ExchangeImageView *_bgImageView;
 }
 
 @end
@@ -44,15 +45,14 @@
                     @"TestImage_17",
                     @"TestImage_18"];
     
-    _bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
-    _bgImageView.contentMode = UIViewContentModeScaleAspectFill;
-    _bgImageView.image = [UIImage imageNamed:_imageArray[0]];
+    _bgImageView = [[ExchangeImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    _bgImageView.nextImageName = _imageArray[0];
     [self.view addSubview:_bgImageView];
     
     CardAnimationView *cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     cardAnimationView.delegate = self;
     cardAnimationView.backgroundColor = [UIColor clearColor];
-    cardAnimationView.cardShowInView_Count = 6;
+    cardAnimationView.cardShowInView_Count = 3;
 //    cardAnimationView.animationDuration_Normal = 0.7;
 //    cardAnimationView.animationDuration_Flip = 1.0;
 //    cardAnimationView.cardRotateWhenPan = NO;
@@ -96,7 +96,8 @@
 - (void)cardViewWillShowWithIndex:(NSInteger)index
 {
     NSLog(@"index:%ld", (long)index);
-    _bgImageView.image = [UIImage imageNamed:_imageArray[index]];
+    _bgImageView.nextImageName = _imageArray[index];
+//    _bgImageView.image = [UIImage imageNamed:_imageArray[index]];
 }
 
 - (void)didReceiveMemoryWarning {
