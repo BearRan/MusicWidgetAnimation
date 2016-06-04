@@ -46,7 +46,7 @@
                     @"TestImage_18"];
     
     _bgImageView = [[ExchangeImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
-    _bgImageView.nextImageName = _imageArray[0];
+//    _bgImageView.nextImageName = _imageArray[0];
     [self.view addSubview:_bgImageView];
     
     CardAnimationView *cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
