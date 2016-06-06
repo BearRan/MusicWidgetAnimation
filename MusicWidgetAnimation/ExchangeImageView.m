@@ -28,7 +28,7 @@
     
     if (self) {
         
-        _animationDuration_EX = 0.8;
+        _animationDuration_EX = 0.3;
         
         _nowImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         _nowImageView.contentMode = UIViewContentModeScaleAspectFill;

@@ -10,6 +10,8 @@
 
 @interface CardViewFront : UIView
 
+@property (strong, nonatomic) UIView        *unitIndicatorPoint;
+@property (strong, nonatomic) UILabel       *unitLabel;
 @property (strong, nonatomic) UIImageView   *headImgV;
 @property (strong, nonatomic) UILabel       *mainLabel;
 @property (strong, nonatomic) UILabel       *assignLabel_1;

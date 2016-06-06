@@ -45,9 +45,7 @@
                     @"TestImage_17",
                     @"TestImage_18"];
     
-    _bgImageView = [[ExchangeImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
-//    _bgImageView.nextImageName = _imageArray[0];
-    [self.view addSubview:_bgImageView];
+    
     
     CardAnimationView *cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     cardAnimationView.delegate = self;
@@ -58,12 +56,16 @@
 //    cardAnimationView.cardRotateWhenPan = NO;
 //    cardAnimationView.cardRotateMaxAngle = 45;
 //    cardAnimationView.cardAlphaGapValue = 0.1;
-//    cardAnimationView.cardOffSetPoint = CGPointMake(25, 40);
-//    cardAnimationView.cardScaleRatio  = 0.15;
+    cardAnimationView.cardOffSetPoint = CGPointMake(0, 30);
+    cardAnimationView.cardScaleRatio  = 0.09;
 //    cardAnimationView.cardFlyMaxDistance = 80;
     cardAnimationView.cardCycleShow = YES;
 //    cardAnimationView.cardPanEnable = NO;
 
+    _bgImageView = [[ExchangeImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    _bgImageView.animationDuration_EX = 0.3;
+    [self.view insertSubview:_bgImageView belowSubview:cardAnimationView];
+    
     [self.view addSubview:cardAnimationView];
 
 }

@@ -8,6 +8,10 @@
 
 #import "CardViewFront.h"
 
+#define color_blue      UIColorFromHEX(0x4cb9f3)
+#define color_545556    UIColorFromHEX(0x545556)
+
+
 @implementation CardViewFront
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -25,6 +29,17 @@
 - (void)createUI
 {
     //  components
+    _unitIndicatorPoint = [[UIView alloc] initWithFrame:CGRectMake(10, 15, 9, 9)];
+    _unitIndicatorPoint.layer.cornerRadius = _unitIndicatorPoint.width / 2.0;
+    _unitIndicatorPoint.layer.masksToBounds = YES;
+    _unitIndicatorPoint.backgroundColor = color_blue;
+    [self addSubview:_unitIndicatorPoint];
+    
+    _unitLabel = [[UILabel alloc] init];
+    _unitLabel.font = [UIFont systemFontOfSize:13];
+    _unitLabel.textColor = color_545556;
+    [self addSubview:_unitLabel];
+    
     _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
     _headImgV.layer.cornerRadius = _headImgV.height / 2.0;
     _headImgV.layer.masksToBounds = YES;
@@ -46,10 +61,16 @@
 {
     [super layoutSubviews];
     
-//    _headImgV.image = [UIImage imageNamed:@""];
-    //    _mainLabel.text = @"ABC";
+    _unitLabel.text = @"动漫Action";
     _assignLabel_1.text = @"EFG";
     _assignLabel_2.text = @"HIJ";
+    
+    
+    
+    
+    [_unitLabel sizeToFit];
+    [_unitLabel BearSetRelativeLayoutWithDirection:kDIR_RIGHT destinationView:_unitIndicatorPoint parentRelation:NO distance:4 center:YES];
+    
     
     [_headImgV BearSetRelativeLayoutWithDirection:kDIR_UP destinationView:nil parentRelation:YES distance:50 center:YES];
     

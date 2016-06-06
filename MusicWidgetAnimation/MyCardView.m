@@ -43,7 +43,7 @@
 {
     self.cardStatus = kCardStatus_Front;
     
-    self.layer.cornerRadius = 5;
+    self.layer.cornerRadius = 8;
     self.layer.masksToBounds = YES;
     
     _cardViewBack = [[CardViewBack alloc] initWithFrame:self.frame];
