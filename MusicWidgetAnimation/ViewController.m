@@ -10,11 +10,13 @@
 #import "CardAnimationView.h"
 #import "MyCardView.h"
 #import "ExchangeImageView.h"
+#import "BottomPageView.h"
 
 @interface ViewController () <CardAnimationViewDelegate>
 {
-    NSArray *_imageArray;
-    ExchangeImageView *_bgImageView;
+    NSArray             *_imageArray;
+    ExchangeImageView   *_bgImageView;
+    BottomPageView      *_bottomPageView;
 }
 
 @end
@@ -61,12 +63,17 @@
 //    cardAnimationView.cardFlyMaxDistance = 80;
     cardAnimationView.cardCycleShow = YES;
 //    cardAnimationView.cardPanEnable = NO;
-
+    [self.view addSubview:cardAnimationView];
+    
     _bgImageView = [[ExchangeImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     _bgImageView.animationDuration_EX = 0.3;
     [self.view insertSubview:_bgImageView belowSubview:cardAnimationView];
     
-    [self.view addSubview:cardAnimationView];
+    _bottomPageView = [[BottomPageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
+    _bottomPageView.pageAll = [_imageArray count];
+    _bottomPageView.pageNow = 0;
+    [self.view addSubview:_bottomPageView];
+    [_bottomPageView setMaxY:HEIGHT - 30];
 
 }
 
@@ -99,6 +106,7 @@
 {
     NSLog(@"index:%ld", (long)index);
     _bgImageView.nextImageName = _imageArray[index];
+    _bottomPageView.pageNow = index;
 //    _bgImageView.image = [UIImage imageNamed:_imageArray[index]];
 }
 
