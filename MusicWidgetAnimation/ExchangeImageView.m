@@ -52,6 +52,16 @@
         _nextImage_OpacityAnimation.removedOnCompletion = NO;
         _nextImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:0];
         _nextImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:0];
+        
+        
+        //  虚化背景
+        UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        visualEffectView.alpha = 0.8;
+        visualEffectView.frame = self.frame;
+        visualEffectView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+        [self addSubview:visualEffectView];
+
     }
     
     return self;

@@ -190,7 +190,7 @@
 {
     NSLog(@"index:%ld", (long)index);
     _bgImageView.nextImageName = _imageArray[index];
-    _bottomPageView.pageNow = index;
+    _bottomPageView.pageNow = index + 1;
 //    _bgImageView.image = [UIImage imageNamed:_imageArray[index]];
 }
 
