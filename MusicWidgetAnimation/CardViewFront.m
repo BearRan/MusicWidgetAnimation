@@ -10,6 +10,10 @@
 
 #define color_blue      UIColorFromHEX(0x4cb9f3)
 #define color_545556    UIColorFromHEX(0x545556)
+#define color_898d90    UIColorFromHEX(0x898d90)
+#define color_edeeef    UIColorFromHEX(0xedeeef)
+#define color_f1f2f3    UIColorFromHEX(0xf1f2f3)
+#define color_e2e3e4    UIColorFromHEX(0xe2e3e4)
 
 
 @implementation CardViewFront
@@ -19,7 +23,7 @@
     self = [super initWithFrame:frame];
     
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+        self.backgroundColor = color_edeeef;
         [self createUI];
     }
     
@@ -29,6 +33,10 @@
 - (void)createUI
 {
     //  components
+    
+    
+    //  --> top unit
+    
     _unitIndicatorPoint = [[UIView alloc] initWithFrame:CGRectMake(10, 15, 9, 9)];
     _unitIndicatorPoint.layer.cornerRadius = _unitIndicatorPoint.width / 2.0;
     _unitIndicatorPoint.layer.masksToBounds = YES;
@@ -40,12 +48,31 @@
     _unitLabel.textColor = color_545556;
     [self addSubview:_unitLabel];
     
-    _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+    
+    
+    //  --> _headImage
+    
+    _headImgV = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 180, 180)];
     _headImgV.layer.cornerRadius = _headImgV.height / 2.0;
     _headImgV.layer.masksToBounds = YES;
     _headImgV.contentMode = UIViewContentModeScaleAspectFill;
     _headImgV.backgroundColor = [UIColor blueColor];
     [self addSubview:_headImgV];
+    
+    _holeView_big = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    _holeView_big.layer.cornerRadius = _holeView_big.width / 2.0;
+    _holeView_big.layer.masksToBounds = YES;
+    _holeView_big.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.8];
+    [_headImgV addSubview:_holeView_big];
+    [_holeView_big BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
+    
+    _holeView_small = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 9, 9)];
+    _holeView_small.layer.cornerRadius = _holeView_small.width / 2.0;
+    _holeView_small.layer.masksToBounds = YES;
+    _holeView_small.backgroundColor = color_898d90;
+    [_holeView_big addSubview:_holeView_small];
+    [_holeView_small BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
+    
     
     _mainLabel = [[UILabel alloc] init];
     [self addSubview:_mainLabel];
@@ -55,6 +82,43 @@
     
     _assignLabel_2 = [[UILabel alloc] init];
     [self addSubview:_assignLabel_2];
+    
+    
+    
+    //  --> bottomMenuView
+    
+    CGFloat btn_width   = 40;
+    CGFloat btn_height  = 40;
+    CGFloat gap_width   = (1.0 * 100 / 540) * self.width;
+    
+    _bottomMenuView = [[UIView alloc] initWithFrame:CGRectMake(0, self.height - 50, self.width, 50)];
+    _bottomMenuView.backgroundColor = color_f1f2f3;
+    [self addSubview:_bottomMenuView];
+    
+    UIView *sepLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _bottomMenuView.width, 1)];
+    sepLineView.backgroundColor = color_e2e3e4;
+    [_bottomMenuView addSubview:sepLineView];
+    
+    NSMutableArray *subViewArray = [NSMutableArray new];
+    
+    _collectBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, btn_width, btn_height)];
+    [_collectBtn setImage:[UIImage imageNamed:@"icon_like"] forState:UIControlStateNormal];
+    [_collectBtn setImage:[UIImage imageNamed:@"icon_like_hover"] forState:UIControlStateSelected];
+    [_bottomMenuView addSubview:_collectBtn];
+    [subViewArray addObject:_collectBtn];
+    
+    _playBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, btn_width, btn_height)];
+    [_playBtn setImage:[UIImage imageNamed:@"icon_play"] forState:UIControlStateNormal];
+    [_playBtn setImage:[UIImage imageNamed:@"icon_pause"] forState:UIControlStateSelected];
+    [_bottomMenuView addSubview:_playBtn];
+    [subViewArray addObject:_playBtn];
+    
+    _shareBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, btn_width, btn_height)];
+    [_shareBtn setImage:[UIImage imageNamed:@"icon_share"] forState:UIControlStateNormal];
+    [_bottomMenuView addSubview:_shareBtn];
+    [subViewArray addObject:_shareBtn];
+    
+    [UIView BearAutoLayViewArray:subViewArray layoutAxis:kLAYOUT_AXIS_X center:YES gapDistance:gap_width];
 }
 
 - (void)layoutSubviews

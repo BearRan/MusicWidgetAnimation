@@ -74,8 +74,8 @@
 #pragma mark - CardAnimationView delegate
 - (CardViewCell *)cardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
 {
-    CGFloat cardView_width = WIDTH * 0.8;
-    CGFloat cardView_height = HEIGHT * 0.7;
+    CGFloat cardView_width = (1.0 * 540 / 640) * WIDTH;
+    CGFloat cardView_height = (1.0 * 811 / 1134) * HEIGHT;
     NSString *cardViewID_Str = @"cardViewID_Str";
     
     MyCardView *cardView = (MyCardView *)[cardAnimationView dequeueReusableCardViewCellWithIdentifier:cardViewID_Str];
