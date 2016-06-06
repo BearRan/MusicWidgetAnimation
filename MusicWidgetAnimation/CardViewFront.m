@@ -128,11 +128,6 @@
 {
     [super layoutSubviews];
     
-    _unitLabel.text = @"动漫Action";
-    _assignLabel_1.text = @"EFG";
-    _assignLabel_2.text = @"HIJ";
-    
-    
     [_unitLabel sizeToFit];
     [_unitLabel BearSetRelativeLayoutWithDirection:kDIR_RIGHT destinationView:_unitIndicatorPoint parentRelation:NO distance:4 center:YES];
     
