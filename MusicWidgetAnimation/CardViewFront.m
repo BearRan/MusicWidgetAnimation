@@ -14,6 +14,8 @@
 #define color_edeeef    UIColorFromHEX(0xedeeef)
 #define color_f1f2f3    UIColorFromHEX(0xf1f2f3)
 #define color_e2e3e4    UIColorFromHEX(0xe2e3e4)
+#define color_313233    UIColorFromHEX(0x313233)
+#define color_999a9b    UIColorFromHEX(0x999a9b)
 
 
 @implementation CardViewFront
@@ -78,12 +80,18 @@
     [self addSubview:_middleView];
     
     _mainLabel = [[UILabel alloc] init];
+    _mainLabel.font = [UIFont systemFontOfSize:16];
+    _mainLabel.textColor = color_313233;
     [_middleView addSubview:_mainLabel];
     
     _assignLabel_1 = [[UILabel alloc] init];
+    _assignLabel_1.font = [UIFont systemFontOfSize:16];
+    _assignLabel_1.textColor = color_313233;
     [_middleView addSubview:_assignLabel_1];
     
     _assignLabel_2 = [[UILabel alloc] init];
+    _assignLabel_2.font = [UIFont systemFontOfSize:14];
+    _assignLabel_2.textColor = color_999a9b;
     [_middleView addSubview:_assignLabel_2];
     
     
