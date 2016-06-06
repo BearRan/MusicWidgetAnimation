@@ -72,7 +72,7 @@
     _bottomPageView = [[BottomPageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
     _bottomPageView.pageAll = [_imageArray count];
     _bottomPageView.pageNow = 0;
-    [self.view addSubview:_bottomPageView];
+    [self.view insertSubview:_bottomPageView belowSubview:cardAnimationView];
     [_bottomPageView setMaxY:HEIGHT - 30];
 
 }

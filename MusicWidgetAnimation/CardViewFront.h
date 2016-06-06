@@ -17,6 +17,7 @@
 @property (strong, nonatomic) UIView        *holeView_big;
 @property (strong, nonatomic) UIView        *holeView_small;
 
+@property (strong, nonatomic) UIView        *middleView;
 @property (strong, nonatomic) UILabel       *mainLabel;
 @property (strong, nonatomic) UILabel       *assignLabel_1;
 @property (strong, nonatomic) UILabel       *assignLabel_2;

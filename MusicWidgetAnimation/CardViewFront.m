@@ -74,14 +74,17 @@
     [_holeView_small BearSetCenterToParentViewWithAxis:kAXIS_X_Y];
     
     
+    _middleView = [[UIView alloc] init];
+    [self addSubview:_middleView];
+    
     _mainLabel = [[UILabel alloc] init];
-    [self addSubview:_mainLabel];
+    [_middleView addSubview:_mainLabel];
     
     _assignLabel_1 = [[UILabel alloc] init];
-    [self addSubview:_assignLabel_1];
+    [_middleView addSubview:_assignLabel_1];
     
     _assignLabel_2 = [[UILabel alloc] init];
-    [self addSubview:_assignLabel_2];
+    [_middleView addSubview:_assignLabel_2];
     
     
     
@@ -130,22 +133,16 @@
     _assignLabel_2.text = @"HIJ";
     
     
-    
-    
     [_unitLabel sizeToFit];
     [_unitLabel BearSetRelativeLayoutWithDirection:kDIR_RIGHT destinationView:_unitIndicatorPoint parentRelation:NO distance:4 center:YES];
     
-    
     [_headImgV BearSetRelativeLayoutWithDirection:kDIR_UP destinationView:nil parentRelation:YES distance:50 center:YES];
     
+    _middleView.frame = CGRectMake(0, _headImgV.maxY, self.width, self.height - 50 - _headImgV.maxY);
     [_mainLabel sizeToFit];
-    [_mainLabel BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_headImgV parentRelation:NO distance:30 center:YES];
-    
     [_assignLabel_1 sizeToFit];
-    [_assignLabel_1 BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_mainLabel parentRelation:NO distance:20 center:YES];
-    
     [_assignLabel_2 sizeToFit];
-    [_assignLabel_2 BearSetRelativeLayoutWithDirection:kDIR_DOWN destinationView:_assignLabel_1 parentRelation:NO distance:20 center:YES];
+    [UIView BearAutoLayViewArray:(NSMutableArray *)_middleView.subviews layoutAxis:kLAYOUT_AXIS_Y center:YES gapDistance:15];
 }
 
 @end
