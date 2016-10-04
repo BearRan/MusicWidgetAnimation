@@ -12,6 +12,7 @@
 @interface InterimImageView ()
 
 @property (strong, nonatomic) NSString          *nowImageName;
+@property (strong, nonatomic) UIView            *interimImageBgView;
 @property (strong, nonatomic) NSMutableArray    *imageViewsArray;   //复用队列数组
 @property (assign, nonatomic) NSInteger         imageViewsIndexNow; //复用队列中计数器，从0开始计数
 @property (assign, nonatomic) NSInteger         imageViewsMaxNum;   //复用队列数量上限
@@ -33,6 +34,8 @@
         _imageViewsIndexNow = -1;
         _imageViewsMaxNum = 5;
         
+        _interimImageBgView = [[UIView alloc] initWithFrame:self.bounds];
+        [self addSubview:_interimImageBgView];
         
         //  虚化背景
         UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
@@ -40,7 +43,7 @@
         visualEffectView.alpha = 0.8;
         visualEffectView.frame = self.frame;
         visualEffectView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
-//        [self addSubview:visualEffectView];
+        [self addSubview:visualEffectView];
 
     }
     
@@ -66,7 +69,7 @@
         interimImageCellView.animationDuration_EX = _animationDuration_EX;
         
         //  放置图层最上方
-        [weakSelf insertSubview:interimImageCellView atIndex:[[weakSelf subviews] count]];
+        [weakSelf.interimImageBgView insertSubview:interimImageCellView atIndex:[[weakSelf.interimImageBgView subviews] count]];
         
         [interimImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName] animation:aniamtion];
         [_imageViewsArray addObject:interimImageCellView];
@@ -79,7 +82,7 @@
         InterimImageCellView *tailImageCellView = [weakSelf getQueueTailImageCellView];
         
         //  放置图层最上方
-        [weakSelf insertSubview:tailImageCellView atIndex:[[weakSelf subviews] count]];
+        [weakSelf.interimImageBgView insertSubview:tailImageCellView atIndex:[[weakSelf.interimImageBgView subviews] count]];
         
         [tailImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName] animation:aniamtion];
         
