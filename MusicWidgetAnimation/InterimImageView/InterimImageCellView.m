@@ -6,10 +6,10 @@
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "InterimImageCellView.h"
-
 static NSString *__kAnimationKeyOpacityShow     = @"__kAnimationKeyOpacityShow";
 static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
+
+#import "InterimImageCellView.h"
 
 @interface InterimImageCellView () <CAAnimationDelegate>
 
@@ -47,42 +47,52 @@ static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
     return self;
 }
 
-- (void)opacityAnimationShowWithImage:(UIImage *)image
+- (void)opacityAnimationShowWithImage:(UIImage *)image animation:(BOOL)aniamtion
 {
     if (image) {
         self.image = image;
     }
     
-    [self opacityAnimationShow];
+    [self opacityAnimationShow:aniamtion];
 }
 
-- (void)opacityAnimationHideWithImage:(UIImage *)image
+- (void)opacityAnimationHideWithImage:(UIImage *)image animation:(BOOL)aniamtion
 {
     if (image) {
         self.image = image;
     }
     
-    [self opacityAnimationHide];
+    [self opacityAnimationHide:aniamtion];
 }
 
 
-- (void)opacityAnimationShow
+- (void)opacityAnimationShow:(BOOL)aniamtion
 {
     [self.layer removeAnimationForKey:__kAnimationKeyOpacityShow];
     
+    CGFloat aniamtionDuration = 0;
+    if (aniamtion) {
+        aniamtionDuration = _animationDuration_EX;
+    }
+    
     _opacityShowAnimation.fromValue     = [NSNumber numberWithFloat:0];
     _opacityShowAnimation.toValue       = [NSNumber numberWithFloat:1];
-    _opacityShowAnimation.duration      = _animationDuration_EX;
+    _opacityShowAnimation.duration      = aniamtionDuration;
     [self.layer addAnimation:_opacityShowAnimation forKey:__kAnimationKeyOpacityShow];
 }
 
-- (void)opacityAnimationHide
+- (void)opacityAnimationHide:(BOOL)aniamtion
 {
     [self.layer removeAnimationForKey:__kAnimationKeyOpacityHide];
     
+    CGFloat aniamtionDuration = 0;
+    if (aniamtion) {
+        aniamtionDuration = _animationDuration_EX;
+    }
+    
     _opacityHideAnimation.fromValue     = [NSNumber numberWithFloat:1];
     _opacityHideAnimation.toValue       = [NSNumber numberWithFloat:0];
-    _opacityHideAnimation.duration      = _animationDuration_EX;
+    _opacityHideAnimation.duration      = aniamtionDuration;
     [self.layer addAnimation:_opacityHideAnimation forKey:__kAnimationKeyOpacityHide];
 }
 
@@ -90,11 +100,15 @@ static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
 {
     if ([self.layer animationForKey:__kAnimationKeyOpacityHide] == anim) {
         
-        [self removeFromSuperview];
+        if (self.opacityHideFinish_Block) {
+            self.opacityHideFinish_Block();
+        }
         
     }else if ([self.layer animationForKey:__kAnimationKeyOpacityShow] == anim){
     
-        nil;
+        if (self.opacityShowFinish_Block) {
+            self.opacityShowFinish_Block();
+        }
     }
 }
 

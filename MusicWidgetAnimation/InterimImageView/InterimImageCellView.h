@@ -8,12 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^OpacityShowFinish_Block)();
+typedef void(^OpacityHideFinish_Block)();
+
 @interface InterimImageCellView : UIImageView
 
 @property (assign, nonatomic) CGFloat   animationDuration_EX;
 @property (assign, nonatomic) BOOL      animationFinished;
 
-- (void)opacityAnimationShowWithImage:(UIImage *)image;
-- (void)opacityAnimationHideWithImage:(UIImage *)image;
+@property (copy, nonatomic) OpacityShowFinish_Block opacityShowFinish_Block;
+@property (copy, nonatomic) OpacityHideFinish_Block opacityHideFinish_Block;
+
+- (void)opacityAnimationShowWithImage:(UIImage *)image animation:(BOOL)aniamtion;
+- (void)opacityAnimationHideWithImage:(UIImage *)image animation:(BOOL)aniamtion;
 
 @end

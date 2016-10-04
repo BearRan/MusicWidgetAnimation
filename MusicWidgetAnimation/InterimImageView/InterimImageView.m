@@ -52,45 +52,46 @@
 {
     _nextImageName = nextImageName;
     
-    //  第一次加载，无动效
-    if ([_nowImageName length] == 0) {
-        
-        [self insertImage:nextImageName];
-    }else{
-        
-        [self insertImage:nextImageName];
-        [self hideFormerImage];
-    }
+    [self insertImage:nextImageName];
+    [self hideFormerImage];
 }
 
 - (void)insertImage:(NSString *)imgName
 {
     __weak typeof(self) weakSelf = self;
     
-    void (^insertNewBlock)() = ^(){
+    void (^insertNewBlock)(BOOL aniamtion) = ^(BOOL aniamtion){
+        
         InterimImageCellView *interimImageCellView = [[InterimImageCellView alloc] initWithFrame:self.bounds];
         interimImageCellView.animationDuration_EX = _animationDuration_EX;
         
         //  放置图层最上方
         [weakSelf insertSubview:interimImageCellView atIndex:[[weakSelf subviews] count]];
         
-        [interimImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName]];
+        [interimImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName] animation:aniamtion];
         [_imageViewsArray addObject:interimImageCellView];
         
         _imageViewsIndexNow ++;
     };
     
-    void (^hideLastBlock)() = ^(){
+    void (^reuseBlock)(BOOL aniamtion) = ^(BOOL aniamtion){
+    
+        InterimImageCellView *tailImageCellView = [weakSelf getQueueTailImageCellView];
         
-        InterimImageCellView *formerImageCellView = [weakSelf getFormerImageCellView];
-        [formerImageCellView opacityAnimationHideWithImage:nil];
+        //  放置图层最上方
+        [weakSelf insertSubview:tailImageCellView atIndex:[[weakSelf subviews] count]];
+        
+        [tailImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName] animation:aniamtion];
+        
+        _imageViewsIndexNow = [weakSelf getImageCellViewIndex:tailImageCellView];
     };
+    
     
     //  第一次切换图片
     if ([_imageViewsArray count] == 0) {
         
         if (insertNewBlock) {
-            insertNewBlock();
+            insertNewBlock(NO);
         }
     }
     //  非第一次切换图片
@@ -100,28 +101,15 @@
         if ([_imageViewsArray count] < _imageViewsMaxNum) {
             
             if (insertNewBlock) {
-                insertNewBlock();
-            }
-            
-            if (hideLastBlock) {
-                hideLastBlock();
+                insertNewBlock(YES);
             }
         }
         
         //  复用队列中尾部ImageCellView
         else{
             
-            InterimImageCellView *tailImageCellView = [self getQueueTailImageCellView];
-            
-            //  放置图层最上方
-            [self insertSubview:tailImageCellView atIndex:[[self subviews] count]];
-            
-            [tailImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName]];
-            
-            _imageViewsIndexNow = [self getImageCellViewIndex:tailImageCellView];
-            
-            if (hideLastBlock) {
-                hideLastBlock();
+            if (reuseBlock) {
+                reuseBlock(YES);
             }
         }
     }
@@ -133,10 +121,13 @@
 
 - (void)hideFormerImage
 {
-    InterimImageCellView *formerImageCellView = [self getFormerImageCellView];
+    __weak InterimImageCellView *formerImageCellView = [self getFormerImageCellView];
     
     if (formerImageCellView) {
-        [formerImageCellView opacityAnimationHideWithImage:nil];
+        [formerImageCellView opacityAnimationHideWithImage:nil animation:YES];
+        formerImageCellView.opacityHideFinish_Block = ^(){
+            [formerImageCellView removeFromSuperview];
+        };
     }
 }
 
