@@ -82,6 +82,7 @@ static NSString *__kAnimationKeyOpacity     = @"__kAnimationKeyOpacity";
 {
     if (aniamtion) {
         
+        //  显示动画仍在进行，中途改变动画
         if (self.animationStatus == kAnimation_Showing) {
             CALayer *presentLayer = [self.layer presentationLayer];
             _opacityAnimation.fromValue     = [NSNumber numberWithFloat:presentLayer.opacity];

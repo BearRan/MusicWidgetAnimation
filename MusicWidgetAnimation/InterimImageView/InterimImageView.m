@@ -113,10 +113,6 @@
             }
         }
     }
-    
-    
-    
-    
 }
 
 - (void)hideFormerImage
