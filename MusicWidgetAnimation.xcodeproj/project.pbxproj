@@ -22,8 +22,9 @@
 		097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85AF1CFDD7D10082FA05 /* MyCardView.m */; };
 		097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B21CFDDD510082FA05 /* CardViewFront.m */; };
 		097A85B51CFE64890082FA05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B41CFE64890082FA05 /* ViewController.m */; };
-		09DC7D971D00FAFB00ABC0FC /* ExchangeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09DC7D961D00FAFB00ABC0FC /* ExchangeImageView.m */; };
 		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
+		09FF5EB91DA14B8200AB6415 /* InterimImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FF5EB81DA14B8200AB6415 /* InterimImageView.m */; };
+		09FF5EBC1DA14BE500AB6415 /* InterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FF5EBB1DA14BE500AB6415 /* InterimImageCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,11 +74,13 @@
 		097A85B11CFDDD510082FA05 /* CardViewFront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewFront.h; sourceTree = "<group>"; };
 		097A85B21CFDDD510082FA05 /* CardViewFront.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewFront.m; sourceTree = "<group>"; };
 		097A85B41CFE64890082FA05 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		09DC7D951D00FAFB00ABC0FC /* ExchangeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeImageView.h; sourceTree = "<group>"; };
-		09DC7D961D00FAFB00ABC0FC /* ExchangeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeImageView.m; sourceTree = "<group>"; };
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
+		09FF5EB71DA14B8200AB6415 /* InterimImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterimImageView.h; sourceTree = "<group>"; };
+		09FF5EB81DA14B8200AB6415 /* InterimImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterimImageView.m; sourceTree = "<group>"; };
+		09FF5EBA1DA14BE500AB6415 /* InterimImageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterimImageCellView.h; sourceTree = "<group>"; };
+		09FF5EBB1DA14BE500AB6415 /* InterimImageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterimImageCellView.m; sourceTree = "<group>"; };
 		0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,8 +141,7 @@
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
 				090DA0241CDE0EF90017D3F0 /* ViewController.h */,
 				097A85B41CFE64890082FA05 /* ViewController.m */,
-				09DC7D951D00FAFB00ABC0FC /* ExchangeImageView.h */,
-				09DC7D961D00FAFB00ABC0FC /* ExchangeImageView.m */,
+				09FF5EB61DA14B8200AB6415 /* InterimImageView */,
 				094608B21D05AC29008363B7 /* BottomPageView.h */,
 				094608B31D05AC29008363B7 /* BottomPageView.m */,
 				097A85AE1CFDD7D10082FA05 /* MyCardView.h */,
@@ -195,6 +197,17 @@
 				092CB0141CF9CD2900827977 /* CardViewCell.m */,
 			);
 			name = CardAnimationView;
+			sourceTree = "<group>";
+		};
+		09FF5EB61DA14B8200AB6415 /* InterimImageView */ = {
+			isa = PBXGroup;
+			children = (
+				09FF5EB71DA14B8200AB6415 /* InterimImageView.h */,
+				09FF5EB81DA14B8200AB6415 /* InterimImageView.m */,
+				09FF5EBA1DA14BE500AB6415 /* InterimImageCellView.h */,
+				09FF5EBB1DA14BE500AB6415 /* InterimImageCellView.m */,
+			);
+			path = InterimImageView;
 			sourceTree = "<group>";
 		};
 		DB8B218B57954EBA283CDB36 /* Pods */ = {
@@ -284,7 +297,8 @@
 				TargetAttributes = {
 					090DA01A1CDE0EF90017D3F0 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = VT6HKJNGDV;
+						DevelopmentTeam = 28R7P5U993;
+						ProvisioningStyle = Manual;
 					};
 					090DA0331CDE0EF90017D3F0 = {
 						CreatedOnToolsVersion = 7.3;
@@ -405,10 +419,11 @@
 				097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */,
 				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
+				09FF5EB91DA14B8200AB6415 /* InterimImageView.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
-				09DC7D971D00FAFB00ABC0FC /* ExchangeImageView.m in Sources */,
 				092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */,
 				09E44EA61CDE255400101712 /* AppConstant.m in Sources */,
+				09FF5EBC1DA14BE500AB6415 /* InterimImageCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,13 +569,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 28R7P5U993;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicWidgetAnimation/PrefixHeader.pch";
 				INFOPLIST_FILE = MusicWidgetAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yuntu.text.BearSkillDemo-xr";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crossStreet.forDevelopment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5e9bbe3d-49b2-4e92-a35c-a5a01f123110";
+				PROVISIONING_PROFILE_SPECIFIER = CorssStreet_dev_03;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -572,11 +589,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MusicWidgetAnimation/PrefixHeader.pch";
 				INFOPLIST_FILE = MusicWidgetAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yuntu.text.BearSkillDemo-xr";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crossStreet.forDevelopment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

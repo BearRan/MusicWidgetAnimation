@@ -1,26 +1,29 @@
 //
-//  ExchangeImageView.m
+//  InterimImageView.m
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/6/3.
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "ExchangeImageView.h"
+#import "InterimImageView.h"
+#import "InterimImageCellView.h"
 
-@interface ExchangeImageView () <UIApplicationDelegate>
-{
-    CABasicAnimation *_nowImage_OpacityAnimation;
-    CABasicAnimation *_nextImage_OpacityAnimation;
-}
+static NSString *__kAnimationKeyNow     = @"__kAnimationKeyNow";
+static NSString *__kAnimationKeyNext    = @"__kAnimationKeyNext";
 
-@property (strong, nonatomic) NSString      *nowImageName;
-@property (strong, nonatomic) UIImageView   *nowImageView;
-@property (strong, nonatomic) UIImageView   *nextImageView;
+@interface InterimImageView () <UIApplicationDelegate, CAAnimationDelegate>
+
+@property (strong, nonatomic) CABasicAnimation  *nowImage_OpacityAnimation;
+@property (strong, nonatomic) CABasicAnimation  *nextImage_OpacityAnimation;
+@property (strong, nonatomic) NSString          *nowImageName;
+@property (strong, nonatomic) UIImageView       *nowImageView;
+@property (strong, nonatomic) UIImageView       *nextImageView;
+@property (strong, nonatomic) NSMutableArray    *imageViewsArray;
 
 @end
 
-@implementation ExchangeImageView
+@implementation InterimImageView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -28,7 +31,10 @@
     
     if (self) {
         
+        __weak typeof(self) weakSelf = self;
         _animationDuration_EX = 0.3;
+        
+        _imageViewsArray = [NSMutableArray new];
         
         _nowImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         _nowImageView.contentMode = UIViewContentModeScaleAspectFill;
@@ -45,13 +51,14 @@
         _nowImage_OpacityAnimation.removedOnCompletion = NO;
         _nowImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:0];
         _nowImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:1];
-        _nowImage_OpacityAnimation.delegate = self;
+        _nowImage_OpacityAnimation.delegate = weakSelf;
         
         _nextImage_OpacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
         _nextImage_OpacityAnimation.fillMode = kCAFillModeForwards;
         _nextImage_OpacityAnimation.removedOnCompletion = NO;
         _nextImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:0];
         _nextImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:0];
+        _nextImage_OpacityAnimation.delegate = weakSelf;
         
         
         //  虚化背景
@@ -60,7 +67,7 @@
         visualEffectView.alpha = 0.8;
         visualEffectView.frame = self.frame;
         visualEffectView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
-        [self addSubview:visualEffectView];
+//        [self addSubview:visualEffectView];
 
     }
     
@@ -74,12 +81,12 @@
     _nowImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:1];
     _nowImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:0];
     _nowImage_OpacityAnimation.duration = _animationDuration_EX;
-    [_nowImageView.layer addAnimation:_nowImage_OpacityAnimation forKey:_nowImage_OpacityAnimation.keyPath];
+    [_nowImageView.layer addAnimation:_nowImage_OpacityAnimation forKey:__kAnimationKeyNow];
     
     _nextImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:0];
     _nextImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:1];
     _nextImage_OpacityAnimation.duration = _animationDuration_EX;
-    [_nextImageView.layer addAnimation:_nextImage_OpacityAnimation forKey:_nextImage_OpacityAnimation.keyPath];
+    [_nextImageView.layer addAnimation:_nextImage_OpacityAnimation forKey:__kAnimationKeyNext];
 }
 
 @synthesize nextImageName = _nextImageName;
@@ -102,26 +109,16 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
     _nowImageView.image = [UIImage imageNamed:_nextImageName];
-    [_nowImageView.layer removeAnimationForKey:_nowImage_OpacityAnimation.keyPath];
-
-    [_nextImageView.layer removeAnimationForKey:_nextImage_OpacityAnimation.keyPath];
+//    [_nowImageView.layer removeAnimationForKey:_nowImage_OpacityAnimation.keyPath];
+//
+//    [_nextImageView.layer removeAnimationForKey:_nextImage_OpacityAnimation.keyPath];
     
-    
-    
-//    if ([anim isKindOfClass:[CABasicAnimation class]]) {
-//        
-//        CABasicAnimation *tempCABasicAnimation = (CABasicAnimation *)anim;
-//        
-//        if ([tempCABasicAnimation.keyPath isEqualToString:_nowImage_OpacityAnimation.keyPath]) {
-//            NSLog(@"AAA--1");
-//        }
-//        else if ([tempCABasicAnimation.keyPath isEqualToString:_nextImage_OpacityAnimation.keyPath]){
-//            NSLog(@"AAA--2");
-//        }
-//        
-//        tempCABasicAnimation.
-//    }
-    
+    if ([_nowImageView.layer animationForKey:__kAnimationKeyNow] == anim) {
+        NSLog(@"now");
+    }
+    else if ([_nextImageView.layer animationForKey:__kAnimationKeyNext] == anim){
+        NSLog(@"next");
+    }
     
 }
 

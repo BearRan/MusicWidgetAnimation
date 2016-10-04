@@ -1,5 +1,5 @@
 //
-//  ExchangeImageView.h
+//  InterimImageView.h
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/6/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExchangeImageView : UIView
+@interface InterimImageView : UIView
 
 @property (assign, nonatomic) CGFloat   animationDuration_EX;
 @property (strong, nonatomic) NSString  *nextImageName;
