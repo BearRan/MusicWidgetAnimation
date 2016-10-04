@@ -88,7 +88,14 @@ static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
+    if ([self.layer animationForKey:__kAnimationKeyOpacityHide] == anim) {
+        
+        [self removeFromSuperview];
+        
+    }else if ([self.layer animationForKey:__kAnimationKeyOpacityShow] == anim){
     
+        nil;
+    }
 }
 
 /*

@@ -9,20 +9,12 @@
 #import "InterimImageView.h"
 #import "InterimImageCellView.h"
 
-static NSString *__kAnimationKeyNow     = @"__kAnimationKeyNow";
-static NSString *__kAnimationKeyNext    = @"__kAnimationKeyNext";
+@interface InterimImageView ()
 
-@interface InterimImageView () <UIApplicationDelegate, CAAnimationDelegate>
-
-@property (strong, nonatomic) CABasicAnimation  *nowImage_OpacityAnimation;
-@property (strong, nonatomic) CABasicAnimation  *nextImage_OpacityAnimation;
 @property (strong, nonatomic) NSString          *nowImageName;
-@property (strong, nonatomic) UIImageView       *nowImageView;
-@property (strong, nonatomic) UIImageView       *nextImageView;
-
-@property (strong, nonatomic) NSMutableArray    *imageViewsArray;
-@property (assign, nonatomic) int               imageViewsIndexNow;
-@property (strong, nonatomic) NSNumber          *imageViewsMaxNum;
+@property (strong, nonatomic) NSMutableArray    *imageViewsArray;   //复用队列数组
+@property (assign, nonatomic) NSInteger         imageViewsIndexNow; //复用队列中计数器，从0开始计数
+@property (assign, nonatomic) NSInteger         imageViewsMaxNum;   //复用队列数量上限
 
 
 @end
@@ -35,36 +27,11 @@ static NSString *__kAnimationKeyNext    = @"__kAnimationKeyNext";
     
     if (self) {
         
-        __weak typeof(self) weakSelf = self;
         _animationDuration_EX = 0.3;
         
         _imageViewsArray = [NSMutableArray new];
         _imageViewsIndexNow = -1;
-        _imageViewsMaxNum = @10;
-        
-//        _nowImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-//        _nowImageView.contentMode = UIViewContentModeScaleAspectFill;
-//        [self addSubview:_nowImageView];
-//        _nowImageView.alpha = 1;
-//        
-//        _nextImageView = [[UIImageView alloc] initWithFrame:self.bounds];
-//        _nextImageView.contentMode = UIViewContentModeScaleAspectFill;
-//        [self addSubview:_nextImageView];
-//        _nextImageView.alpha = 1;
-//        
-//        _nowImage_OpacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-//        _nowImage_OpacityAnimation.fillMode = kCAFillModeForwards;
-//        _nowImage_OpacityAnimation.removedOnCompletion = NO;
-//        _nowImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:0];
-//        _nowImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:1];
-//        _nowImage_OpacityAnimation.delegate = weakSelf;
-//        
-//        _nextImage_OpacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-//        _nextImage_OpacityAnimation.fillMode = kCAFillModeForwards;
-//        _nextImage_OpacityAnimation.removedOnCompletion = NO;
-//        _nextImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:0];
-//        _nextImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:0];
-//        _nextImage_OpacityAnimation.delegate = weakSelf;
+        _imageViewsMaxNum = 5;
         
         
         //  虚化背景
@@ -79,38 +46,6 @@ static NSString *__kAnimationKeyNext    = @"__kAnimationKeyNext";
     
     return self;
 }
-
-- (void)exchangeToNextImage:(NSString *)imageName animation:(BOOL)animation
-{
-    _nextImageView.image = [UIImage imageNamed:imageName];
-    
-    _nowImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:1];
-    _nowImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:0];
-    _nowImage_OpacityAnimation.duration = _animationDuration_EX;
-    [_nowImageView.layer addAnimation:_nowImage_OpacityAnimation forKey:__kAnimationKeyNow];
-    
-    _nextImage_OpacityAnimation.fromValue = [NSNumber numberWithFloat:0];
-    _nextImage_OpacityAnimation.toValue = [NSNumber numberWithFloat:1];
-    _nextImage_OpacityAnimation.duration = _animationDuration_EX;
-    [_nextImageView.layer addAnimation:_nextImage_OpacityAnimation forKey:__kAnimationKeyNext];
-}
-
-//@synthesize nextImageName = _nextImageName;
-//- (void)setNextImageName:(NSString *)nextImageName
-//{
-//    _nextImageName = nextImageName;
-//    
-//    //  第一次加载，无动效
-//    if ([_nowImageName length] == 0) {
-//        
-//        _nowImageName = _nextImageName;
-//        _nowImageView.image = [UIImage imageNamed:_nowImageName];
-//        _nowImageView.alpha = 1;
-//    }else{
-//        
-//        [self exchangeToNextImage:_nextImageName animation:YES];
-//    }
-//}
 
 @synthesize nextImageName = _nextImageName;
 - (void)setNextImageName:(NSString *)nextImageName
@@ -130,36 +65,121 @@ static NSString *__kAnimationKeyNext    = @"__kAnimationKeyNext";
 
 - (void)insertImage:(NSString *)imgName
 {
-    InterimImageCellView *interimImageCellView = [[InterimImageCellView alloc] initWithFrame:self.bounds];
-    interimImageCellView.animationDuration_EX = _animationDuration_EX;
-    [self addSubview:interimImageCellView];
-    [interimImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName]];
-    [_imageViewsArray addObject:interimImageCellView];
+    __weak typeof(self) weakSelf = self;
     
-    _imageViewsIndexNow ++;
+    void (^insertNewBlock)() = ^(){
+        InterimImageCellView *interimImageCellView = [[InterimImageCellView alloc] initWithFrame:self.bounds];
+        interimImageCellView.animationDuration_EX = _animationDuration_EX;
+        
+        //  放置图层最上方
+        [weakSelf insertSubview:interimImageCellView atIndex:[[weakSelf subviews] count]];
+        
+        [interimImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName]];
+        [_imageViewsArray addObject:interimImageCellView];
+        
+        _imageViewsIndexNow ++;
+    };
+    
+    void (^hideLastBlock)() = ^(){
+        
+        InterimImageCellView *formerImageCellView = [weakSelf getFormerImageCellView];
+        [formerImageCellView opacityAnimationHideWithImage:nil];
+    };
+    
+    //  第一次切换图片
+    if ([_imageViewsArray count] == 0) {
+        
+        if (insertNewBlock) {
+            insertNewBlock();
+        }
+    }
+    //  非第一次切换图片
+    else{
+        
+        //  新增InterimImageCellView
+        if ([_imageViewsArray count] < _imageViewsMaxNum) {
+            
+            if (insertNewBlock) {
+                insertNewBlock();
+            }
+            
+            if (hideLastBlock) {
+                hideLastBlock();
+            }
+        }
+        
+        //  复用队列中尾部ImageCellView
+        else{
+            
+            InterimImageCellView *tailImageCellView = [self getQueueTailImageCellView];
+            
+            //  放置图层最上方
+            [self insertSubview:tailImageCellView atIndex:[[self subviews] count]];
+            
+            [tailImageCellView opacityAnimationShowWithImage:[UIImage imageNamed:imgName]];
+            
+            _imageViewsIndexNow = [self getImageCellViewIndex:tailImageCellView];
+            
+            if (hideLastBlock) {
+                hideLastBlock();
+            }
+        }
+    }
+    
+    
+    
+    
 }
 
 - (void)hideFormerImage
 {
-    if ([_imageViewsArray count] <= 1) {
-        return;
-    }
+    InterimImageCellView *formerImageCellView = [self getFormerImageCellView];
     
-    InterimImageCellView *formerImageCellView = _imageViewsArray[_imageViewsIndexNow - 1];
-    [formerImageCellView opacityAnimationHideWithImage:nil];
+    if (formerImageCellView) {
+        [formerImageCellView opacityAnimationHideWithImage:nil];
+    }
 }
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+- (InterimImageCellView *)getFormerImageCellView
 {
-    _nowImageView.image = [UIImage imageNamed:_nextImageName];
-    
-    if ([_nowImageView.layer animationForKey:__kAnimationKeyNow] == anim) {
-        NSLog(@"now");
-    }
-    else if ([_nextImageView.layer animationForKey:__kAnimationKeyNext] == anim){
-        NSLog(@"next");
+    if ([_imageViewsArray count] <= 1) {
+        return nil;
     }
     
+    NSInteger imageViewsIndexFormer = _imageViewsIndexNow - 1;
+    if (imageViewsIndexFormer < 0) {
+        imageViewsIndexFormer = [_imageViewsArray count] - 1;
+    }
+    
+    InterimImageCellView *formerImageCellView = _imageViewsArray[imageViewsIndexFormer];
+    return formerImageCellView;
+}
+
+- (InterimImageCellView *)getQueueTailImageCellView
+{
+    if ([_imageViewsArray count] <= 1) {
+        return nil;
+    }
+    
+    //  数量未满
+    if ([_imageViewsArray count] < _imageViewsMaxNum){
+        return nil;
+    }
+    
+    NSInteger imageViewsIndexTail = _imageViewsIndexNow + 1;
+    if (imageViewsIndexTail > [_imageViewsArray count] - 1) {
+        imageViewsIndexTail = 0;
+    }
+    
+    InterimImageCellView *formerImageCellView = _imageViewsArray[imageViewsIndexTail];
+    return formerImageCellView;
+}
+
+- (NSInteger)getImageCellViewIndex:(InterimImageCellView *)imageCellView
+{
+    NSInteger index = [_imageViewsArray indexOfObject:imageCellView];
+    
+    return index;
 }
 
 @end
