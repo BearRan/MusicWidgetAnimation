@@ -10,6 +10,10 @@
 
 @interface InterimImageCellView : UIImageView
 
-@property (assign, nonatomic) BOOL   animationFinished;
+@property (assign, nonatomic) CGFloat   animationDuration_EX;
+@property (assign, nonatomic) BOOL      animationFinished;
+
+- (void)opacityAnimationShowWithImage:(UIImage *)image;
+- (void)opacityAnimationHideWithImage:(UIImage *)image;
 
 @end

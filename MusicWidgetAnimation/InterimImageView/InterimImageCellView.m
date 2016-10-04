@@ -8,9 +8,13 @@
 
 #import "InterimImageCellView.h"
 
+static NSString *__kAnimationKeyOpacityShow     = @"__kAnimationKeyOpacityShow";
+static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
+
 @interface InterimImageCellView () <CAAnimationDelegate>
 
-@property (strong, nonatomic) CABasicAnimation  *opacityAnimation;
+@property (strong, nonatomic) CABasicAnimation  *opacityShowAnimation;
+@property (strong, nonatomic) CABasicAnimation  *opacityHideAnimation;
 
 @end
 
@@ -24,18 +28,62 @@
         
         __weak typeof(self) weakSelf = self;
         
-        self.animationFinished = YES;
+        _animationDuration_EX   = 0.3;
+        self.animationFinished  = YES;
+        self.contentMode = UIViewContentModeScaleAspectFill;
         
-        _opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        _opacityAnimation.fillMode = kCAFillModeForwards;
-        _opacityAnimation.removedOnCompletion = NO;
-        _opacityAnimation.fromValue = [NSNumber numberWithFloat:0];
-        _opacityAnimation.toValue = [NSNumber numberWithFloat:1];
-        _opacityAnimation.delegate = weakSelf;
+        _opacityShowAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        _opacityShowAnimation.fillMode = kCAFillModeForwards;
+        _opacityShowAnimation.removedOnCompletion = NO;
+        _opacityShowAnimation.delegate = weakSelf;
+        
+        _opacityHideAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        _opacityHideAnimation.fillMode = kCAFillModeForwards;
+        _opacityHideAnimation.removedOnCompletion = NO;
+        _opacityHideAnimation.delegate = weakSelf;
         
     }
     
     return self;
+}
+
+- (void)opacityAnimationShowWithImage:(UIImage *)image
+{
+    if (image) {
+        self.image = image;
+    }
+    
+    [self opacityAnimationShow];
+}
+
+- (void)opacityAnimationHideWithImage:(UIImage *)image
+{
+    if (image) {
+        self.image = image;
+    }
+    
+    [self opacityAnimationHide];
+}
+
+
+- (void)opacityAnimationShow
+{
+    [self.layer removeAnimationForKey:__kAnimationKeyOpacityShow];
+    
+    _opacityShowAnimation.fromValue     = [NSNumber numberWithFloat:0];
+    _opacityShowAnimation.toValue       = [NSNumber numberWithFloat:1];
+    _opacityShowAnimation.duration      = _animationDuration_EX;
+    [self.layer addAnimation:_opacityShowAnimation forKey:__kAnimationKeyOpacityShow];
+}
+
+- (void)opacityAnimationHide
+{
+    [self.layer removeAnimationForKey:__kAnimationKeyOpacityHide];
+    
+    _opacityHideAnimation.fromValue     = [NSNumber numberWithFloat:1];
+    _opacityHideAnimation.toValue       = [NSNumber numberWithFloat:0];
+    _opacityHideAnimation.duration      = _animationDuration_EX;
+    [self.layer addAnimation:_opacityHideAnimation forKey:__kAnimationKeyOpacityHide];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
