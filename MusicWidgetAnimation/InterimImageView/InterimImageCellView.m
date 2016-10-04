@@ -70,30 +70,24 @@ static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
 {
     [self.layer removeAnimationForKey:__kAnimationKeyOpacityShow];
     
-    CGFloat aniamtionDuration = 0;
     if (aniamtion) {
-        aniamtionDuration = _animationDuration_EX;
+        _opacityShowAnimation.fromValue     = [NSNumber numberWithFloat:0];
+        _opacityShowAnimation.toValue       = [NSNumber numberWithFloat:1];
+        _opacityShowAnimation.duration      = _animationDuration_EX;
+        [self.layer addAnimation:_opacityShowAnimation forKey:__kAnimationKeyOpacityShow];
     }
-    
-    _opacityShowAnimation.fromValue     = [NSNumber numberWithFloat:0];
-    _opacityShowAnimation.toValue       = [NSNumber numberWithFloat:1];
-    _opacityShowAnimation.duration      = aniamtionDuration;
-    [self.layer addAnimation:_opacityShowAnimation forKey:__kAnimationKeyOpacityShow];
 }
 
 - (void)opacityAnimationHide:(BOOL)aniamtion
 {
     [self.layer removeAnimationForKey:__kAnimationKeyOpacityHide];
     
-    CGFloat aniamtionDuration = 0;
     if (aniamtion) {
-        aniamtionDuration = _animationDuration_EX;
+        _opacityHideAnimation.fromValue     = [NSNumber numberWithFloat:1];
+        _opacityHideAnimation.toValue       = [NSNumber numberWithFloat:0];
+        _opacityHideAnimation.duration      = _animationDuration_EX;
+        [self.layer addAnimation:_opacityHideAnimation forKey:__kAnimationKeyOpacityHide];
     }
-    
-    _opacityHideAnimation.fromValue     = [NSNumber numberWithFloat:1];
-    _opacityHideAnimation.toValue       = [NSNumber numberWithFloat:0];
-    _opacityHideAnimation.duration      = aniamtionDuration;
-    [self.layer addAnimation:_opacityHideAnimation forKey:__kAnimationKeyOpacityHide];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
