@@ -6,15 +6,20 @@
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-static NSString *__kAnimationKeyOpacityShow     = @"__kAnimationKeyOpacityShow";
-static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
+typedef enum {
+    kAnimaiton_Hidding,
+    kAnimation_Showing,
+    kAnimation_Finished,
+}AnimationStatus;
+
+static NSString *__kAnimationKeyOpacity     = @"__kAnimationKeyOpacity";
 
 #import "InterimImageCellView.h"
 
 @interface InterimImageCellView () <CAAnimationDelegate>
 
-@property (strong, nonatomic) CABasicAnimation  *opacityShowAnimation;
-@property (strong, nonatomic) CABasicAnimation  *opacityHideAnimation;
+@property (strong, nonatomic) CABasicAnimation  *opacityAnimation;
+@property (assign, nonatomic) AnimationStatus   animationStatus;
 
 @end
 
@@ -30,17 +35,13 @@ static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
         
         _animationDuration_EX   = 0.3;
         self.animationFinished  = YES;
-        self.contentMode = UIViewContentModeScaleAspectFill;
+        self.animationStatus    = kAnimation_Finished;
+        self.contentMode        = UIViewContentModeScaleAspectFill;
         
-        _opacityShowAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        _opacityShowAnimation.fillMode = kCAFillModeForwards;
-        _opacityShowAnimation.removedOnCompletion = NO;
-        _opacityShowAnimation.delegate = weakSelf;
-        
-        _opacityHideAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-        _opacityHideAnimation.fillMode = kCAFillModeForwards;
-        _opacityHideAnimation.removedOnCompletion = NO;
-        _opacityHideAnimation.delegate = weakSelf;
+        _opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
+        _opacityAnimation.fillMode = kCAFillModeForwards;
+        _opacityAnimation.removedOnCompletion = NO;
+        _opacityAnimation.delegate = weakSelf;
         
     }
     
@@ -68,50 +69,66 @@ static NSString *__kAnimationKeyOpacityHide     = @"__kAnimationKeyOpacityHide";
 
 - (void)opacityAnimationShow:(BOOL)aniamtion
 {
-    [self.layer removeAnimationForKey:__kAnimationKeyOpacityShow];
-    
     if (aniamtion) {
-        _opacityShowAnimation.fromValue     = [NSNumber numberWithFloat:0];
-        _opacityShowAnimation.toValue       = [NSNumber numberWithFloat:1];
-        _opacityShowAnimation.duration      = _animationDuration_EX;
-        [self.layer addAnimation:_opacityShowAnimation forKey:__kAnimationKeyOpacityShow];
+        _opacityAnimation.fromValue     = [NSNumber numberWithFloat:0];
+        _opacityAnimation.toValue       = [NSNumber numberWithFloat:1];
+        _opacityAnimation.duration      = _animationDuration_EX;
+        [self.layer addAnimation:_opacityAnimation forKey:__kAnimationKeyOpacity];
+        self.animationStatus = kAnimation_Showing;
     }
 }
 
 - (void)opacityAnimationHide:(BOOL)aniamtion
 {
-    [self.layer removeAnimationForKey:__kAnimationKeyOpacityHide];
-    
     if (aniamtion) {
-        _opacityHideAnimation.fromValue     = [NSNumber numberWithFloat:1];
-        _opacityHideAnimation.toValue       = [NSNumber numberWithFloat:0];
-        _opacityHideAnimation.duration      = _animationDuration_EX;
-        [self.layer addAnimation:_opacityHideAnimation forKey:__kAnimationKeyOpacityHide];
+        
+        if (self.animationStatus == kAnimation_Showing) {
+            CALayer *presentLayer = [self.layer presentationLayer];
+            _opacityAnimation.fromValue     = [NSNumber numberWithFloat:presentLayer.opacity];
+            if (self.opacityShowFinish_Block) {
+                self.opacityShowFinish_Block();
+            }
+        }
+        else{
+            _opacityAnimation.fromValue     = [NSNumber numberWithFloat:1];
+        }
+        
+        _opacityAnimation.toValue       = [NSNumber numberWithFloat:0];
+        _opacityAnimation.duration      = _animationDuration_EX;
+        [self.layer addAnimation:_opacityAnimation forKey:__kAnimationKeyOpacity];
+        self.animationStatus = kAnimaiton_Hidding;
     }
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-    if ([self.layer animationForKey:__kAnimationKeyOpacityHide] == anim) {
+    if ([self.layer animationForKey:__kAnimationKeyOpacity] == anim) {
         
-        if (self.opacityHideFinish_Block) {
-            self.opacityHideFinish_Block();
+        switch (_animationStatus) {
+                
+            case kAnimation_Showing:
+            {
+                self.animationStatus = kAnimation_Finished;
+                if (self.opacityShowFinish_Block) {
+                    self.opacityShowFinish_Block();
+                }
+            }
+                break;
+                
+            case kAnimaiton_Hidding:
+            {
+                self.animationStatus = kAnimation_Finished;
+                if (self.opacityHideFinish_Block) {
+                    self.opacityHideFinish_Block();
+                }
+            }
+                break;
+                
+            default:
+                break;
         }
         
-    }else if ([self.layer animationForKey:__kAnimationKeyOpacityShow] == anim){
-    
-        if (self.opacityShowFinish_Block) {
-            self.opacityShowFinish_Block();
-        }
     }
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

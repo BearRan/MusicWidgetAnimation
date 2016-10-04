@@ -147,7 +147,7 @@
     [self.view addSubview:cardAnimationView];
     
     _bgImageView = [[InterimImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
-    _bgImageView.animationDuration_EX = 1.3;
+    _bgImageView.animationDuration_EX = 5.3;
     [self.view insertSubview:_bgImageView belowSubview:cardAnimationView];
     
     _bottomPageView = [[BottomPageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
