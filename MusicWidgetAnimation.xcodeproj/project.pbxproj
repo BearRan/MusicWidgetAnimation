@@ -17,14 +17,14 @@
 		090DA0441CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */; };
 		090DA0561CDE13E90017D3F0 /* CardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0551CDE13E90017D3F0 /* CardAnimationView.m */; };
 		092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CB0141CF9CD2900827977 /* CardViewCell.m */; };
+		0935D8411DA4A81600D1CDA9 /* ImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935D83E1DA4A81600D1CDA9 /* ImageGradientView.m */; };
+		0935D8421DA4A81600D1CDA9 /* InterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935D8401DA4A81600D1CDA9 /* InterimImageCellView.m */; };
 		093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4A951CE4A49C00DE4875 /* CardViewBack.m */; };
 		094608B41D05AC29008363B7 /* BottomPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094608B31D05AC29008363B7 /* BottomPageView.m */; };
 		097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85AF1CFDD7D10082FA05 /* MyCardView.m */; };
 		097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B21CFDDD510082FA05 /* CardViewFront.m */; };
 		097A85B51CFE64890082FA05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B41CFE64890082FA05 /* ViewController.m */; };
 		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
-		09FF5EB91DA14B8200AB6415 /* ImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FF5EB81DA14B8200AB6415 /* ImageGradientView.m */; };
-		09FF5EBC1DA14BE500AB6415 /* InterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FF5EBB1DA14BE500AB6415 /* InterimImageCellView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,10 @@
 		090DA0551CDE13E90017D3F0 /* CardAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardAnimationView.m; sourceTree = "<group>"; };
 		092CB0131CF9CD2900827977 /* CardViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewCell.h; sourceTree = "<group>"; };
 		092CB0141CF9CD2900827977 /* CardViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewCell.m; sourceTree = "<group>"; };
+		0935D83D1DA4A81600D1CDA9 /* ImageGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGradientView.h; sourceTree = "<group>"; };
+		0935D83E1DA4A81600D1CDA9 /* ImageGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGradientView.m; sourceTree = "<group>"; };
+		0935D83F1DA4A81600D1CDA9 /* InterimImageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterimImageCellView.h; sourceTree = "<group>"; };
+		0935D8401DA4A81600D1CDA9 /* InterimImageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterimImageCellView.m; sourceTree = "<group>"; };
 		093F4A941CE4A49C00DE4875 /* CardViewBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewBack.h; sourceTree = "<group>"; };
 		093F4A951CE4A49C00DE4875 /* CardViewBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewBack.m; sourceTree = "<group>"; };
 		094608B21D05AC29008363B7 /* BottomPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomPageView.h; sourceTree = "<group>"; };
@@ -77,10 +81,6 @@
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
-		09FF5EB71DA14B8200AB6415 /* ImageGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGradientView.h; sourceTree = "<group>"; };
-		09FF5EB81DA14B8200AB6415 /* ImageGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGradientView.m; sourceTree = "<group>"; };
-		09FF5EBA1DA14BE500AB6415 /* InterimImageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterimImageCellView.h; sourceTree = "<group>"; };
-		09FF5EBB1DA14BE500AB6415 /* InterimImageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterimImageCellView.m; sourceTree = "<group>"; };
 		0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,12 +136,12 @@
 		090DA01D1CDE0EF90017D3F0 /* MusicWidgetAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				0935D83C1DA4A81600D1CDA9 /* ImageGradientView */,
 				092CB0161CFA055C00827977 /* CardAnimationView */,
 				090DA0211CDE0EF90017D3F0 /* AppDelegate.h */,
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
 				090DA0241CDE0EF90017D3F0 /* ViewController.h */,
 				097A85B41CFE64890082FA05 /* ViewController.m */,
-				09FF5EB61DA14B8200AB6415 /* InterimImageView */,
 				094608B21D05AC29008363B7 /* BottomPageView.h */,
 				094608B31D05AC29008363B7 /* BottomPageView.m */,
 				097A85AE1CFDD7D10082FA05 /* MyCardView.h */,
@@ -199,15 +199,15 @@
 			name = CardAnimationView;
 			sourceTree = "<group>";
 		};
-		09FF5EB61DA14B8200AB6415 /* InterimImageView */ = {
+		0935D83C1DA4A81600D1CDA9 /* ImageGradientView */ = {
 			isa = PBXGroup;
 			children = (
-				09FF5EB71DA14B8200AB6415 /* ImageGradientView.h */,
-				09FF5EB81DA14B8200AB6415 /* ImageGradientView.m */,
-				09FF5EBA1DA14BE500AB6415 /* InterimImageCellView.h */,
-				09FF5EBB1DA14BE500AB6415 /* InterimImageCellView.m */,
+				0935D83D1DA4A81600D1CDA9 /* ImageGradientView.h */,
+				0935D83E1DA4A81600D1CDA9 /* ImageGradientView.m */,
+				0935D83F1DA4A81600D1CDA9 /* InterimImageCellView.h */,
+				0935D8401DA4A81600D1CDA9 /* InterimImageCellView.m */,
 			);
-			path = InterimImageView;
+			path = ImageGradientView;
 			sourceTree = "<group>";
 		};
 		DB8B218B57954EBA283CDB36 /* Pods */ = {
@@ -415,15 +415,15 @@
 				094608B41D05AC29008363B7 /* BottomPageView.m in Sources */,
 				097A85B51CFE64890082FA05 /* ViewController.m in Sources */,
 				090DA0561CDE13E90017D3F0 /* CardAnimationView.m in Sources */,
+				0935D8411DA4A81600D1CDA9 /* ImageGradientView.m in Sources */,
 				093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */,
 				097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */,
 				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
-				09FF5EB91DA14B8200AB6415 /* ImageGradientView.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
 				092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */,
 				09E44EA61CDE255400101712 /* AppConstant.m in Sources */,
-				09FF5EBC1DA14BE500AB6415 /* InterimImageCellView.m in Sources */,
+				0935D8421DA4A81600D1CDA9 /* InterimImageCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
