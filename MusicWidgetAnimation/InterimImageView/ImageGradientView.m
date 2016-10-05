@@ -1,15 +1,15 @@
 //
-//  InterimImageView.m
+//  ImageGradientView.m
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/6/3.
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "InterimImageView.h"
+#import "ImageGradientView.h"
 #import "InterimImageCellView.h"
 
-@interface InterimImageView ()
+@interface ImageGradientView ()
 
 @property (strong, nonatomic) NSString          *nowImageName;
 @property (strong, nonatomic) UIView            *interimImageBgView;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation InterimImageView
+@implementation ImageGradientView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

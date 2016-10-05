@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CardAnimationView.h"
 #import "MyCardView.h"
-#import "InterimImageView.h"
+#import "ImageGradientView.h"
 #import "BottomPageView.h"
 
 @interface ViewController () <CardAnimationViewDelegate>
@@ -20,7 +20,7 @@
     NSArray             *_timeArray;
     NSArray             *_unitArray;
     
-    InterimImageView   *_bgImageView;
+    ImageGradientView   *_bgImageView;
     BottomPageView      *_bottomPageView;
 }
 
@@ -146,7 +146,7 @@
 //    cardAnimationView.cardPanEnable = NO;
     [self.view addSubview:cardAnimationView];
     
-    _bgImageView = [[InterimImageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    _bgImageView = [[ImageGradientView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     _bgImageView.animationDuration_EX = 1.3;
     [self.view insertSubview:_bgImageView belowSubview:cardAnimationView];
     
