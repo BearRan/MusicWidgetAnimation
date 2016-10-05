@@ -146,9 +146,18 @@
 //    cardAnimationView.cardPanEnable = NO;
     [self.view addSubview:cardAnimationView];
     
+    //  虚化背景
+    UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    visualEffectView.alpha = 0.8;
+    visualEffectView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
+    visualEffectView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
+    [self.view insertSubview:visualEffectView belowSubview:cardAnimationView];
+    
+    //  图片切换view
     _bgImageView = [[ImageGradientView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     _bgImageView.animationDuration_EX = 1.3;
-    [self.view insertSubview:_bgImageView belowSubview:cardAnimationView];
+    [self.view insertSubview:_bgImageView belowSubview:visualEffectView];
     
     _bottomPageView = [[BottomPageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
     _bottomPageView.pageAll = [_imageArray count];

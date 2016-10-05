@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E625361FECADACCCC46F0671'
+               BlueprintIdentifier = '61095CF8C93054D430B375CEC9D52F2D'
                BlueprintName = 'Pods-MusicWidgetAnimation'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-MusicWidgetAnimation.a'>

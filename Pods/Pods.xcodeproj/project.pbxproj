@@ -1,1296 +1,1055 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>052A17875CB827423D627183396CEB60</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>0A1818986DAF191EFD7965524676A7BD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UITextField+BearSet.m</string>
-			<key>path</key>
-			<string>Pod/Classes/UITextField+BearSet.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0AAAEDBFDBE86AB150E320A9634EECC6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIView+BearSet.m</string>
-			<key>path</key>
-			<string>Pod/Classes/UIView+BearSet.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0BF21C2BEFD3796D81311B3258D594B0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>0EE7CEC794F3DDD0FBA43BEF27CF3E35</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>651F54DD1B0D11C29AB4A100CA67027B</string>
-				<string>E0BD7B70304B871AE5F87F986ADEB944</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>114815E367745F4A5D0706598F3A8148</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1837DB2EF7DE628945645182FBA2191E</string>
-				<string>5240B4E72B9C90E4B7BB18A95A09F297</string>
-				<string>986206098FEA136D46AFB0D8C774E269</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>path</key>
-			<string>../Target Support Files/BearSkill</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>12E55B84DA91F979C86F20A772B12F7B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F71FA0C421434F59BF6C7D3094D2867</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>158DDB0EAAD6F87738DD4CE31BBC2AB7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>16C3965A8F7235151E93E96C593114D4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3343984E830896DD3088932BFFD1E997</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1837DB2EF7DE628945645182FBA2191E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>BearSkill.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1954C1775FD6F9638F07D5F25F284726</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>0EE7CEC794F3DDD0FBA43BEF27CF3E35</string>
-			<key>buildPhases</key>
-			<array>
-				<string>95ECE825C62B398990DBACC552FB55BC</string>
-				<string>4648A1D5FDEED5911F06CEA3F8752AB6</string>
-				<string>4E3C2F6C87CCF9FF631B604C9B28CDFA</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E146A04C55D42823D72FADC6263EC116</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BearSkill</string>
-			<key>productName</key>
-			<string>BearSkill</string>
-			<key>productReference</key>
-			<string>BA8948D8CA693D1DB3DB09B76014EA68</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>196FF0C61365A37B39E210B7F9E2AACE</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D0D1F31FCD27902104D94E27B6031FA6</string>
-				<string>88BF8F4A9F619E29BC3ABE9FC155C78C</string>
-				<string>3343984E830896DD3088932BFFD1E997</string>
-				<string>96FEB97EE72199117239FF5AAFB81FBB</string>
-				<string>E8BB515720012013EBBFE58CC724AFD3</string>
-				<string>A76C4DD8FDABDF08EB8AAB067FD4B46F</string>
-				<string>723F884A2FA3C829171859044A1F1967</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-MusicWidgetAnimation</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-MusicWidgetAnimation</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>26636F348319724262608BD50D820F92</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F8AB99DB83C7BBD9C202EF50DC94032E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2829D3A7CF56A7D440429050BD28966E</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2842717C5511FDC8F6951145B8A23817</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>5FCBDF5B98A43DB574F7E9509C78B964</string>
-			<key>remoteInfo</key>
-			<string>BearSkill-BearSkill</string>
-		</dict>
-		<key>2D8DCEE7F57564ED3B93234D17C1A4C2</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7835B91A3C7F9BDFAA6EFC902B022434</string>
-				<string>7400579DAACCF1B11AFB995A0BE4CA50</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B37F0F91F85060E28F1DAAB522DC7EC1</string>
-				<string>052A17875CB827423D627183396CEB60</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>3343984E830896DD3088932BFFD1E997</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-MusicWidgetAnimation-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3458633288718B623038FCBA1B421896</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5240B4E72B9C90E4B7BB18A95A09F297</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3634F4B8A01F31176784D54864DD1249</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0AAAEDBFDBE86AB150E320A9634EECC6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3BCFDFA5D90F79B6E15289EF42CF4432</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>BearSkill</string>
-			<key>target</key>
-			<string>1954C1775FD6F9638F07D5F25F284726</string>
-			<key>targetProxy</key>
-			<string>F1BA7216296394BB5AF49D84D9AFC3D6</string>
-		</dict>
-		<key>3E4E89230EF59BC255123B67864ACF77</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>41A995936DFC51C8A82048B3A27924F7</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>BearSkill.bundle</string>
-			<key>path</key>
-			<string>BearSkill.bundle</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>4648A1D5FDEED5911F06CEA3F8752AB6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E3DAAAEACF77094EB30CF202EA12C466</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4E3C2F6C87CCF9FF631B604C9B28CDFA</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>E7A908B9CA6226E990B5FF4EE5CDF5D5</string>
-				<string>12E55B84DA91F979C86F20A772B12F7B</string>
-				<string>CBF769E5246607DA4CA1DFFE96AAB74B</string>
-				<string>A96BFF22D9A568B2F03423FAE8F331B1</string>
-				<string>67432060501A9B9B302F33D0C8D95A21</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>5240B4E72B9C90E4B7BB18A95A09F297</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>BearSkill-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5FCBDF5B98A43DB574F7E9509C78B964</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>2D8DCEE7F57564ED3B93234D17C1A4C2</string>
-			<key>buildPhases</key>
-			<array>
-				<string>0BF21C2BEFD3796D81311B3258D594B0</string>
-				<string>2829D3A7CF56A7D440429050BD28966E</string>
-				<string>B415A62DED1B81659E83F84172B4BCAB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>BearSkill-BearSkill</string>
-			<key>productName</key>
-			<string>BearSkill-BearSkill</string>
-			<key>productReference</key>
-			<string>41A995936DFC51C8A82048B3A27924F7</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle</string>
-		</dict>
-		<key>651F54DD1B0D11C29AB4A100CA67027B</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1837DB2EF7DE628945645182FBA2191E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/BearSkill/BearSkill-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>66BFA000664BC207093135F5FA3A9F2C</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>723F884A2FA3C829171859044A1F1967</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>67432060501A9B9B302F33D0C8D95A21</key>
-		<dict>
-			<key>fileRef</key>
-			<string>934749626588F65B580AD87C63354F7C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>68AA3965A710C1EE265E1AACFFE67C4A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>158DDB0EAAD6F87738DD4CE31BBC2AB7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>68BFF3FE2433031E9FA0AC5104E5B8AB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>0A1818986DAF191EFD7965524676A7BD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>6EBA01ED4C33C907161DADCA99784B6F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UILabel+BearSet.m</string>
-			<key>path</key>
-			<string>Pod/Classes/UILabel+BearSet.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>723F884A2FA3C829171859044A1F1967</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-MusicWidgetAnimation.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7400579DAACCF1B11AFB995A0BE4CA50</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1837DB2EF7DE628945645182FBA2191E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>BearSkill</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7835B91A3C7F9BDFAA6EFC902B022434</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1837DB2EF7DE628945645182FBA2191E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>PRODUCT_NAME</key>
-				<string>BearSkill</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>bundle</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>793BD6A8B29DBB1A6F92FDD998EDC2BB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A76C4DD8FDABDF08EB8AAB067FD4B46F</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>26636F348319724262608BD50D820F92</string>
-				<string>C132FAA612C882B6C2E1A34ED847E663</string>
-				<string>D95347BDAC1F0884BF2202D663786BF8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>82BA55688CC0A0F2CD8712FE5BFF3381</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6EBA01ED4C33C907161DADCA99784B6F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>88BF8F4A9F619E29BC3ABE9FC155C78C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-MusicWidgetAnimation-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8C8C649C81092990934F03E7FE311F0A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BearTextField.m</string>
-			<key>path</key>
-			<string>Pod/Classes/BearTextField.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8F71FA0C421434F59BF6C7D3094D2867</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BearTextField.h</string>
-			<key>path</key>
-			<string>Pod/Classes/BearTextField.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8F884235168661470A5EE2F452A8A722</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8C8C649C81092990934F03E7FE311F0A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>934749626588F65B580AD87C63354F7C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIView+BearSet.h</string>
-			<key>path</key>
-			<string>Pod/Classes/UIView+BearSet.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>95ECE825C62B398990DBACC552FB55BC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>F1103EF9D29D799C35D6387E93E7BDA5</string>
-				<string>3458633288718B623038FCBA1B421896</string>
-				<string>8F884235168661470A5EE2F452A8A722</string>
-				<string>82BA55688CC0A0F2CD8712FE5BFF3381</string>
-				<string>68BFF3FE2433031E9FA0AC5104E5B8AB</string>
-				<string>3634F4B8A01F31176784D54864DD1249</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>96FEB97EE72199117239FF5AAFB81FBB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-MusicWidgetAnimation-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>986206098FEA136D46AFB0D8C774E269</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BearSkill-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A60245B479FEBC6120A100C7AE072834</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>DEBA53C523A2D11F67A09F967F505316</string>
-			<key>buildPhases</key>
-			<array>
-				<string>C2310B1C0E2203408598F912BB601025</string>
-				<string>68AA3965A710C1EE265E1AACFFE67C4A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>3BCFDFA5D90F79B6E15289EF42CF4432</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-MusicWidgetAnimation</string>
-			<key>productName</key>
-			<string>Pods-MusicWidgetAnimation</string>
-			<key>productReference</key>
-			<string>CA45417F74541B1C5374CA047BF9A0C2</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>A76C4DD8FDABDF08EB8AAB067FD4B46F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-MusicWidgetAnimation.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A96BFF22D9A568B2F03423FAE8F331B1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D7DCF1B94E65E9DC19023D6C8AB40828</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>B37F0F91F85060E28F1DAAB522DC7EC1</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B415A62DED1B81659E83F84172B4BCAB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BA8948D8CA693D1DB3DB09B76014EA68</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libBearSkill.a</string>
-			<key>path</key>
-			<string>libBearSkill.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF6342C8B29F4CEEA088EFF7AB4DE362</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF6342C8B29F4CEEA088EFF7AB4DE362</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3E4E89230EF59BC255123B67864ACF77</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BFEC1CC5C812597C029B3300FBD7849D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>BearConstants.m</string>
-			<key>path</key>
-			<string>Pod/Classes/BearConstants.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C132FAA612C882B6C2E1A34ED847E663</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>41A995936DFC51C8A82048B3A27924F7</string>
-				<string>BA8948D8CA693D1DB3DB09B76014EA68</string>
-				<string>CA45417F74541B1C5374CA047BF9A0C2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C2310B1C0E2203408598F912BB601025</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>16C3965A8F7235151E93E96C593114D4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>CA45417F74541B1C5374CA047BF9A0C2</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods-MusicWidgetAnimation.a</string>
-			<key>path</key>
-			<string>libPods-MusicWidgetAnimation.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>CBF769E5246607DA4CA1DFFE96AAB74B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DF3819E08C605C0213A7CFE97D05C394</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>D0D1F31FCD27902104D94E27B6031FA6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-MusicWidgetAnimation-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>C132FAA612C882B6C2E1A34ED847E663</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>1954C1775FD6F9638F07D5F25F284726</string>
-				<string>5FCBDF5B98A43DB574F7E9509C78B964</string>
-				<string>A60245B479FEBC6120A100C7AE072834</string>
-			</array>
-		</dict>
-		<key>D7DCF1B94E65E9DC19023D6C8AB40828</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UITextField+BearSet.h</string>
-			<key>path</key>
-			<string>Pod/Classes/UITextField+BearSet.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D95347BDAC1F0884BF2202D663786BF8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>196FF0C61365A37B39E210B7F9E2AACE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DEBA53C523A2D11F67A09F967F505316</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>793BD6A8B29DBB1A6F92FDD998EDC2BB</string>
-				<string>66BFA000664BC207093135F5FA3A9F2C</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>DF3819E08C605C0213A7CFE97D05C394</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UILabel+BearSet.h</string>
-			<key>path</key>
-			<string>Pod/Classes/UILabel+BearSet.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E0BD7B70304B871AE5F87F986ADEB944</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1837DB2EF7DE628945645182FBA2191E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Target Support Files/BearSkill/BearSkill-prefix.pch</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string></string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>E146A04C55D42823D72FADC6263EC116</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>name</key>
-			<string>BearSkill-BearSkill</string>
-			<key>target</key>
-			<string>5FCBDF5B98A43DB574F7E9509C78B964</string>
-			<key>targetProxy</key>
-			<string>2842717C5511FDC8F6951145B8A23817</string>
-		</dict>
-		<key>E3DAAAEACF77094EB30CF202EA12C466</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E7A908B9CA6226E990B5FF4EE5CDF5D5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F470C16C6654DF8068727598359E7A1C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>E8BB515720012013EBBFE58CC724AFD3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-MusicWidgetAnimation-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1103EF9D29D799C35D6387E93E7BDA5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>BFEC1CC5C812597C029B3300FBD7849D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F1BA7216296394BB5AF49D84D9AFC3D6</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D41D8CD98F00B204E9800998ECF8427E</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>1954C1775FD6F9638F07D5F25F284726</string>
-			<key>remoteInfo</key>
-			<string>BearSkill</string>
-		</dict>
-		<key>F470C16C6654DF8068727598359E7A1C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>BearConstants.h</string>
-			<key>path</key>
-			<string>Pod/Classes/BearConstants.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F8AB99DB83C7BBD9C202EF50DC94032E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F470C16C6654DF8068727598359E7A1C</string>
-				<string>BFEC1CC5C812597C029B3300FBD7849D</string>
-				<string>8F71FA0C421434F59BF6C7D3094D2867</string>
-				<string>8C8C649C81092990934F03E7FE311F0A</string>
-				<string>DF3819E08C605C0213A7CFE97D05C394</string>
-				<string>6EBA01ED4C33C907161DADCA99784B6F</string>
-				<string>D7DCF1B94E65E9DC19023D6C8AB40828</string>
-				<string>0A1818986DAF191EFD7965524676A7BD</string>
-				<string>934749626588F65B580AD87C63354F7C</string>
-				<string>0AAAEDBFDBE86AB150E320A9634EECC6</string>
-				<string>114815E367745F4A5D0706598F3A8148</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>BearSkill</string>
-			<key>path</key>
-			<string>BearSkill</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05B1E69CE85DBEB20E0ED830E871F2CB /* BearSkill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFA238252FAF2D3C09D683D4FE70FFC /* BearSkill-dummy.m */; };
+		07B6093D973519DEA37C4B67A373C585 /* BearAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 42A9D4CE4F10FD0DE4935D22C144A842 /* BearAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DBE0A8CE2380149279BA00CE54A2BE5 /* NSMutableAttributedString+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2412AF089C401AE78783EB1C475EC0A8 /* NSMutableAttributedString+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F0AC7656A8C76519D6E30987AE11AB9 /* BearAlertBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5093D0A48C31E8B60F7B27AAC0E2 /* BearAlertBtnsView.m */; };
+		1CF66BD4B43175FA49A6E18C23FA989E /* ImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EBA2A37DE78189B2B81B03B855D70 /* ImageGradientView.m */; };
+		2287C14C08B2618184EF8E33DF80299A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		2731C78050C7E87AD8D9C437ACCA8FB4 /* UITextField+BearLimitLength.m in Sources */ = {isa = PBXBuildFile; fileRef = C0257397ADEFBBB20394E3BD15AFFBA5 /* UITextField+BearLimitLength.m */; };
+		289885E13E94F454BF6952C9AAAEF656 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		2E0E1B6CF6429970E3746451EE0EE6F4 /* UILabel+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9F72B356350A3FB93BB5808E2853E7 /* UILabel+BearSet.m */; };
+		46BA59C3812C88E82629B8C3DAF2DB35 /* Pods-MusicWidgetAnimationTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 853AB87728DC2D5CDB033280E1384A4E /* Pods-MusicWidgetAnimationTests-dummy.m */; };
+		4766BC0A25CE5CD5706F2BD66E2EA4BD /* BearAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C78186E49F704452606525661A9B26 /* BearAlertContentView.m */; };
+		4DB564CB3C6FE74E6D7DAE271BAC5D27 /* ApplicationOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DFE3D4CC97621968D7C183FB139A1 /* ApplicationOpenURLManager.m */; };
+		53729210EEDB368B2539701C96916BF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		58586ED26BDB239754A463A6CD81E173 /* ImageGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6277EF9DECC884AD9CEA73B7B0F0BAA2 /* ImageGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5FD5A26B45661A296130EFAE85755D5A /* BearConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A70BB64DF6392FEFDF2A3CD96768D /* BearConstants.m */; };
+		6AEB0970490A399AC4C286DB6D97CDFD /* BearAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D55F8388BB9DE9DCD504B825DF5DB /* BearAnimation-dummy.m */; };
+		70C77A7EC8F4E434339245800B476C01 /* Pods-MusicWidgetAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 791E9220C0505F5F64C48D223D0EFA1A /* Pods-MusicWidgetAnimation-dummy.m */; };
+		76056797923A2182DADA68547034F481 /* InterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D90016B338097806717D6AA47A2DCAD3 /* InterimImageCellView.m */; };
+		88E1E5BD06EB74F4AB998B58A60A8F42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		9088789C48094E92653924EA5A7A20B4 /* BearAlertContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C2E9596AB2D04AF8B78C020ED213892 /* BearAlertContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9205567BE34B32A676B2E215FDC55501 /* UILabel+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 006F3F33E9A82DB613CB1FDB6099BC66 /* UILabel+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		930AD829706E6346BCBD7D76D428D8D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		9928C61582C93532A852D617D8D9B6D4 /* Pods-MusicWidgetAnimationUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A7F4B911F0C918DC29FAF230BA20E /* Pods-MusicWidgetAnimationUITests-dummy.m */; };
+		9A23134033DAB05536412FE51666AD1B /* UITableView+BearStoreCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0B499D5A34A6E9B6F155F37FBD442B /* UITableView+BearStoreCellHeight.m */; };
+		9A5DB535B2FF2C44D294E5078CC6C757 /* BearAlertBtnsView.h in Headers */ = {isa = PBXBuildFile; fileRef = BF61E96CBBA03C00B1DADB7740476785 /* BearAlertBtnsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4E3B00A807FF2FBC55533BF1ACFC5A2 /* UIView+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 53ADC9792AF89D2AA83EE4CE23A0F1B3 /* UIView+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B79740901544F669FE12168BCE39A3E8 /* NSMutableAttributedString+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E0724F25CCA1926693F9A6713B0E1 /* NSMutableAttributedString+BearSet.m */; };
+		C1B2A3EF6578302F8E844D7EFEFB6BD0 /* BearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99514BE6ECB546DF75B0E031F1D5EACA /* BearAlertView.m */; };
+		C50405FE636FC661DB101A2C762057E4 /* UIView+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C746DB2AFBC29E808DA91996EEA2A8 /* UIView+BearSet.m */; };
+		C6FFCDEDF2979441598245B2A580571F /* UITextField+BearLimitLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BE221ACEB3E4B3199E7DB9B096C28D8 /* UITextField+BearLimitLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9BE5C125538724BD522AAEDC425AE71 /* UITableView+BearStoreCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D800D9BD9AC8A55176AD39F949020B9 /* UITableView+BearStoreCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEFEFF823D5EE5029195F43777DFF980 /* BearCutOutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3293EBE23176D9F7268D85C98C6F368B /* BearCutOutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDDF66CDD7FD6AB7A37644CAB740385C /* BearCutOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058A11AE4231C2964FB1007957563E5 /* BearCutOutView.m */; };
+		DF92B84970262DD3BD7460122F1CF745 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		E260DF67102DF82F6786F8692A8AF25F /* ApplicationOpenURLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 43A6C98846C5A100D2A69FE0E51A6E88 /* ApplicationOpenURLManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F829CB31BF498759576C6728C93D9CB9 /* InterimImageCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D2E70C4894708B3BD42D20763B11FE /* InterimImageCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8449C0899A0320846527407B461AEE5 /* BearConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB7717BA9CA33CD4FD4C1D427BD992D /* BearConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32D5A06954027EB3C8AB1D38B6390CBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6650DCC340B90AEA241B0997839E75BA;
+			remoteInfo = BearSkill;
+		};
+		7236880130177FDD69EF0FAA419E715E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92DAC08E856F55428CA1CA7602143E60;
+			remoteInfo = "BearSkill-BearSkill";
+		};
+		C9281AD28261A6BFBD0C2162509FA1F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 609FDFDAFDE339E0E614277DBF18B20E;
+			remoteInfo = BearAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006F3F33E9A82DB613CB1FDB6099BC66 /* UILabel+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+BearSet.h"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.h"; sourceTree = "<group>"; };
+		0DB7717BA9CA33CD4FD4C1D427BD992D /* BearConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearConstants.h; path = Pod/Classes/Constants/BearConstants.h; sourceTree = "<group>"; };
+		14BE5240F77D98F4AFE6F567BB86792A /* Pods-MusicWidgetAnimation-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimation-frameworks.sh"; sourceTree = "<group>"; };
+		1651B89D4F3BCB0E377678E018DB37C7 /* Pods-MusicWidgetAnimationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicWidgetAnimationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1B5D9E735E9E240BE0633C214F139348 /* BearSkill.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearSkill.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D800D9BD9AC8A55176AD39F949020B9 /* UITableView+BearStoreCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BearStoreCellHeight.h"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.h"; sourceTree = "<group>"; };
+		2412AF089C401AE78783EB1C475EC0A8 /* NSMutableAttributedString+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+BearSet.h"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.h"; sourceTree = "<group>"; };
+		2787197277BAF9D97D5B3E40501C1FE1 /* Pods-MusicWidgetAnimation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicWidgetAnimation-acknowledgements.markdown"; sourceTree = "<group>"; };
+		2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BearSkill.xcconfig; sourceTree = "<group>"; };
+		3293EBE23176D9F7268D85C98C6F368B /* BearCutOutView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearCutOutView.h; path = "Pod/Classes/UI&Extend/BearCutOutView.h"; sourceTree = "<group>"; };
+		34CBE2DC7C4CD3B0C489C58615DB70DB /* libPods-MusicWidgetAnimationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A9D4CE4F10FD0DE4935D22C144A842 /* BearAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.h"; sourceTree = "<group>"; };
+		42EA6DFB6517A8DF19FEDEBFB82D94D7 /* Pods-MusicWidgetAnimationTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicWidgetAnimationTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		43A6C98846C5A100D2A69FE0E51A6E88 /* ApplicationOpenURLManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ApplicationOpenURLManager.h; path = Pod/Classes/Constants/ApplicationOpenURLManager.h; sourceTree = "<group>"; };
+		43E42EED3BE57FC187545D918DB8FC55 /* BearAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BearAnimation-prefix.pch"; sourceTree = "<group>"; };
+		458A70BB64DF6392FEFDF2A3CD96768D /* BearConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearConstants.m; path = Pod/Classes/Constants/BearConstants.m; sourceTree = "<group>"; };
+		5058A11AE4231C2964FB1007957563E5 /* BearCutOutView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearCutOutView.m; path = "Pod/Classes/UI&Extend/BearCutOutView.m"; sourceTree = "<group>"; };
+		53ADC9792AF89D2AA83EE4CE23A0F1B3 /* UIView+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+BearSet.h"; path = "Pod/Classes/Layout/UIView+BearSet.h"; sourceTree = "<group>"; };
+		565510FFB1F4DC53B57E26740C74A9B9 /* Pods-MusicWidgetAnimation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicWidgetAnimation-acknowledgements.plist"; sourceTree = "<group>"; };
+		6277EF9DECC884AD9CEA73B7B0F0BAA2 /* ImageGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ImageGradientView.h; path = BearAnimation/Widget/ImageGradientView/ImageGradientView.h; sourceTree = "<group>"; };
+		63491BE3FF9E37ECD4452B34373D482E /* libPods-MusicWidgetAnimationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C2E9596AB2D04AF8B78C020ED213892 /* BearAlertContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertContentView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.h"; sourceTree = "<group>"; };
+		78AA82523F5A41D7CCAB9BB7E5E3EDEB /* Pods-MusicWidgetAnimationTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicWidgetAnimationTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		78C746DB2AFBC29E808DA91996EEA2A8 /* UIView+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BearSet.m"; path = "Pod/Classes/Layout/UIView+BearSet.m"; sourceTree = "<group>"; };
+		791E9220C0505F5F64C48D223D0EFA1A /* Pods-MusicWidgetAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicWidgetAnimation-dummy.m"; sourceTree = "<group>"; };
+		7ACCA09B49B84D58E2784C809CA1AF0C /* Pods-MusicWidgetAnimationTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationTests-resources.sh"; sourceTree = "<group>"; };
+		818F76ABDBA4EA8B4F7AE12649D17C59 /* libBearSkill.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBearSkill.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		853AB87728DC2D5CDB033280E1384A4E /* Pods-MusicWidgetAnimationTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicWidgetAnimationTests-dummy.m"; sourceTree = "<group>"; };
+		8791B0B58ADAACDA62F136BB8924F52F /* ResourceBundle-BearSkill-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BearSkill-Info.plist"; sourceTree = "<group>"; };
+		8BE221ACEB3E4B3199E7DB9B096C28D8 /* UITextField+BearLimitLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+BearLimitLength.h"; path = "Pod/Classes/UI&Extend/UITextField+BearLimitLength.h"; sourceTree = "<group>"; };
+		8D7E0724F25CCA1926693F9A6713B0E1 /* NSMutableAttributedString+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+BearSet.m"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.m"; sourceTree = "<group>"; };
+		8E9B0E01554A93BCB8225D03A08F36EE /* Pods-MusicWidgetAnimationUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationUITests-frameworks.sh"; sourceTree = "<group>"; };
+		8EA630815B68FCBB2408DF52670D8B5E /* BearSkill-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BearSkill-prefix.pch"; sourceTree = "<group>"; };
+		91108E9EEA831BC762C73F5A3B7B26FC /* Pods-MusicWidgetAnimationUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicWidgetAnimationUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		986B4E007D034948C91D451C53EB751A /* Pods-MusicWidgetAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
+		9902C7FDB9710730F41ABCDBA1B6F36B /* Pods-MusicWidgetAnimation-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimation-resources.sh"; sourceTree = "<group>"; };
+		99514BE6ECB546DF75B0E031F1D5EACA /* BearAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.m"; sourceTree = "<group>"; };
+		9F5EBA2A37DE78189B2B81B03B855D70 /* ImageGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ImageGradientView.m; path = BearAnimation/Widget/ImageGradientView/ImageGradientView.m; sourceTree = "<group>"; };
+		A145E0B73926E59C97C60D814918E266 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A9465D6FEA25D34720D4D26DA58C7EA6 /* Pods-MusicWidgetAnimationTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationTests-frameworks.sh"; sourceTree = "<group>"; };
+		B13D55F8388BB9DE9DCD504B825DF5DB /* BearAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BearAnimation-dummy.m"; sourceTree = "<group>"; };
+		B296C0C97A20CCD3033CAEB398B0D1BD /* Pods-MusicWidgetAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BCADD50857C313B93C56EF1C47C27D0A /* Pods-MusicWidgetAnimationUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationUITests-resources.sh"; sourceTree = "<group>"; };
+		BF61E96CBBA03C00B1DADB7740476785 /* BearAlertBtnsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertBtnsView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.h"; sourceTree = "<group>"; };
+		BFE45FB066F317103810D908BB523C96 /* libBearAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBearAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0257397ADEFBBB20394E3BD15AFFBA5 /* UITextField+BearLimitLength.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+BearLimitLength.m"; path = "Pod/Classes/UI&Extend/UITextField+BearLimitLength.m"; sourceTree = "<group>"; };
+		C6678F2FAC3C53853B993EF9BBA5A99D /* Pods-MusicWidgetAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8C78186E49F704452606525661A9B26 /* BearAlertContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertContentView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.m"; sourceTree = "<group>"; };
+		CB9DFE3D4CC97621968D7C183FB139A1 /* ApplicationOpenURLManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ApplicationOpenURLManager.m; path = Pod/Classes/Constants/ApplicationOpenURLManager.m; sourceTree = "<group>"; };
+		CF6A7F4B911F0C918DC29FAF230BA20E /* Pods-MusicWidgetAnimationUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicWidgetAnimationUITests-dummy.m"; sourceTree = "<group>"; };
+		D0EFC9FDED935ADCF7DAD22070800634 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BearAnimation.xcconfig; sourceTree = "<group>"; };
+		D90016B338097806717D6AA47A2DCAD3 /* InterimImageCellView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InterimImageCellView.m; path = BearAnimation/Widget/ImageGradientView/InterimImageCellView.m; sourceTree = "<group>"; };
+		DBFA238252FAF2D3C09D683D4FE70FFC /* BearSkill-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BearSkill-dummy.m"; sourceTree = "<group>"; };
+		E6C4986E8F7C5F6E2F49B069C78F5EAD /* Pods-MusicWidgetAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EA0B499D5A34A6E9B6F155F37FBD442B /* UITableView+BearStoreCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BearStoreCellHeight.m"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.m"; sourceTree = "<group>"; };
+		EF9F72B356350A3FB93BB5808E2853E7 /* UILabel+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+BearSet.m"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.m"; sourceTree = "<group>"; };
+		F5D2E70C4894708B3BD42D20763B11FE /* InterimImageCellView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InterimImageCellView.h; path = BearAnimation/Widget/ImageGradientView/InterimImageCellView.h; sourceTree = "<group>"; };
+		FC8C5093D0A48C31E8B60F7B27AAC0E2 /* BearAlertBtnsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertBtnsView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.m"; sourceTree = "<group>"; };
+		FFD39396EC57E7529FDE90C6EF968CA2 /* Pods-MusicWidgetAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimation.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		117A4441C4DBCAC50EC2B152CFEF1074 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34F01ECCB3CB6CABF9F94AB3DDF5D9BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2287C14C08B2618184EF8E33DF80299A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EF7936845853ABA45825CC420E66F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53729210EEDB368B2539701C96916BF2 /* Foundation.framework in Frameworks */,
+				DF92B84970262DD3BD7460122F1CF745 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58D785ADD30A60501C15A96E1CAEE3FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289885E13E94F454BF6952C9AAAEF656 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BF5B52C95C634FABD413748F07946DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88E1E5BD06EB74F4AB998B58A60A8F42 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C99A8B71AEC4F1034FD482FB6DD0AEB0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				930AD829706E6346BCBD7D76D428D8D2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B9CF583E3039FD3630C0904B0F4F02E /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				CAA537619BDA3EA48752C40F8E2BBE30 /* ImageGradientView */,
+			);
+			name = Widget;
+			sourceTree = "<group>";
+		};
+		2562DF04F2D32466AD43909FF2252F9C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */,
+				B13D55F8388BB9DE9DCD504B825DF5DB /* BearAnimation-dummy.m */,
+				43E42EED3BE57FC187545D918DB8FC55 /* BearAnimation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BearAnimation";
+			sourceTree = "<group>";
+		};
+		31F1CBB94496A1FF189F1981A4D98CE7 /* Pods-MusicWidgetAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2787197277BAF9D97D5B3E40501C1FE1 /* Pods-MusicWidgetAnimation-acknowledgements.markdown */,
+				565510FFB1F4DC53B57E26740C74A9B9 /* Pods-MusicWidgetAnimation-acknowledgements.plist */,
+				791E9220C0505F5F64C48D223D0EFA1A /* Pods-MusicWidgetAnimation-dummy.m */,
+				14BE5240F77D98F4AFE6F567BB86792A /* Pods-MusicWidgetAnimation-frameworks.sh */,
+				9902C7FDB9710730F41ABCDBA1B6F36B /* Pods-MusicWidgetAnimation-resources.sh */,
+				A145E0B73926E59C97C60D814918E266 /* Pods-MusicWidgetAnimation.debug.xcconfig */,
+				FFD39396EC57E7529FDE90C6EF968CA2 /* Pods-MusicWidgetAnimation.release.xcconfig */,
+			);
+			name = "Pods-MusicWidgetAnimation";
+			path = "Target Support Files/Pods-MusicWidgetAnimation";
+			sourceTree = "<group>";
+		};
+		3477C60D849A362E2FF078009D5261BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F8ED2B6A223571E0F3444DC5D9C0E6E /* BearAnimation */,
+				B99E9EE777BBD7D918C855B41AECADD8 /* BearSkill */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3F8ED2B6A223571E0F3444DC5D9C0E6E /* BearAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				2562DF04F2D32466AD43909FF2252F9C /* Support Files */,
+				1B9CF583E3039FD3630C0904B0F4F02E /* Widget */,
+			);
+			path = BearAnimation;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				3477C60D849A362E2FF078009D5261BD /* Pods */,
+				95269CE717BD7683347341BBC5597377 /* Products */,
+				A1ED3D9B403976ACFA094EAF5EF58C96 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		87CAB233342C227E3FD170816EE2FEE4 /* Pods-MusicWidgetAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				42EA6DFB6517A8DF19FEDEBFB82D94D7 /* Pods-MusicWidgetAnimationTests-acknowledgements.markdown */,
+				78AA82523F5A41D7CCAB9BB7E5E3EDEB /* Pods-MusicWidgetAnimationTests-acknowledgements.plist */,
+				853AB87728DC2D5CDB033280E1384A4E /* Pods-MusicWidgetAnimationTests-dummy.m */,
+				A9465D6FEA25D34720D4D26DA58C7EA6 /* Pods-MusicWidgetAnimationTests-frameworks.sh */,
+				7ACCA09B49B84D58E2784C809CA1AF0C /* Pods-MusicWidgetAnimationTests-resources.sh */,
+				B296C0C97A20CCD3033CAEB398B0D1BD /* Pods-MusicWidgetAnimationTests.debug.xcconfig */,
+				986B4E007D034948C91D451C53EB751A /* Pods-MusicWidgetAnimationTests.release.xcconfig */,
+			);
+			name = "Pods-MusicWidgetAnimationTests";
+			path = "Target Support Files/Pods-MusicWidgetAnimationTests";
+			sourceTree = "<group>";
+		};
+		95269CE717BD7683347341BBC5597377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1B5D9E735E9E240BE0633C214F139348 /* BearSkill.bundle */,
+				BFE45FB066F317103810D908BB523C96 /* libBearAnimation.a */,
+				818F76ABDBA4EA8B4F7AE12649D17C59 /* libBearSkill.a */,
+				D0EFC9FDED935ADCF7DAD22070800634 /* libPods-MusicWidgetAnimation.a */,
+				63491BE3FF9E37ECD4452B34373D482E /* libPods-MusicWidgetAnimationTests.a */,
+				34CBE2DC7C4CD3B0C489C58615DB70DB /* libPods-MusicWidgetAnimationUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1ED3D9B403976ACFA094EAF5EF58C96 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				31F1CBB94496A1FF189F1981A4D98CE7 /* Pods-MusicWidgetAnimation */,
+				87CAB233342C227E3FD170816EE2FEE4 /* Pods-MusicWidgetAnimationTests */,
+				B98EC35EC646DA04DFDC64BE99C0C87A /* Pods-MusicWidgetAnimationUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AED9C5ABCC4DFB64120AE6D1A9FFE246 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */,
+				DBFA238252FAF2D3C09D683D4FE70FFC /* BearSkill-dummy.m */,
+				8EA630815B68FCBB2408DF52670D8B5E /* BearSkill-prefix.pch */,
+				8791B0B58ADAACDA62F136BB8924F52F /* ResourceBundle-BearSkill-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BearSkill";
+			sourceTree = "<group>";
+		};
+		B98EC35EC646DA04DFDC64BE99C0C87A /* Pods-MusicWidgetAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1651B89D4F3BCB0E377678E018DB37C7 /* Pods-MusicWidgetAnimationUITests-acknowledgements.markdown */,
+				91108E9EEA831BC762C73F5A3B7B26FC /* Pods-MusicWidgetAnimationUITests-acknowledgements.plist */,
+				CF6A7F4B911F0C918DC29FAF230BA20E /* Pods-MusicWidgetAnimationUITests-dummy.m */,
+				8E9B0E01554A93BCB8225D03A08F36EE /* Pods-MusicWidgetAnimationUITests-frameworks.sh */,
+				BCADD50857C313B93C56EF1C47C27D0A /* Pods-MusicWidgetAnimationUITests-resources.sh */,
+				C6678F2FAC3C53853B993EF9BBA5A99D /* Pods-MusicWidgetAnimationUITests.debug.xcconfig */,
+				E6C4986E8F7C5F6E2F49B069C78F5EAD /* Pods-MusicWidgetAnimationUITests.release.xcconfig */,
+			);
+			name = "Pods-MusicWidgetAnimationUITests";
+			path = "Target Support Files/Pods-MusicWidgetAnimationUITests";
+			sourceTree = "<group>";
+		};
+		B99E9EE777BBD7D918C855B41AECADD8 /* BearSkill */ = {
+			isa = PBXGroup;
+			children = (
+				43A6C98846C5A100D2A69FE0E51A6E88 /* ApplicationOpenURLManager.h */,
+				CB9DFE3D4CC97621968D7C183FB139A1 /* ApplicationOpenURLManager.m */,
+				BF61E96CBBA03C00B1DADB7740476785 /* BearAlertBtnsView.h */,
+				FC8C5093D0A48C31E8B60F7B27AAC0E2 /* BearAlertBtnsView.m */,
+				6C2E9596AB2D04AF8B78C020ED213892 /* BearAlertContentView.h */,
+				C8C78186E49F704452606525661A9B26 /* BearAlertContentView.m */,
+				42A9D4CE4F10FD0DE4935D22C144A842 /* BearAlertView.h */,
+				99514BE6ECB546DF75B0E031F1D5EACA /* BearAlertView.m */,
+				0DB7717BA9CA33CD4FD4C1D427BD992D /* BearConstants.h */,
+				458A70BB64DF6392FEFDF2A3CD96768D /* BearConstants.m */,
+				3293EBE23176D9F7268D85C98C6F368B /* BearCutOutView.h */,
+				5058A11AE4231C2964FB1007957563E5 /* BearCutOutView.m */,
+				2412AF089C401AE78783EB1C475EC0A8 /* NSMutableAttributedString+BearSet.h */,
+				8D7E0724F25CCA1926693F9A6713B0E1 /* NSMutableAttributedString+BearSet.m */,
+				006F3F33E9A82DB613CB1FDB6099BC66 /* UILabel+BearSet.h */,
+				EF9F72B356350A3FB93BB5808E2853E7 /* UILabel+BearSet.m */,
+				1D800D9BD9AC8A55176AD39F949020B9 /* UITableView+BearStoreCellHeight.h */,
+				EA0B499D5A34A6E9B6F155F37FBD442B /* UITableView+BearStoreCellHeight.m */,
+				8BE221ACEB3E4B3199E7DB9B096C28D8 /* UITextField+BearLimitLength.h */,
+				C0257397ADEFBBB20394E3BD15AFFBA5 /* UITextField+BearLimitLength.m */,
+				53ADC9792AF89D2AA83EE4CE23A0F1B3 /* UIView+BearSet.h */,
+				78C746DB2AFBC29E808DA91996EEA2A8 /* UIView+BearSet.m */,
+				AED9C5ABCC4DFB64120AE6D1A9FFE246 /* Support Files */,
+			);
+			path = BearSkill;
+			sourceTree = "<group>";
+		};
+		CAA537619BDA3EA48752C40F8E2BBE30 /* ImageGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				6277EF9DECC884AD9CEA73B7B0F0BAA2 /* ImageGradientView.h */,
+				9F5EBA2A37DE78189B2B81B03B855D70 /* ImageGradientView.m */,
+				F5D2E70C4894708B3BD42D20763B11FE /* InterimImageCellView.h */,
+				D90016B338097806717D6AA47A2DCAD3 /* InterimImageCellView.m */,
+			);
+			name = ImageGradientView;
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3B681EFFE4DCC54722CF24008BC62215 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E260DF67102DF82F6786F8692A8AF25F /* ApplicationOpenURLManager.h in Headers */,
+				9A5DB535B2FF2C44D294E5078CC6C757 /* BearAlertBtnsView.h in Headers */,
+				9088789C48094E92653924EA5A7A20B4 /* BearAlertContentView.h in Headers */,
+				07B6093D973519DEA37C4B67A373C585 /* BearAlertView.h in Headers */,
+				F8449C0899A0320846527407B461AEE5 /* BearConstants.h in Headers */,
+				CEFEFF823D5EE5029195F43777DFF980 /* BearCutOutView.h in Headers */,
+				0DBE0A8CE2380149279BA00CE54A2BE5 /* NSMutableAttributedString+BearSet.h in Headers */,
+				9205567BE34B32A676B2E215FDC55501 /* UILabel+BearSet.h in Headers */,
+				C9BE5C125538724BD522AAEDC425AE71 /* UITableView+BearStoreCellHeight.h in Headers */,
+				C6FFCDEDF2979441598245B2A580571F /* UITextField+BearLimitLength.h in Headers */,
+				B4E3B00A807FF2FBC55533BF1ACFC5A2 /* UIView+BearSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B24356BA47A5D35E39325D19B1DC36D7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58586ED26BDB239754A463A6CD81E173 /* ImageGradientView.h in Headers */,
+				F829CB31BF498759576C6728C93D9CB9 /* InterimImageCellView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		609FDFDAFDE339E0E614277DBF18B20E /* BearAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41343EE4B5F6E62014D7262A8E9F6943 /* Build configuration list for PBXNativeTarget "BearAnimation" */;
+			buildPhases = (
+				EC16F73C5B78FBA6ABBC205A79C20B43 /* Sources */,
+				3EF7936845853ABA45825CC420E66F82 /* Frameworks */,
+				B24356BA47A5D35E39325D19B1DC36D7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BearAnimation;
+			productName = BearAnimation;
+			productReference = BFE45FB066F317103810D908BB523C96 /* libBearAnimation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		61095CF8C93054D430B375CEC9D52F2D /* Pods-MusicWidgetAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B3326A701CDE1BD2DE03E2465281518 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimation" */;
+			buildPhases = (
+				B8F450C5BD2E45BF4D69D0E7D8D16E16 /* Sources */,
+				C99A8B71AEC4F1034FD482FB6DD0AEB0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				54A28C0077B7CEAF5B76603DBBA88904 /* PBXTargetDependency */,
+				799A1ED93FC19187935D3522F0F32946 /* PBXTargetDependency */,
+			);
+			name = "Pods-MusicWidgetAnimation";
+			productName = "Pods-MusicWidgetAnimation";
+			productReference = D0EFC9FDED935ADCF7DAD22070800634 /* libPods-MusicWidgetAnimation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6650DCC340B90AEA241B0997839E75BA /* BearSkill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 02E5426BD2CDC4ACEAF90AAED615B302 /* Build configuration list for PBXNativeTarget "BearSkill" */;
+			buildPhases = (
+				657EF71C2A4263F90131387DBE73A691 /* Sources */,
+				7BF5B52C95C634FABD413748F07946DA /* Frameworks */,
+				3B681EFFE4DCC54722CF24008BC62215 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C3EECE4F1091183A346E76F15A9CCFD /* PBXTargetDependency */,
+			);
+			name = BearSkill;
+			productName = BearSkill;
+			productReference = 818F76ABDBA4EA8B4F7AE12649D17C59 /* libBearSkill.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		92DAC08E856F55428CA1CA7602143E60 /* BearSkill-BearSkill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC9311BE9D442CC8C4FA02A5275B1547 /* Build configuration list for PBXNativeTarget "BearSkill-BearSkill" */;
+			buildPhases = (
+				7E819EF5201453DB5E7BA78E92C35511 /* Sources */,
+				117A4441C4DBCAC50EC2B152CFEF1074 /* Frameworks */,
+				A9102F63E0BE8B24374BEA7C17BB19F6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BearSkill-BearSkill";
+			productName = "BearSkill-BearSkill";
+			productReference = 1B5D9E735E9E240BE0633C214F139348 /* BearSkill.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B8730B201C113CCEF7E67D3F84D223D4 /* Pods-MusicWidgetAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADBE16AE20E442061B279B81B38DAFF0 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimationUITests" */;
+			buildPhases = (
+				6FFF3A68E56BBF3F915A92D7227F9488 /* Sources */,
+				58D785ADD30A60501C15A96E1CAEE3FE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MusicWidgetAnimationUITests";
+			productName = "Pods-MusicWidgetAnimationUITests";
+			productReference = 34CBE2DC7C4CD3B0C489C58615DB70DB /* libPods-MusicWidgetAnimationUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB31EE4078FD72D7916843F3DE2652AB /* Pods-MusicWidgetAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 691AA9811DA2D127AE7B1044B66BB106 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimationTests" */;
+			buildPhases = (
+				F2D35B45D055264F619B7355CB4B36BF /* Sources */,
+				34F01ECCB3CB6CABF9F94AB3DDF5D9BE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-MusicWidgetAnimationTests";
+			productName = "Pods-MusicWidgetAnimationTests";
+			productReference = 63491BE3FF9E37ECD4452B34373D482E /* libPods-MusicWidgetAnimationTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 95269CE717BD7683347341BBC5597377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				609FDFDAFDE339E0E614277DBF18B20E /* BearAnimation */,
+				6650DCC340B90AEA241B0997839E75BA /* BearSkill */,
+				92DAC08E856F55428CA1CA7602143E60 /* BearSkill-BearSkill */,
+				61095CF8C93054D430B375CEC9D52F2D /* Pods-MusicWidgetAnimation */,
+				EB31EE4078FD72D7916843F3DE2652AB /* Pods-MusicWidgetAnimationTests */,
+				B8730B201C113CCEF7E67D3F84D223D4 /* Pods-MusicWidgetAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9102F63E0BE8B24374BEA7C17BB19F6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		657EF71C2A4263F90131387DBE73A691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DB564CB3C6FE74E6D7DAE271BAC5D27 /* ApplicationOpenURLManager.m in Sources */,
+				0F0AC7656A8C76519D6E30987AE11AB9 /* BearAlertBtnsView.m in Sources */,
+				4766BC0A25CE5CD5706F2BD66E2EA4BD /* BearAlertContentView.m in Sources */,
+				C1B2A3EF6578302F8E844D7EFEFB6BD0 /* BearAlertView.m in Sources */,
+				5FD5A26B45661A296130EFAE85755D5A /* BearConstants.m in Sources */,
+				DDDF66CDD7FD6AB7A37644CAB740385C /* BearCutOutView.m in Sources */,
+				05B1E69CE85DBEB20E0ED830E871F2CB /* BearSkill-dummy.m in Sources */,
+				B79740901544F669FE12168BCE39A3E8 /* NSMutableAttributedString+BearSet.m in Sources */,
+				2E0E1B6CF6429970E3746451EE0EE6F4 /* UILabel+BearSet.m in Sources */,
+				9A23134033DAB05536412FE51666AD1B /* UITableView+BearStoreCellHeight.m in Sources */,
+				2731C78050C7E87AD8D9C437ACCA8FB4 /* UITextField+BearLimitLength.m in Sources */,
+				C50405FE636FC661DB101A2C762057E4 /* UIView+BearSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6FFF3A68E56BBF3F915A92D7227F9488 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9928C61582C93532A852D617D8D9B6D4 /* Pods-MusicWidgetAnimationUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E819EF5201453DB5E7BA78E92C35511 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8F450C5BD2E45BF4D69D0E7D8D16E16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C77A7EC8F4E434339245800B476C01 /* Pods-MusicWidgetAnimation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC16F73C5B78FBA6ABBC205A79C20B43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AEB0970490A399AC4C286DB6D97CDFD /* BearAnimation-dummy.m in Sources */,
+				1CF66BD4B43175FA49A6E18C23FA989E /* ImageGradientView.m in Sources */,
+				76056797923A2182DADA68547034F481 /* InterimImageCellView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2D35B45D055264F619B7355CB4B36BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46BA59C3812C88E82629B8C3DAF2DB35 /* Pods-MusicWidgetAnimationTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		54A28C0077B7CEAF5B76603DBBA88904 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BearAnimation;
+			target = 609FDFDAFDE339E0E614277DBF18B20E /* BearAnimation */;
+			targetProxy = C9281AD28261A6BFBD0C2162509FA1F6 /* PBXContainerItemProxy */;
+		};
+		799A1ED93FC19187935D3522F0F32946 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BearSkill;
+			target = 6650DCC340B90AEA241B0997839E75BA /* BearSkill */;
+			targetProxy = 32D5A06954027EB3C8AB1D38B6390CBC /* PBXContainerItemProxy */;
+		};
+		7C3EECE4F1091183A346E76F15A9CCFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BearSkill-BearSkill";
+			target = 92DAC08E856F55428CA1CA7602143E60 /* BearSkill-BearSkill */;
+			targetProxy = 7236880130177FDD69EF0FAA419E715E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0A94689DA66EAC38C84A1B9BA5859E33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6C4986E8F7C5F6E2F49B069C78F5EAD /* Pods-MusicWidgetAnimationUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		0D23259F1705C6F9A2E61ED3525511B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 986B4E007D034948C91D451C53EB751A /* Pods-MusicWidgetAnimationTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		20FA58194F68D7C871348ED0C717B72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A145E0B73926E59C97C60D814918E266 /* Pods-MusicWidgetAnimation.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		33550299D38AEC5B077D1B50D3575CF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BearSkill/BearSkill-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		39417A543CF379DAC33F0761DCAF6738 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6678F2FAC3C53853B993EF9BBA5A99D /* Pods-MusicWidgetAnimationUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		3D7B8F05E55E3B08E0E54A1E6B76CD63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B296C0C97A20CCD3033CAEB398B0D1BD /* Pods-MusicWidgetAnimationTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4EC12919D5A1DB01CC883454D309D74F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BearAnimation/BearAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		5D1C257526C08C0E8B77BDDAA206D777 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BearSkill/BearSkill-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6A926F41AB08308903E8E2AF56711473 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BearSkill";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/BearSkill/ResourceBundle-BearSkill-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = BearSkill;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B4EBD80300409E461CDE06659D47D1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BearAnimation/BearAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B624C5E74CDB62631499FD83D6FCC5D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD39396EC57E7529FDE90C6EF968CA2 /* Pods-MusicWidgetAnimation.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C7E15C5788A3B37DAE2B7CE54BFEADEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BearSkill";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/BearSkill/ResourceBundle-BearSkill-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = BearSkill;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		CF7953F66E785E8876EB4D370D777D50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		02E5426BD2CDC4ACEAF90AAED615B302 /* Build configuration list for PBXNativeTarget "BearSkill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33550299D38AEC5B077D1B50D3575CF9 /* Debug */,
+				5D1C257526C08C0E8B77BDDAA206D777 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF7953F66E785E8876EB4D370D777D50 /* Debug */,
+				79B0C2E66EFA9917ED6EDDB8FC6A7684 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41343EE4B5F6E62014D7262A8E9F6943 /* Build configuration list for PBXNativeTarget "BearAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B4EBD80300409E461CDE06659D47D1B /* Debug */,
+				4EC12919D5A1DB01CC883454D309D74F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B3326A701CDE1BD2DE03E2465281518 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20FA58194F68D7C871348ED0C717B72B /* Debug */,
+				B624C5E74CDB62631499FD83D6FCC5D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		691AA9811DA2D127AE7B1044B66BB106 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D7B8F05E55E3B08E0E54A1E6B76CD63 /* Debug */,
+				0D23259F1705C6F9A2E61ED3525511B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC9311BE9D442CC8C4FA02A5275B1547 /* Build configuration list for PBXNativeTarget "BearSkill-BearSkill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A926F41AB08308903E8E2AF56711473 /* Debug */,
+				C7E15C5788A3B37DAE2B7CE54BFEADEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADBE16AE20E442061B279B81B38DAFF0 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39417A543CF379DAC33F0761DCAF6738 /* Debug */,
+				0A94689DA66EAC38C84A1B9BA5859E33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

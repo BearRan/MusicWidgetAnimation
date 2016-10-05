@@ -5,7 +5,8 @@
 
 target 'MusicWidgetAnimation' do
 
-pod 'BearSkill'
+    pod 'BearSkill',        :git => 'git@github.com:BearRan/BearSkill.git'
+    pod 'BearAnimation',    :git => 'git@github.com:BearRan/BearAnimation.git'
 
 end
 

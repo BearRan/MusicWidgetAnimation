@@ -1,10 +1,33 @@
 PODS:
-  - BearSkill (0.0.8)
+  - BearAnimation (0.1.0):
+    - BearAnimation/Widget (= 0.1.0)
+  - BearAnimation/Widget (0.1.0):
+    - BearAnimation/Widget/ImageGradientView (= 0.1.0)
+  - BearAnimation/Widget/ImageGradientView (0.1.0)
+  - BearSkill (0.1.6)
 
 DEPENDENCIES:
-  - BearSkill
+  - BearAnimation (from `git@github.com:BearRan/BearAnimation.git`)
+  - BearSkill (from `git@github.com:BearRan/BearSkill.git`)
+
+EXTERNAL SOURCES:
+  BearAnimation:
+    :git: git@github.com:BearRan/BearAnimation.git
+  BearSkill:
+    :git: git@github.com:BearRan/BearSkill.git
+
+CHECKOUT OPTIONS:
+  BearAnimation:
+    :commit: 7ba2a4c9b9ab228ccf1c2cb7137e813d23d4ebb9
+    :git: git@github.com:BearRan/BearAnimation.git
+  BearSkill:
+    :commit: 49ca595f82d5bac17e0890155c1fb48e5fc64b47
+    :git: git@github.com:BearRan/BearSkill.git
 
 SPEC CHECKSUMS:
-  BearSkill: 120d8a10d8e5101b7ac85b7be36b98332106e98d
+  BearAnimation: b24de666fdff08f2c574ff9a87f5b8f68c612f04
+  BearSkill: df366c1f09f0402036b0d53768160c0754f425d7
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 9ea7d16e7702e2611371af542cb30e63989f7534
+
+COCOAPODS: 1.1.0.beta.2

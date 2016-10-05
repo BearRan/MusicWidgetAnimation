@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		049DCF99E5C532A672904891 /* libPods-MusicWidgetAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */; };
 		090DA0201CDE0EF90017D3F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA01F1CDE0EF90017D3F0 /* main.m */; };
 		090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0221CDE0EF90017D3F0 /* AppDelegate.m */; };
 		090DA0291CDE0EF90017D3F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090DA0271CDE0EF90017D3F0 /* Main.storyboard */; };
@@ -17,14 +16,15 @@
 		090DA0441CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */; };
 		090DA0561CDE13E90017D3F0 /* CardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0551CDE13E90017D3F0 /* CardAnimationView.m */; };
 		092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CB0141CF9CD2900827977 /* CardViewCell.m */; };
-		0935D8411DA4A81600D1CDA9 /* ImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935D83E1DA4A81600D1CDA9 /* ImageGradientView.m */; };
-		0935D8421DA4A81600D1CDA9 /* InterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0935D8401DA4A81600D1CDA9 /* InterimImageCellView.m */; };
 		093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4A951CE4A49C00DE4875 /* CardViewBack.m */; };
 		094608B41D05AC29008363B7 /* BottomPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094608B31D05AC29008363B7 /* BottomPageView.m */; };
 		097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85AF1CFDD7D10082FA05 /* MyCardView.m */; };
 		097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B21CFDDD510082FA05 /* CardViewFront.m */; };
 		097A85B51CFE64890082FA05 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85B41CFE64890082FA05 /* ViewController.m */; };
 		09E44EA61CDE255400101712 /* AppConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E44EA51CDE255400101712 /* AppConstant.m */; };
+		532099CF203205F13700CCDD /* libPods-MusicWidgetAnimationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43989191ABD2D4AC7DCCEC71 /* libPods-MusicWidgetAnimationTests.a */; };
+		99B2E3F04300BCDF7122EA99 /* libPods-MusicWidgetAnimationUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F69D608E7728767249A8F53 /* libPods-MusicWidgetAnimationUITests.a */; };
+		D1A83D6EEA626B92A432F440 /* libPods-MusicWidgetAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E6CB33B957C776FD489094 /* libPods-MusicWidgetAnimation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06CD0D1E06795034DD4A8289 /* Pods-MusicWidgetAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.release.xcconfig"; sourceTree = "<group>"; };
 		090DA01B1CDE0EF90017D3F0 /* MusicWidgetAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicWidgetAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		090DA01F1CDE0EF90017D3F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		090DA0211CDE0EF90017D3F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -65,10 +64,6 @@
 		090DA0551CDE13E90017D3F0 /* CardAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardAnimationView.m; sourceTree = "<group>"; };
 		092CB0131CF9CD2900827977 /* CardViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewCell.h; sourceTree = "<group>"; };
 		092CB0141CF9CD2900827977 /* CardViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewCell.m; sourceTree = "<group>"; };
-		0935D83D1DA4A81600D1CDA9 /* ImageGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageGradientView.h; sourceTree = "<group>"; };
-		0935D83E1DA4A81600D1CDA9 /* ImageGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageGradientView.m; sourceTree = "<group>"; };
-		0935D83F1DA4A81600D1CDA9 /* InterimImageCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterimImageCellView.h; sourceTree = "<group>"; };
-		0935D8401DA4A81600D1CDA9 /* InterimImageCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterimImageCellView.m; sourceTree = "<group>"; };
 		093F4A941CE4A49C00DE4875 /* CardViewBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewBack.h; sourceTree = "<group>"; };
 		093F4A951CE4A49C00DE4875 /* CardViewBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewBack.m; sourceTree = "<group>"; };
 		094608B21D05AC29008363B7 /* BottomPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomPageView.h; sourceTree = "<group>"; };
@@ -81,8 +76,15 @@
 		09E44EA31CDE1B4F00101712 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		09E44EA41CDE255400101712 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
 		09E44EA51CDE255400101712 /* AppConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConstant.m; sourceTree = "<group>"; };
-		0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
+		285459D3F3A2F321411AEA33 /* Pods-MusicWidgetAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimationUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimationUITests/Pods-MusicWidgetAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		34AFAF804D2EC2071D830C68 /* Pods-MusicWidgetAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimationTests/Pods-MusicWidgetAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		43989191ABD2D4AC7DCCEC71 /* libPods-MusicWidgetAnimationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64C629A78017CCAADCCB26D2 /* Pods-MusicWidgetAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimationTests/Pods-MusicWidgetAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
+		82E6CB33B957C776FD489094 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B7C21207F254454C37B5E09 /* Pods-MusicWidgetAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.release.xcconfig"; sourceTree = "<group>"; };
+		9F69D608E7728767249A8F53 /* libPods-MusicWidgetAnimationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA568A13188F79898110C554 /* Pods-MusicWidgetAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimationUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimationUITests/Pods-MusicWidgetAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EBEE12B580C5B676074AF2B8 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicWidgetAnimation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049DCF99E5C532A672904891 /* libPods-MusicWidgetAnimation.a in Frameworks */,
+				D1A83D6EEA626B92A432F440 /* libPods-MusicWidgetAnimation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				532099CF203205F13700CCDD /* libPods-MusicWidgetAnimationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B2E3F04300BCDF7122EA99 /* libPods-MusicWidgetAnimationUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,8 +122,8 @@
 				090DA0371CDE0EF90017D3F0 /* MusicWidgetAnimationTests */,
 				090DA0421CDE0EF90017D3F0 /* MusicWidgetAnimationUITests */,
 				090DA01C1CDE0EF90017D3F0 /* Products */,
-				DB8B218B57954EBA283CDB36 /* Pods */,
-				E137A60E52A4EDF152334759 /* Frameworks */,
+				8F907E4B7938B717B5E1ADAC /* Pods */,
+				0F026A2009B5B6F78710BA95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,7 +140,6 @@
 		090DA01D1CDE0EF90017D3F0 /* MusicWidgetAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				0935D83C1DA4A81600D1CDA9 /* ImageGradientView */,
 				092CB0161CFA055C00827977 /* CardAnimationView */,
 				090DA0211CDE0EF90017D3F0 /* AppDelegate.h */,
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
@@ -199,32 +202,27 @@
 			name = CardAnimationView;
 			sourceTree = "<group>";
 		};
-		0935D83C1DA4A81600D1CDA9 /* ImageGradientView */ = {
+		0F026A2009B5B6F78710BA95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0935D83D1DA4A81600D1CDA9 /* ImageGradientView.h */,
-				0935D83E1DA4A81600D1CDA9 /* ImageGradientView.m */,
-				0935D83F1DA4A81600D1CDA9 /* InterimImageCellView.h */,
-				0935D8401DA4A81600D1CDA9 /* InterimImageCellView.m */,
-			);
-			path = ImageGradientView;
-			sourceTree = "<group>";
-		};
-		DB8B218B57954EBA283CDB36 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */,
-				06CD0D1E06795034DD4A8289 /* Pods-MusicWidgetAnimation.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E137A60E52A4EDF152334759 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0A112AC034950FC001497B73 /* libPods-MusicWidgetAnimation.a */,
+				82E6CB33B957C776FD489094 /* libPods-MusicWidgetAnimation.a */,
+				43989191ABD2D4AC7DCCEC71 /* libPods-MusicWidgetAnimationTests.a */,
+				9F69D608E7728767249A8F53 /* libPods-MusicWidgetAnimationUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F907E4B7938B717B5E1ADAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBEE12B580C5B676074AF2B8 /* Pods-MusicWidgetAnimation.debug.xcconfig */,
+				8B7C21207F254454C37B5E09 /* Pods-MusicWidgetAnimation.release.xcconfig */,
+				34AFAF804D2EC2071D830C68 /* Pods-MusicWidgetAnimationTests.debug.xcconfig */,
+				64C629A78017CCAADCCB26D2 /* Pods-MusicWidgetAnimationTests.release.xcconfig */,
+				285459D3F3A2F321411AEA33 /* Pods-MusicWidgetAnimationUITests.debug.xcconfig */,
+				DA568A13188F79898110C554 /* Pods-MusicWidgetAnimationUITests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,12 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 090DA0481CDE0EF90017D3F0 /* Build configuration list for PBXNativeTarget "MusicWidgetAnimation" */;
 			buildPhases = (
-				1C4B343F2F6E6D16A4BF13C0 /* Check Pods Manifest.lock */,
+				2DDDC172CB85812C6E83940A /* [CP] Check Pods Manifest.lock */,
 				090DA0171CDE0EF90017D3F0 /* Sources */,
 				090DA0181CDE0EF90017D3F0 /* Frameworks */,
 				090DA0191CDE0EF90017D3F0 /* Resources */,
-				9C27D4B24A9AFCBEAB8CD32C /* Embed Pods Frameworks */,
-				5EBF1131A105B5343A241C94 /* Copy Pods Resources */,
+				5D38A677414F2D75576FE0D3 /* [CP] Embed Pods Frameworks */,
+				0239CB331437E02DC6277A18 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 090DA04B1CDE0EF90017D3F0 /* Build configuration list for PBXNativeTarget "MusicWidgetAnimationTests" */;
 			buildPhases = (
+				8ABFC1201585682BAFD6F2E1 /* [CP] Check Pods Manifest.lock */,
 				090DA0301CDE0EF90017D3F0 /* Sources */,
 				090DA0311CDE0EF90017D3F0 /* Frameworks */,
 				090DA0321CDE0EF90017D3F0 /* Resources */,
+				BE540DAAFDCEE8A0A029FDEB /* [CP] Embed Pods Frameworks */,
+				7E56FA320EFAAF398701B68D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,9 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 090DA04E1CDE0EF90017D3F0 /* Build configuration list for PBXNativeTarget "MusicWidgetAnimationUITests" */;
 			buildPhases = (
+				85B8D6E765CB98226557DBB8 /* [CP] Check Pods Manifest.lock */,
 				090DA03B1CDE0EF90017D3F0 /* Sources */,
 				090DA03C1CDE0EF90017D3F0 /* Frameworks */,
 				090DA03D1CDE0EF90017D3F0 /* Resources */,
+				FD2C3FE99F684E6FD7FAAD54 /* [CP] Embed Pods Frameworks */,
+				E52B583408C79ABEBDA609B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,29 +364,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C4B343F2F6E6D16A4BF13C0 /* Check Pods Manifest.lock */ = {
+		0239CB331437E02DC6277A18 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5EBF1131A105B5343A241C94 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,19 +379,124 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9C27D4B24A9AFCBEAB8CD32C /* Embed Pods Frameworks */ = {
+		2DDDC172CB85812C6E83940A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D38A677414F2D75576FE0D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimation/Pods-MusicWidgetAnimation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E56FA320EFAAF398701B68D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimationTests/Pods-MusicWidgetAnimationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85B8D6E765CB98226557DBB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8ABFC1201585682BAFD6F2E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE540DAAFDCEE8A0A029FDEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimationTests/Pods-MusicWidgetAnimationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E52B583408C79ABEBDA609B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimationUITests/Pods-MusicWidgetAnimationUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD2C3FE99F684E6FD7FAAD54 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusicWidgetAnimationUITests/Pods-MusicWidgetAnimationUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -415,7 +509,6 @@
 				094608B41D05AC29008363B7 /* BottomPageView.m in Sources */,
 				097A85B51CFE64890082FA05 /* ViewController.m in Sources */,
 				090DA0561CDE13E90017D3F0 /* CardAnimationView.m in Sources */,
-				0935D8411DA4A81600D1CDA9 /* ImageGradientView.m in Sources */,
 				093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */,
 				097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */,
 				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
@@ -423,7 +516,6 @@
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
 				092CB0151CF9CD2900827977 /* CardViewCell.m in Sources */,
 				09E44EA61CDE255400101712 /* AppConstant.m in Sources */,
-				0935D8421DA4A81600D1CDA9 /* InterimImageCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +656,7 @@
 		};
 		090DA0491CDE0EF90017D3F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1E2EDE732BD34BE61BDBA66 /* Pods-MusicWidgetAnimation.debug.xcconfig */;
+			baseConfigurationReference = EBEE12B580C5B676074AF2B8 /* Pods-MusicWidgetAnimation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -584,7 +676,7 @@
 		};
 		090DA04A1CDE0EF90017D3F0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06CD0D1E06795034DD4A8289 /* Pods-MusicWidgetAnimation.release.xcconfig */;
+			baseConfigurationReference = 8B7C21207F254454C37B5E09 /* Pods-MusicWidgetAnimation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -603,6 +695,7 @@
 		};
 		090DA04C1CDE0EF90017D3F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34AFAF804D2EC2071D830C68 /* Pods-MusicWidgetAnimationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MusicWidgetAnimationTests/Info.plist;
@@ -615,6 +708,7 @@
 		};
 		090DA04D1CDE0EF90017D3F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64C629A78017CCAADCCB26D2 /* Pods-MusicWidgetAnimationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MusicWidgetAnimationTests/Info.plist;
@@ -627,6 +721,7 @@
 		};
 		090DA04F1CDE0EF90017D3F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 285459D3F3A2F321411AEA33 /* Pods-MusicWidgetAnimationUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MusicWidgetAnimationUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -638,6 +733,7 @@
 		};
 		090DA0501CDE0EF90017D3F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA568A13188F79898110C554 /* Pods-MusicWidgetAnimationUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MusicWidgetAnimationUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
