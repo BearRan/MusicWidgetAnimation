@@ -99,7 +99,6 @@
     if ([_delegate respondsToSelector:@selector(myCardViewFlipAnimationDoing:)]) {
         [_delegate myCardViewFlipAnimationDoing:self];
     }
-    //    [_cardView_Now removeGestureRecognizer:_panGesture];
 }
 
 - (void)flipAnimationDidStop_Event
@@ -107,12 +106,10 @@
     if ([_delegate respondsToSelector:@selector(myCardViewFlipAnimationFinished:)]) {
         [_delegate myCardViewFlipAnimationFinished:self];
     }
-    //    [_cardView_Now addGestureRecognizer:_panGesture];
 }
 
 - (void)setBigSize:(UIView *)view
 {
-    //    view.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
     [view setWidth_DonotMoveCenter:WIDTH];
     [view setHeight_DonotMoveCenter:HEIGHT];
 }
