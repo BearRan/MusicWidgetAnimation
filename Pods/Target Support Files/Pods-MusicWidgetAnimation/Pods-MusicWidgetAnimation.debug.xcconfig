@@ -1,9 +1,9 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BearAnimation" "${PODS_ROOT}/Headers/Public/BearSkill"
-LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/BearAnimation" "$PODS_CONFIGURATION_BUILD_DIR/BearSkill"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BearAnimation" -isystem "${PODS_ROOT}/Headers/Public/BearSkill"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"BearAnimation" -l"BearSkill" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BearSkill" "${PODS_ROOT}/Headers/Public/CRAnimation"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/BearSkill" "$PODS_CONFIGURATION_BUILD_DIR/CRAnimation"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BearSkill" -isystem "${PODS_ROOT}/Headers/Public/CRAnimation"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"BearSkill" -l"CRAnimation" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

@@ -1,33 +1,33 @@
 PODS:
-  - BearAnimation (0.1.0):
-    - BearAnimation/Widget (= 0.1.0)
-  - BearAnimation/Widget (0.1.0):
-    - BearAnimation/Widget/ImageGradientView (= 0.1.0)
-  - BearAnimation/Widget/ImageGradientView (0.1.0)
   - BearSkill (0.1.6)
+  - CRAnimation (0.1.0):
+    - CRAnimation/Widget (= 0.1.0)
+  - CRAnimation/Widget (0.1.0):
+    - CRAnimation/Widget/CRImageGradientView (= 0.1.0)
+  - CRAnimation/Widget/CRImageGradientView (0.1.0)
 
 DEPENDENCIES:
-  - BearAnimation (from `git@github.com:BearRan/BearAnimation.git`)
   - BearSkill (from `git@github.com:BearRan/BearSkill.git`)
+  - CRAnimation (from `git@github.com:BearRan/CRAnimation.git`)
 
 EXTERNAL SOURCES:
-  BearAnimation:
-    :git: git@github.com:BearRan/BearAnimation.git
   BearSkill:
     :git: git@github.com:BearRan/BearSkill.git
+  CRAnimation:
+    :git: git@github.com:BearRan/CRAnimation.git
 
 CHECKOUT OPTIONS:
-  BearAnimation:
-    :commit: 7ba2a4c9b9ab228ccf1c2cb7137e813d23d4ebb9
-    :git: git@github.com:BearRan/BearAnimation.git
   BearSkill:
     :commit: 49ca595f82d5bac17e0890155c1fb48e5fc64b47
     :git: git@github.com:BearRan/BearSkill.git
+  CRAnimation:
+    :commit: 10dff6eb6389fe61f15ec7d56e18c8ba6c392568
+    :git: git@github.com:BearRan/CRAnimation.git
 
 SPEC CHECKSUMS:
-  BearAnimation: b24de666fdff08f2c574ff9a87f5b8f68c612f04
   BearSkill: df366c1f09f0402036b0d53768160c0754f425d7
+  CRAnimation: 3d9b9d4be353134edab7f33ad8a33aa40f2405e1
 
-PODFILE CHECKSUM: 9ea7d16e7702e2611371af542cb30e63989f7534
+PODFILE CHECKSUM: 77fb9e4fd85873959fcc206dbde3d9fa97e0d8c5
 
-COCOAPODS: 1.1.0.beta.2
+COCOAPODS: 1.1.0.rc.2

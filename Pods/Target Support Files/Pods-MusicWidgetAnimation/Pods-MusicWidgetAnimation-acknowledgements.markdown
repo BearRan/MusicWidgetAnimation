@@ -1,9 +1,9 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## BearAnimation
+## BearSkill
 
-Copyright (c) 2016 BearRan <648070256@qq.com>
+Copyright (c) 2016 Bear <648070256@qq.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -24,9 +24,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## BearSkill
+## CRAnimation
 
-Copyright (c) 2016 Bear <648070256@qq.com>
+Copyright (c) 2016 BearRan <648070256@qq.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

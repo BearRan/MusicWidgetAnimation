@@ -1,15 +1,15 @@
 //
-//  ImageGradientView.m
+//  CRImageGradientView.m
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/6/3.
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "ImageGradientView.h"
-#import "InterimImageCellView.h"
+#import "CRImageGradientView.h"
+#import "CRInterimImageCellView.h"
 
-@interface ImageGradientView ()
+@interface CRImageGradientView ()
 
 @property (strong, nonatomic) NSString          *nowImageName;
 @property (strong, nonatomic) UIView            *interimImageBgView;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation ImageGradientView
+@implementation CRImageGradientView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -56,7 +56,7 @@
     
     void (^insertNewBlock)(BOOL aniamtion) = ^(BOOL aniamtion){
         
-        InterimImageCellView *interimImageCellView = [[InterimImageCellView alloc] initWithFrame:self.bounds];
+        CRInterimImageCellView *interimImageCellView = [[CRInterimImageCellView alloc] initWithFrame:self.bounds];
         interimImageCellView.animationDuration_EX = _animationDuration_EX;
         
         //  放置图层最上方
@@ -70,7 +70,7 @@
     
     void (^reuseBlock)(BOOL aniamtion) = ^(BOOL aniamtion){
     
-        InterimImageCellView *tailImageCellView = [weakSelf getQueueTailImageCellView];
+        CRInterimImageCellView *tailImageCellView = [weakSelf getQueueTailImageCellView];
         
         //  放置图层最上方
         [weakSelf.interimImageBgView insertSubview:tailImageCellView atIndex:[[weakSelf.interimImageBgView subviews] count]];
@@ -111,7 +111,7 @@
 
 - (void)hideFormerImage
 {
-    __weak InterimImageCellView *formerImageCellView = [self getFormerImageCellView];
+    __weak CRInterimImageCellView *formerImageCellView = [self getFormerImageCellView];
     
     if (formerImageCellView) {
         [formerImageCellView opacityAnimationHideWithImage:nil animation:YES];
@@ -121,7 +121,7 @@
     }
 }
 
-- (InterimImageCellView *)getFormerImageCellView
+- (CRInterimImageCellView *)getFormerImageCellView
 {
     if ([_imageViewsArray count] <= 1) {
         return nil;
@@ -132,11 +132,11 @@
         imageViewsIndexFormer = [_imageViewsArray count] - 1;
     }
     
-    InterimImageCellView *formerImageCellView = _imageViewsArray[imageViewsIndexFormer];
+    CRInterimImageCellView *formerImageCellView = _imageViewsArray[imageViewsIndexFormer];
     return formerImageCellView;
 }
 
-- (InterimImageCellView *)getQueueTailImageCellView
+- (CRInterimImageCellView *)getQueueTailImageCellView
 {
     if ([_imageViewsArray count] <= 1) {
         return nil;
@@ -152,11 +152,11 @@
         imageViewsIndexTail = 0;
     }
     
-    InterimImageCellView *formerImageCellView = _imageViewsArray[imageViewsIndexTail];
+    CRInterimImageCellView *formerImageCellView = _imageViewsArray[imageViewsIndexTail];
     return formerImageCellView;
 }
 
-- (NSInteger)getImageCellViewIndex:(InterimImageCellView *)imageCellView
+- (NSInteger)getImageCellViewIndex:(CRInterimImageCellView *)imageCellView
 {
     NSInteger index = [_imageViewsArray indexOfObject:imageCellView];
     

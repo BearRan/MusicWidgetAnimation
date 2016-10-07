@@ -1,5 +1,5 @@
 //
-//  InterimImageCellView.m
+//  CRInterimImageCellView.m
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/10/2.
@@ -14,16 +14,16 @@ typedef enum {
 
 static NSString *__kAnimationKeyOpacity     = @"__kAnimationKeyOpacity";
 
-#import "InterimImageCellView.h"
+#import "CRInterimImageCellView.h"
 
-@interface InterimImageCellView () <CAAnimationDelegate>
+@interface CRInterimImageCellView () <CAAnimationDelegate>
 
 @property (strong, nonatomic) CABasicAnimation  *opacityAnimation;
 @property (assign, nonatomic) AnimationStatus   animationStatus;
 
 @end
 
-@implementation InterimImageCellView
+@implementation CRInterimImageCellView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {

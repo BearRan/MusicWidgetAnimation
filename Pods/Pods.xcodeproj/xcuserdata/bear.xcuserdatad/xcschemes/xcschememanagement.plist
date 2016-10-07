@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BearAnimation.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>BearSkill-BearSkill.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>BearSkill.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>CRAnimation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,17 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>609FDFDAFDE339E0E614277DBF18B20E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>61095CF8C93054D430B375CEC9D52F2D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>6650DCC340B90AEA241B0997839E75BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>761FC50CA79BABC8EAB17E11BEC8BBA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>84CA77BFD4E89CA7D51D54F71CE4DC85</key>
 		<dict>
 			<key>primary</key>
 			<true/>

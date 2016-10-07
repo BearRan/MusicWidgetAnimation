@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "CRCardAnimationView.h"
 #import "MyCardView.h"
-#import "ImageGradientView.h"
+#import "CRImageGradientView.h"
 #import "BottomPageView.h"
 
 @interface ViewController () <CardAnimationViewDelegate, MyCardViewDelegate>
@@ -20,7 +20,7 @@
     NSArray             *_timeArray;
     NSArray             *_unitArray;
     
-    ImageGradientView   *_bgImageView;
+    CRImageGradientView *_bgImageView;
     BottomPageView      *_bottomPageView;
     CRCardAnimationView   *_cardAnimationView;
 }
@@ -156,7 +156,7 @@
     [self.view insertSubview:visualEffectView belowSubview:_cardAnimationView];
     
     //  图片切换view
-    _bgImageView = [[ImageGradientView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    _bgImageView = [[CRImageGradientView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     _bgImageView.animationDuration_EX = 1.3;
     [self.view insertSubview:_bgImageView belowSubview:visualEffectView];
     

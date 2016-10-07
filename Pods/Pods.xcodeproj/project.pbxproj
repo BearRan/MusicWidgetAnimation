@@ -7,47 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05B1E69CE85DBEB20E0ED830E871F2CB /* BearSkill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFA238252FAF2D3C09D683D4FE70FFC /* BearSkill-dummy.m */; };
-		07B6093D973519DEA37C4B67A373C585 /* BearAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 42A9D4CE4F10FD0DE4935D22C144A842 /* BearAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0DBE0A8CE2380149279BA00CE54A2BE5 /* NSMutableAttributedString+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 2412AF089C401AE78783EB1C475EC0A8 /* NSMutableAttributedString+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0F0AC7656A8C76519D6E30987AE11AB9 /* BearAlertBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8C5093D0A48C31E8B60F7B27AAC0E2 /* BearAlertBtnsView.m */; };
-		1CF66BD4B43175FA49A6E18C23FA989E /* ImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5EBA2A37DE78189B2B81B03B855D70 /* ImageGradientView.m */; };
+		05B1E69CE85DBEB20E0ED830E871F2CB /* BearSkill-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B3CCD5B3C28EF585BB6D5F3270EB32 /* BearSkill-dummy.m */; };
+		07B6093D973519DEA37C4B67A373C585 /* BearAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = C979540870C767BBE238C09E4D2BBD06 /* BearAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		09348C33B8D7FE6B00881421A888E216 /* Pods-MusicWidgetAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 791E9220C0505F5F64C48D223D0EFA1A /* Pods-MusicWidgetAnimation-dummy.m */; };
+		0BFA08FA0473A81ED90CFCC084C3609B /* CRAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A63C1D15AA2E06EC3A0D232C43BBAE /* CRAnimation-dummy.m */; };
+		0DBE0A8CE2380149279BA00CE54A2BE5 /* NSMutableAttributedString+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 96392685315C8F6AF4F3E11FC5BBBE1D /* NSMutableAttributedString+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F0AC7656A8C76519D6E30987AE11AB9 /* BearAlertBtnsView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1D6A10ECBD2CAB80543A2441A63E544 /* BearAlertBtnsView.m */; };
+		10115902682C5F06E62CFA6E9289360E /* CRImageGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C5DE4313D70D70AEF50E59B61DD5A27 /* CRImageGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2287C14C08B2618184EF8E33DF80299A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		2731C78050C7E87AD8D9C437ACCA8FB4 /* UITextField+BearLimitLength.m in Sources */ = {isa = PBXBuildFile; fileRef = C0257397ADEFBBB20394E3BD15AFFBA5 /* UITextField+BearLimitLength.m */; };
+		2731C78050C7E87AD8D9C437ACCA8FB4 /* UITextField+BearLimitLength.m in Sources */ = {isa = PBXBuildFile; fileRef = AD95EF8C30DCD800AFFA1894B7F17EA6 /* UITextField+BearLimitLength.m */; };
 		289885E13E94F454BF6952C9AAAEF656 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		2E0E1B6CF6429970E3746451EE0EE6F4 /* UILabel+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9F72B356350A3FB93BB5808E2853E7 /* UILabel+BearSet.m */; };
+		2E0E1B6CF6429970E3746451EE0EE6F4 /* UILabel+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = F867F3486B813C0A4A421DAD89064F96 /* UILabel+BearSet.m */; };
+		44EBCDE10BE65F8E0E853C47C131B701 /* CRInterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0069FFF1F3415F61BBB2C8262DB41CE /* CRInterimImageCellView.m */; };
 		46BA59C3812C88E82629B8C3DAF2DB35 /* Pods-MusicWidgetAnimationTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 853AB87728DC2D5CDB033280E1384A4E /* Pods-MusicWidgetAnimationTests-dummy.m */; };
-		4766BC0A25CE5CD5706F2BD66E2EA4BD /* BearAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8C78186E49F704452606525661A9B26 /* BearAlertContentView.m */; };
-		4DB564CB3C6FE74E6D7DAE271BAC5D27 /* ApplicationOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB9DFE3D4CC97621968D7C183FB139A1 /* ApplicationOpenURLManager.m */; };
-		53729210EEDB368B2539701C96916BF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		58586ED26BDB239754A463A6CD81E173 /* ImageGradientView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6277EF9DECC884AD9CEA73B7B0F0BAA2 /* ImageGradientView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FD5A26B45661A296130EFAE85755D5A /* BearConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 458A70BB64DF6392FEFDF2A3CD96768D /* BearConstants.m */; };
-		6AEB0970490A399AC4C286DB6D97CDFD /* BearAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B13D55F8388BB9DE9DCD504B825DF5DB /* BearAnimation-dummy.m */; };
-		70C77A7EC8F4E434339245800B476C01 /* Pods-MusicWidgetAnimation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 791E9220C0505F5F64C48D223D0EFA1A /* Pods-MusicWidgetAnimation-dummy.m */; };
-		76056797923A2182DADA68547034F481 /* InterimImageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = D90016B338097806717D6AA47A2DCAD3 /* InterimImageCellView.m */; };
+		4766BC0A25CE5CD5706F2BD66E2EA4BD /* BearAlertContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD2C94B53C53893BE3EFEC3995A70F20 /* BearAlertContentView.m */; };
+		4DB564CB3C6FE74E6D7DAE271BAC5D27 /* ApplicationOpenURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D7A813BABE27E1ED64557B1744DD242 /* ApplicationOpenURLManager.m */; };
+		5F08F8D7FD005BB3A97E6F35E813B9AE /* CRImageGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B7FF099E89D4A57E6AF6737CFD2952 /* CRImageGradientView.m */; };
+		5FD5A26B45661A296130EFAE85755D5A /* BearConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = DECE61F15C54F324D36FBBC8118612FE /* BearConstants.m */; };
 		88E1E5BD06EB74F4AB998B58A60A8F42 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		9088789C48094E92653924EA5A7A20B4 /* BearAlertContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C2E9596AB2D04AF8B78C020ED213892 /* BearAlertContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9205567BE34B32A676B2E215FDC55501 /* UILabel+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 006F3F33E9A82DB613CB1FDB6099BC66 /* UILabel+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		930AD829706E6346BCBD7D76D428D8D2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		9088789C48094E92653924EA5A7A20B4 /* BearAlertContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B4EFD944A3A168EE66E571F3B05709F /* BearAlertContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9205567BE34B32A676B2E215FDC55501 /* UILabel+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = B96FAFF075DAFFE185152236D743464E /* UILabel+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94E176EEB4DFCAA66E3204C875E30444 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
 		9928C61582C93532A852D617D8D9B6D4 /* Pods-MusicWidgetAnimationUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6A7F4B911F0C918DC29FAF230BA20E /* Pods-MusicWidgetAnimationUITests-dummy.m */; };
-		9A23134033DAB05536412FE51666AD1B /* UITableView+BearStoreCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0B499D5A34A6E9B6F155F37FBD442B /* UITableView+BearStoreCellHeight.m */; };
-		9A5DB535B2FF2C44D294E5078CC6C757 /* BearAlertBtnsView.h in Headers */ = {isa = PBXBuildFile; fileRef = BF61E96CBBA03C00B1DADB7740476785 /* BearAlertBtnsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4E3B00A807FF2FBC55533BF1ACFC5A2 /* UIView+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 53ADC9792AF89D2AA83EE4CE23A0F1B3 /* UIView+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B79740901544F669FE12168BCE39A3E8 /* NSMutableAttributedString+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7E0724F25CCA1926693F9A6713B0E1 /* NSMutableAttributedString+BearSet.m */; };
-		C1B2A3EF6578302F8E844D7EFEFB6BD0 /* BearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99514BE6ECB546DF75B0E031F1D5EACA /* BearAlertView.m */; };
-		C50405FE636FC661DB101A2C762057E4 /* UIView+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C746DB2AFBC29E808DA91996EEA2A8 /* UIView+BearSet.m */; };
-		C6FFCDEDF2979441598245B2A580571F /* UITextField+BearLimitLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BE221ACEB3E4B3199E7DB9B096C28D8 /* UITextField+BearLimitLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9BE5C125538724BD522AAEDC425AE71 /* UITableView+BearStoreCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D800D9BD9AC8A55176AD39F949020B9 /* UITableView+BearStoreCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEFEFF823D5EE5029195F43777DFF980 /* BearCutOutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3293EBE23176D9F7268D85C98C6F368B /* BearCutOutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDDF66CDD7FD6AB7A37644CAB740385C /* BearCutOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5058A11AE4231C2964FB1007957563E5 /* BearCutOutView.m */; };
-		DF92B84970262DD3BD7460122F1CF745 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
-		E260DF67102DF82F6786F8692A8AF25F /* ApplicationOpenURLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 43A6C98846C5A100D2A69FE0E51A6E88 /* ApplicationOpenURLManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F829CB31BF498759576C6728C93D9CB9 /* InterimImageCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = F5D2E70C4894708B3BD42D20763B11FE /* InterimImageCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8449C0899A0320846527407B461AEE5 /* BearConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DB7717BA9CA33CD4FD4C1D427BD992D /* BearConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9A23134033DAB05536412FE51666AD1B /* UITableView+BearStoreCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D9083F36D5DB06B654CEFE518CCF6BB /* UITableView+BearStoreCellHeight.m */; };
+		9A5DB535B2FF2C44D294E5078CC6C757 /* BearAlertBtnsView.h in Headers */ = {isa = PBXBuildFile; fileRef = 37DF678B6EB605C69E46C815CDF08AEE /* BearAlertBtnsView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4E3B00A807FF2FBC55533BF1ACFC5A2 /* UIView+BearSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C1B087F0A6F1BEB0AE5D165F6B81B60 /* UIView+BearSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B79740901544F669FE12168BCE39A3E8 /* NSMutableAttributedString+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FB69494195A0EA0F1C83B7F1F14C80C4 /* NSMutableAttributedString+BearSet.m */; };
+		BFEA322CCB1C3A7DCDAECBFA43931961 /* CRInterimImageCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBEAB624E6FFF5B8B3BFA40583813EA /* CRInterimImageCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C1B2A3EF6578302F8E844D7EFEFB6BD0 /* BearAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7DB436C5BEC6A723C46CB2F653510BC /* BearAlertView.m */; };
+		C50405FE636FC661DB101A2C762057E4 /* UIView+BearSet.m in Sources */ = {isa = PBXBuildFile; fileRef = C6329787C911E2B6F658BCD3EB5C8CEE /* UIView+BearSet.m */; };
+		C6FFCDEDF2979441598245B2A580571F /* UITextField+BearLimitLength.h in Headers */ = {isa = PBXBuildFile; fileRef = 4617CDB0C880724B9C3E798B8D66F5C2 /* UITextField+BearLimitLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9BE5C125538724BD522AAEDC425AE71 /* UITableView+BearStoreCellHeight.h in Headers */ = {isa = PBXBuildFile; fileRef = BB87F5AA4813250831FAB964B5DAB097 /* UITableView+BearStoreCellHeight.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEFEFF823D5EE5029195F43777DFF980 /* BearCutOutView.h in Headers */ = {isa = PBXBuildFile; fileRef = 489E6849B12B6B487011DC4FF3BF5D4F /* BearCutOutView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC36C272A03EE9198E667F1D5BD568D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		DDDF66CDD7FD6AB7A37644CAB740385C /* BearCutOutView.m in Sources */ = {isa = PBXBuildFile; fileRef = A81AB2AD282B31346F86E44CBB0F3F4A /* BearCutOutView.m */; };
+		E260DF67102DF82F6786F8692A8AF25F /* ApplicationOpenURLManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F63B0DE67C5B37862D7F75677889B816 /* ApplicationOpenURLManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EAA015490553C4586DE9495ADBCE767A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		F8449C0899A0320846527407B461AEE5 /* BearConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F0017A7C9680DB9C3890D1310B5E7CE2 /* BearConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		32D5A06954027EB3C8AB1D38B6390CBC /* PBXContainerItemProxy */ = {
+		6701B1C497A301E2BBC947A8BE85FA19 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -61,78 +61,78 @@
 			remoteGlobalIDString = 92DAC08E856F55428CA1CA7602143E60;
 			remoteInfo = "BearSkill-BearSkill";
 		};
-		C9281AD28261A6BFBD0C2162509FA1F6 /* PBXContainerItemProxy */ = {
+		D8356EEFCBD053139D37A793A51BC74B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 609FDFDAFDE339E0E614277DBF18B20E;
-			remoteInfo = BearAnimation;
+			remoteGlobalIDString = 761FC50CA79BABC8EAB17E11BEC8BBA5;
+			remoteInfo = CRAnimation;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		006F3F33E9A82DB613CB1FDB6099BC66 /* UILabel+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+BearSet.h"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.h"; sourceTree = "<group>"; };
-		0DB7717BA9CA33CD4FD4C1D427BD992D /* BearConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearConstants.h; path = Pod/Classes/Constants/BearConstants.h; sourceTree = "<group>"; };
+		0555485E2954EAFC4AC97A2A4D47C2DF /* libPods-MusicWidgetAnimationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C5DE4313D70D70AEF50E59B61DD5A27 /* CRImageGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRImageGradientView.h; path = CRAnimation/CRWidget/CRImageGradientView/CRImageGradientView.h; sourceTree = "<group>"; };
 		14BE5240F77D98F4AFE6F567BB86792A /* Pods-MusicWidgetAnimation-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimation-frameworks.sh"; sourceTree = "<group>"; };
 		1651B89D4F3BCB0E377678E018DB37C7 /* Pods-MusicWidgetAnimationUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicWidgetAnimationUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1B5D9E735E9E240BE0633C214F139348 /* BearSkill.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearSkill.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D800D9BD9AC8A55176AD39F949020B9 /* UITableView+BearStoreCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BearStoreCellHeight.h"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.h"; sourceTree = "<group>"; };
-		2412AF089C401AE78783EB1C475EC0A8 /* NSMutableAttributedString+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+BearSet.h"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.h"; sourceTree = "<group>"; };
+		1D7A813BABE27E1ED64557B1744DD242 /* ApplicationOpenURLManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ApplicationOpenURLManager.m; path = Pod/Classes/Constants/ApplicationOpenURLManager.m; sourceTree = "<group>"; };
 		2787197277BAF9D97D5B3E40501C1FE1 /* Pods-MusicWidgetAnimation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicWidgetAnimation-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BearSkill.xcconfig; sourceTree = "<group>"; };
-		3293EBE23176D9F7268D85C98C6F368B /* BearCutOutView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearCutOutView.h; path = "Pod/Classes/UI&Extend/BearCutOutView.h"; sourceTree = "<group>"; };
-		34CBE2DC7C4CD3B0C489C58615DB70DB /* libPods-MusicWidgetAnimationUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42A9D4CE4F10FD0DE4935D22C144A842 /* BearAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.h"; sourceTree = "<group>"; };
+		28A63C1D15AA2E06EC3A0D232C43BBAE /* CRAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CRAnimation-dummy.m"; sourceTree = "<group>"; };
+		314F9863C0043BF35B5A769F9CE9F5C6 /* CRAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CRAnimation.xcconfig; sourceTree = "<group>"; };
+		36B2D20159597A8B19D4032409F2D7CF /* libBearSkill.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBearSkill.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		37DF678B6EB605C69E46C815CDF08AEE /* BearAlertBtnsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertBtnsView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.h"; sourceTree = "<group>"; };
+		3A394237C80315B167DC6C7D7C9E6BD6 /* libCRAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCRAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EA6DFB6517A8DF19FEDEBFB82D94D7 /* Pods-MusicWidgetAnimationTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MusicWidgetAnimationTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		43A6C98846C5A100D2A69FE0E51A6E88 /* ApplicationOpenURLManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ApplicationOpenURLManager.h; path = Pod/Classes/Constants/ApplicationOpenURLManager.h; sourceTree = "<group>"; };
-		43E42EED3BE57FC187545D918DB8FC55 /* BearAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BearAnimation-prefix.pch"; sourceTree = "<group>"; };
-		458A70BB64DF6392FEFDF2A3CD96768D /* BearConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearConstants.m; path = Pod/Classes/Constants/BearConstants.m; sourceTree = "<group>"; };
-		5058A11AE4231C2964FB1007957563E5 /* BearCutOutView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearCutOutView.m; path = "Pod/Classes/UI&Extend/BearCutOutView.m"; sourceTree = "<group>"; };
-		53ADC9792AF89D2AA83EE4CE23A0F1B3 /* UIView+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+BearSet.h"; path = "Pod/Classes/Layout/UIView+BearSet.h"; sourceTree = "<group>"; };
+		43B7FF099E89D4A57E6AF6737CFD2952 /* CRImageGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRImageGradientView.m; path = CRAnimation/CRWidget/CRImageGradientView/CRImageGradientView.m; sourceTree = "<group>"; };
+		4617CDB0C880724B9C3E798B8D66F5C2 /* UITextField+BearLimitLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+BearLimitLength.h"; path = "Pod/Classes/UI&Extend/UITextField+BearLimitLength.h"; sourceTree = "<group>"; };
+		489E6849B12B6B487011DC4FF3BF5D4F /* BearCutOutView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearCutOutView.h; path = "Pod/Classes/UI&Extend/BearCutOutView.h"; sourceTree = "<group>"; };
 		565510FFB1F4DC53B57E26740C74A9B9 /* Pods-MusicWidgetAnimation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicWidgetAnimation-acknowledgements.plist"; sourceTree = "<group>"; };
-		6277EF9DECC884AD9CEA73B7B0F0BAA2 /* ImageGradientView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ImageGradientView.h; path = BearAnimation/Widget/ImageGradientView/ImageGradientView.h; sourceTree = "<group>"; };
-		63491BE3FF9E37ECD4452B34373D482E /* libPods-MusicWidgetAnimationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C2E9596AB2D04AF8B78C020ED213892 /* BearAlertContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertContentView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.h"; sourceTree = "<group>"; };
+		5B4EFD944A3A168EE66E571F3B05709F /* BearAlertContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertContentView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.h"; sourceTree = "<group>"; };
+		6061BA049E7AE7083FBA719950965123 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D9083F36D5DB06B654CEFE518CCF6BB /* UITableView+BearStoreCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BearStoreCellHeight.m"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.m"; sourceTree = "<group>"; };
 		78AA82523F5A41D7CCAB9BB7E5E3EDEB /* Pods-MusicWidgetAnimationTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicWidgetAnimationTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		78C746DB2AFBC29E808DA91996EEA2A8 /* UIView+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BearSet.m"; path = "Pod/Classes/Layout/UIView+BearSet.m"; sourceTree = "<group>"; };
 		791E9220C0505F5F64C48D223D0EFA1A /* Pods-MusicWidgetAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicWidgetAnimation-dummy.m"; sourceTree = "<group>"; };
 		7ACCA09B49B84D58E2784C809CA1AF0C /* Pods-MusicWidgetAnimationTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationTests-resources.sh"; sourceTree = "<group>"; };
-		818F76ABDBA4EA8B4F7AE12649D17C59 /* libBearSkill.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBearSkill.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C1B087F0A6F1BEB0AE5D165F6B81B60 /* UIView+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+BearSet.h"; path = "Pod/Classes/Layout/UIView+BearSet.h"; sourceTree = "<group>"; };
 		853AB87728DC2D5CDB033280E1384A4E /* Pods-MusicWidgetAnimationTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicWidgetAnimationTests-dummy.m"; sourceTree = "<group>"; };
-		8791B0B58ADAACDA62F136BB8924F52F /* ResourceBundle-BearSkill-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BearSkill-Info.plist"; sourceTree = "<group>"; };
-		8BE221ACEB3E4B3199E7DB9B096C28D8 /* UITextField+BearLimitLength.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITextField+BearLimitLength.h"; path = "Pod/Classes/UI&Extend/UITextField+BearLimitLength.h"; sourceTree = "<group>"; };
-		8D7E0724F25CCA1926693F9A6713B0E1 /* NSMutableAttributedString+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+BearSet.m"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.m"; sourceTree = "<group>"; };
 		8E9B0E01554A93BCB8225D03A08F36EE /* Pods-MusicWidgetAnimationUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationUITests-frameworks.sh"; sourceTree = "<group>"; };
-		8EA630815B68FCBB2408DF52670D8B5E /* BearSkill-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BearSkill-prefix.pch"; sourceTree = "<group>"; };
 		91108E9EEA831BC762C73F5A3B7B26FC /* Pods-MusicWidgetAnimationUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MusicWidgetAnimationUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9518774FC5ED1B07EB5B8B953068D1D7 /* BearSkill.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BearSkill.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		96392685315C8F6AF4F3E11FC5BBBE1D /* NSMutableAttributedString+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+BearSet.h"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.h"; sourceTree = "<group>"; };
+		978BB88D1379A13AA5B1E8F585CC9AAA /* BearSkill-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BearSkill-prefix.pch"; sourceTree = "<group>"; };
 		986B4E007D034948C91D451C53EB751A /* Pods-MusicWidgetAnimationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationTests.release.xcconfig"; sourceTree = "<group>"; };
 		9902C7FDB9710730F41ABCDBA1B6F36B /* Pods-MusicWidgetAnimation-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimation-resources.sh"; sourceTree = "<group>"; };
-		99514BE6ECB546DF75B0E031F1D5EACA /* BearAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.m"; sourceTree = "<group>"; };
-		9F5EBA2A37DE78189B2B81B03B855D70 /* ImageGradientView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ImageGradientView.m; path = BearAnimation/Widget/ImageGradientView/ImageGradientView.m; sourceTree = "<group>"; };
+		9BF158CC36DF24DDA9AF8AD65968179D /* libPods-MusicWidgetAnimationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C4B2987907CBA6C91C57E71A32FF862 /* ResourceBundle-BearSkill-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BearSkill-Info.plist"; sourceTree = "<group>"; };
 		A145E0B73926E59C97C60D814918E266 /* Pods-MusicWidgetAnimation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimation.debug.xcconfig"; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A81AB2AD282B31346F86E44CBB0F3F4A /* BearCutOutView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearCutOutView.m; path = "Pod/Classes/UI&Extend/BearCutOutView.m"; sourceTree = "<group>"; };
 		A9465D6FEA25D34720D4D26DA58C7EA6 /* Pods-MusicWidgetAnimationTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationTests-frameworks.sh"; sourceTree = "<group>"; };
-		B13D55F8388BB9DE9DCD504B825DF5DB /* BearAnimation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BearAnimation-dummy.m"; sourceTree = "<group>"; };
+		AD95EF8C30DCD800AFFA1894B7F17EA6 /* UITextField+BearLimitLength.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+BearLimitLength.m"; path = "Pod/Classes/UI&Extend/UITextField+BearLimitLength.m"; sourceTree = "<group>"; };
+		B0069FFF1F3415F61BBB2C8262DB41CE /* CRInterimImageCellView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CRInterimImageCellView.m; path = CRAnimation/CRWidget/CRImageGradientView/CRInterimImageCellView.m; sourceTree = "<group>"; };
+		B1D6A10ECBD2CAB80543A2441A63E544 /* BearAlertBtnsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertBtnsView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.m"; sourceTree = "<group>"; };
 		B296C0C97A20CCD3033CAEB398B0D1BD /* Pods-MusicWidgetAnimationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B96FAFF075DAFFE185152236D743464E /* UILabel+BearSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+BearSet.h"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.h"; sourceTree = "<group>"; };
+		BAE08ADC4F585FA44DE2D3535E4F0C38 /* BearSkill.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BearSkill.xcconfig; sourceTree = "<group>"; };
+		BB87F5AA4813250831FAB964B5DAB097 /* UITableView+BearStoreCellHeight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UITableView+BearStoreCellHeight.h"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.h"; sourceTree = "<group>"; };
 		BCADD50857C313B93C56EF1C47C27D0A /* Pods-MusicWidgetAnimationUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MusicWidgetAnimationUITests-resources.sh"; sourceTree = "<group>"; };
-		BF61E96CBBA03C00B1DADB7740476785 /* BearAlertBtnsView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertBtnsView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.h"; sourceTree = "<group>"; };
-		BFE45FB066F317103810D908BB523C96 /* libBearAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBearAnimation.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0257397ADEFBBB20394E3BD15AFFBA5 /* UITextField+BearLimitLength.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITextField+BearLimitLength.m"; path = "Pod/Classes/UI&Extend/UITextField+BearLimitLength.m"; sourceTree = "<group>"; };
+		C6329787C911E2B6F658BCD3EB5C8CEE /* UIView+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+BearSet.m"; path = "Pod/Classes/Layout/UIView+BearSet.m"; sourceTree = "<group>"; };
 		C6678F2FAC3C53853B993EF9BBA5A99D /* Pods-MusicWidgetAnimationUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		C8C78186E49F704452606525661A9B26 /* BearAlertContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertContentView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.m"; sourceTree = "<group>"; };
-		CB9DFE3D4CC97621968D7C183FB139A1 /* ApplicationOpenURLManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ApplicationOpenURLManager.m; path = Pod/Classes/Constants/ApplicationOpenURLManager.m; sourceTree = "<group>"; };
+		C979540870C767BBE238C09E4D2BBD06 /* BearAlertView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearAlertView.h; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.h"; sourceTree = "<group>"; };
 		CF6A7F4B911F0C918DC29FAF230BA20E /* Pods-MusicWidgetAnimationUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MusicWidgetAnimationUITests-dummy.m"; sourceTree = "<group>"; };
-		D0EFC9FDED935ADCF7DAD22070800634 /* libPods-MusicWidgetAnimation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MusicWidgetAnimation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BearAnimation.xcconfig; sourceTree = "<group>"; };
-		D90016B338097806717D6AA47A2DCAD3 /* InterimImageCellView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = InterimImageCellView.m; path = BearAnimation/Widget/ImageGradientView/InterimImageCellView.m; sourceTree = "<group>"; };
-		DBFA238252FAF2D3C09D683D4FE70FFC /* BearSkill-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BearSkill-dummy.m"; sourceTree = "<group>"; };
+		DECE61F15C54F324D36FBBC8118612FE /* BearConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearConstants.m; path = Pod/Classes/Constants/BearConstants.m; sourceTree = "<group>"; };
+		E6B3CCD5B3C28EF585BB6D5F3270EB32 /* BearSkill-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BearSkill-dummy.m"; sourceTree = "<group>"; };
 		E6C4986E8F7C5F6E2F49B069C78F5EAD /* Pods-MusicWidgetAnimationUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimationUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E7DB436C5BEC6A723C46CB2F653510BC /* BearAlertView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertView.m"; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EA0B499D5A34A6E9B6F155F37FBD442B /* UITableView+BearStoreCellHeight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITableView+BearStoreCellHeight.m"; path = "Pod/Classes/Layout/UITableView+BearStoreCellHeight.m"; sourceTree = "<group>"; };
-		EF9F72B356350A3FB93BB5808E2853E7 /* UILabel+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+BearSet.m"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.m"; sourceTree = "<group>"; };
-		F5D2E70C4894708B3BD42D20763B11FE /* InterimImageCellView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = InterimImageCellView.h; path = BearAnimation/Widget/ImageGradientView/InterimImageCellView.h; sourceTree = "<group>"; };
-		FC8C5093D0A48C31E8B60F7B27AAC0E2 /* BearAlertBtnsView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertBtnsView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertBtnsView.m"; sourceTree = "<group>"; };
+		F0017A7C9680DB9C3890D1310B5E7CE2 /* BearConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BearConstants.h; path = Pod/Classes/Constants/BearConstants.h; sourceTree = "<group>"; };
+		F63B0DE67C5B37862D7F75677889B816 /* ApplicationOpenURLManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ApplicationOpenURLManager.h; path = Pod/Classes/Constants/ApplicationOpenURLManager.h; sourceTree = "<group>"; };
+		F867F3486B813C0A4A421DAD89064F96 /* UILabel+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+BearSet.m"; path = "Pod/Classes/UI&Extend/UILabel+BearSet.m"; sourceTree = "<group>"; };
+		FB69494195A0EA0F1C83B7F1F14C80C4 /* NSMutableAttributedString+BearSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+BearSet.m"; path = "Pod/Classes/AttributeString/NSMutableAttributedString+BearSet.m"; sourceTree = "<group>"; };
+		FBA978741F9529E8C2800FE5069979EA /* CRAnimation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CRAnimation-prefix.pch"; sourceTree = "<group>"; };
+		FD2C94B53C53893BE3EFEC3995A70F20 /* BearAlertContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BearAlertContentView.m; path = "Pod/Classes/UI&Extend/BearAlertView/BearAlertContentView.m"; sourceTree = "<group>"; };
+		FEBEAB624E6FFF5B8B3BFA40583813EA /* CRInterimImageCellView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CRInterimImageCellView.h; path = CRAnimation/CRWidget/CRImageGradientView/CRInterimImageCellView.h; sourceTree = "<group>"; };
 		FFD39396EC57E7529FDE90C6EF968CA2 /* Pods-MusicWidgetAnimation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MusicWidgetAnimation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,12 +152,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3EF7936845853ABA45825CC420E66F82 /* Frameworks */ = {
+		4B428CED1F5BB3AA3AD25F2A2599B5BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53729210EEDB368B2539701C96916BF2 /* Foundation.framework in Frameworks */,
-				DF92B84970262DD3BD7460122F1CF745 /* UIKit.framework in Frameworks */,
+				EAA015490553C4586DE9495ADBCE767A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,34 +176,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C99A8B71AEC4F1034FD482FB6DD0AEB0 /* Frameworks */ = {
+		D4FCAEF6099E6BA2B76F4358ADBCB01F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930AD829706E6346BCBD7D76D428D8D2 /* Foundation.framework in Frameworks */,
+				94E176EEB4DFCAA66E3204C875E30444 /* Foundation.framework in Frameworks */,
+				DC36C272A03EE9198E667F1D5BD568D9 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B9CF583E3039FD3630C0904B0F4F02E /* Widget */ = {
+		1B4A7AD2DB0D44ACDD35EE05F113675E /* CRAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				CAA537619BDA3EA48752C40F8E2BBE30 /* ImageGradientView */,
+				64F0E8E33F1031DEF058F3108232D134 /* Support Files */,
+				5BAA082E98CAD3E2F9E6540E96293758 /* Widget */,
 			);
-			name = Widget;
-			sourceTree = "<group>";
-		};
-		2562DF04F2D32466AD43909FF2252F9C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */,
-				B13D55F8388BB9DE9DCD504B825DF5DB /* BearAnimation-dummy.m */,
-				43E42EED3BE57FC187545D918DB8FC55 /* BearAnimation-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/BearAnimation";
+			path = CRAnimation;
 			sourceTree = "<group>";
 		};
 		31F1CBB94496A1FF189F1981A4D98CE7 /* Pods-MusicWidgetAnimation */ = {
@@ -222,24 +212,6 @@
 			path = "Target Support Files/Pods-MusicWidgetAnimation";
 			sourceTree = "<group>";
 		};
-		3477C60D849A362E2FF078009D5261BD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3F8ED2B6A223571E0F3444DC5D9C0E6E /* BearAnimation */,
-				B99E9EE777BBD7D918C855B41AECADD8 /* BearSkill */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		3F8ED2B6A223571E0F3444DC5D9C0E6E /* BearAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				2562DF04F2D32466AD43909FF2252F9C /* Support Files */,
-				1B9CF583E3039FD3630C0904B0F4F02E /* Widget */,
-			);
-			path = BearAnimation;
-			sourceTree = "<group>";
-		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,13 +220,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5BAA082E98CAD3E2F9E6540E96293758 /* Widget */ = {
+			isa = PBXGroup;
+			children = (
+				AD2D123AFD4D3EF6673015F13ADF2B80 /* CRImageGradientView */,
+			);
+			name = Widget;
+			sourceTree = "<group>";
+		};
+		64F0E8E33F1031DEF058F3108232D134 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				314F9863C0043BF35B5A769F9CE9F5C6 /* CRAnimation.xcconfig */,
+				28A63C1D15AA2E06EC3A0D232C43BBAE /* CRAnimation-dummy.m */,
+				FBA978741F9529E8C2800FE5069979EA /* CRAnimation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CRAnimation";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				3477C60D849A362E2FF078009D5261BD /* Pods */,
-				95269CE717BD7683347341BBC5597377 /* Products */,
+				956971EB6602D9F551FC64D24E4F9F48 /* Pods */,
+				B6CB9B5882116FB7A052EC5B38758892 /* Products */,
 				A1ED3D9B403976ACFA094EAF5EF58C96 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -274,17 +265,43 @@
 			path = "Target Support Files/Pods-MusicWidgetAnimationTests";
 			sourceTree = "<group>";
 		};
-		95269CE717BD7683347341BBC5597377 /* Products */ = {
+		91285F0854F9C0FB336F4636E7D6C2AE /* BearSkill */ = {
 			isa = PBXGroup;
 			children = (
-				1B5D9E735E9E240BE0633C214F139348 /* BearSkill.bundle */,
-				BFE45FB066F317103810D908BB523C96 /* libBearAnimation.a */,
-				818F76ABDBA4EA8B4F7AE12649D17C59 /* libBearSkill.a */,
-				D0EFC9FDED935ADCF7DAD22070800634 /* libPods-MusicWidgetAnimation.a */,
-				63491BE3FF9E37ECD4452B34373D482E /* libPods-MusicWidgetAnimationTests.a */,
-				34CBE2DC7C4CD3B0C489C58615DB70DB /* libPods-MusicWidgetAnimationUITests.a */,
+				F63B0DE67C5B37862D7F75677889B816 /* ApplicationOpenURLManager.h */,
+				1D7A813BABE27E1ED64557B1744DD242 /* ApplicationOpenURLManager.m */,
+				37DF678B6EB605C69E46C815CDF08AEE /* BearAlertBtnsView.h */,
+				B1D6A10ECBD2CAB80543A2441A63E544 /* BearAlertBtnsView.m */,
+				5B4EFD944A3A168EE66E571F3B05709F /* BearAlertContentView.h */,
+				FD2C94B53C53893BE3EFEC3995A70F20 /* BearAlertContentView.m */,
+				C979540870C767BBE238C09E4D2BBD06 /* BearAlertView.h */,
+				E7DB436C5BEC6A723C46CB2F653510BC /* BearAlertView.m */,
+				F0017A7C9680DB9C3890D1310B5E7CE2 /* BearConstants.h */,
+				DECE61F15C54F324D36FBBC8118612FE /* BearConstants.m */,
+				489E6849B12B6B487011DC4FF3BF5D4F /* BearCutOutView.h */,
+				A81AB2AD282B31346F86E44CBB0F3F4A /* BearCutOutView.m */,
+				96392685315C8F6AF4F3E11FC5BBBE1D /* NSMutableAttributedString+BearSet.h */,
+				FB69494195A0EA0F1C83B7F1F14C80C4 /* NSMutableAttributedString+BearSet.m */,
+				B96FAFF075DAFFE185152236D743464E /* UILabel+BearSet.h */,
+				F867F3486B813C0A4A421DAD89064F96 /* UILabel+BearSet.m */,
+				BB87F5AA4813250831FAB964B5DAB097 /* UITableView+BearStoreCellHeight.h */,
+				6D9083F36D5DB06B654CEFE518CCF6BB /* UITableView+BearStoreCellHeight.m */,
+				4617CDB0C880724B9C3E798B8D66F5C2 /* UITextField+BearLimitLength.h */,
+				AD95EF8C30DCD800AFFA1894B7F17EA6 /* UITextField+BearLimitLength.m */,
+				7C1B087F0A6F1BEB0AE5D165F6B81B60 /* UIView+BearSet.h */,
+				C6329787C911E2B6F658BCD3EB5C8CEE /* UIView+BearSet.m */,
+				A3F566B93507699B4BE5C560C813B8B9 /* Support Files */,
 			);
-			name = Products;
+			path = BearSkill;
+			sourceTree = "<group>";
+		};
+		956971EB6602D9F551FC64D24E4F9F48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91285F0854F9C0FB336F4636E7D6C2AE /* BearSkill */,
+				1B4A7AD2DB0D44ACDD35EE05F113675E /* CRAnimation */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A1ED3D9B403976ACFA094EAF5EF58C96 /* Targets Support Files */ = {
@@ -297,16 +314,40 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		AED9C5ABCC4DFB64120AE6D1A9FFE246 /* Support Files */ = {
+		A3F566B93507699B4BE5C560C813B8B9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */,
-				DBFA238252FAF2D3C09D683D4FE70FFC /* BearSkill-dummy.m */,
-				8EA630815B68FCBB2408DF52670D8B5E /* BearSkill-prefix.pch */,
-				8791B0B58ADAACDA62F136BB8924F52F /* ResourceBundle-BearSkill-Info.plist */,
+				BAE08ADC4F585FA44DE2D3535E4F0C38 /* BearSkill.xcconfig */,
+				E6B3CCD5B3C28EF585BB6D5F3270EB32 /* BearSkill-dummy.m */,
+				978BB88D1379A13AA5B1E8F585CC9AAA /* BearSkill-prefix.pch */,
+				9C4B2987907CBA6C91C57E71A32FF862 /* ResourceBundle-BearSkill-Info.plist */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/BearSkill";
+			sourceTree = "<group>";
+		};
+		AD2D123AFD4D3EF6673015F13ADF2B80 /* CRImageGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				0C5DE4313D70D70AEF50E59B61DD5A27 /* CRImageGradientView.h */,
+				43B7FF099E89D4A57E6AF6737CFD2952 /* CRImageGradientView.m */,
+				FEBEAB624E6FFF5B8B3BFA40583813EA /* CRInterimImageCellView.h */,
+				B0069FFF1F3415F61BBB2C8262DB41CE /* CRInterimImageCellView.m */,
+			);
+			name = CRImageGradientView;
+			sourceTree = "<group>";
+		};
+		B6CB9B5882116FB7A052EC5B38758892 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9518774FC5ED1B07EB5B8B953068D1D7 /* BearSkill.bundle */,
+				36B2D20159597A8B19D4032409F2D7CF /* libBearSkill.a */,
+				3A394237C80315B167DC6C7D7C9E6BD6 /* libCRAnimation.a */,
+				6061BA049E7AE7083FBA719950965123 /* libPods-MusicWidgetAnimation.a */,
+				9BF158CC36DF24DDA9AF8AD65968179D /* libPods-MusicWidgetAnimationTests.a */,
+				0555485E2954EAFC4AC97A2A4D47C2DF /* libPods-MusicWidgetAnimationUITests.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		B98EC35EC646DA04DFDC64BE99C0C87A /* Pods-MusicWidgetAnimationUITests */ = {
@@ -322,47 +363,6 @@
 			);
 			name = "Pods-MusicWidgetAnimationUITests";
 			path = "Target Support Files/Pods-MusicWidgetAnimationUITests";
-			sourceTree = "<group>";
-		};
-		B99E9EE777BBD7D918C855B41AECADD8 /* BearSkill */ = {
-			isa = PBXGroup;
-			children = (
-				43A6C98846C5A100D2A69FE0E51A6E88 /* ApplicationOpenURLManager.h */,
-				CB9DFE3D4CC97621968D7C183FB139A1 /* ApplicationOpenURLManager.m */,
-				BF61E96CBBA03C00B1DADB7740476785 /* BearAlertBtnsView.h */,
-				FC8C5093D0A48C31E8B60F7B27AAC0E2 /* BearAlertBtnsView.m */,
-				6C2E9596AB2D04AF8B78C020ED213892 /* BearAlertContentView.h */,
-				C8C78186E49F704452606525661A9B26 /* BearAlertContentView.m */,
-				42A9D4CE4F10FD0DE4935D22C144A842 /* BearAlertView.h */,
-				99514BE6ECB546DF75B0E031F1D5EACA /* BearAlertView.m */,
-				0DB7717BA9CA33CD4FD4C1D427BD992D /* BearConstants.h */,
-				458A70BB64DF6392FEFDF2A3CD96768D /* BearConstants.m */,
-				3293EBE23176D9F7268D85C98C6F368B /* BearCutOutView.h */,
-				5058A11AE4231C2964FB1007957563E5 /* BearCutOutView.m */,
-				2412AF089C401AE78783EB1C475EC0A8 /* NSMutableAttributedString+BearSet.h */,
-				8D7E0724F25CCA1926693F9A6713B0E1 /* NSMutableAttributedString+BearSet.m */,
-				006F3F33E9A82DB613CB1FDB6099BC66 /* UILabel+BearSet.h */,
-				EF9F72B356350A3FB93BB5808E2853E7 /* UILabel+BearSet.m */,
-				1D800D9BD9AC8A55176AD39F949020B9 /* UITableView+BearStoreCellHeight.h */,
-				EA0B499D5A34A6E9B6F155F37FBD442B /* UITableView+BearStoreCellHeight.m */,
-				8BE221ACEB3E4B3199E7DB9B096C28D8 /* UITextField+BearLimitLength.h */,
-				C0257397ADEFBBB20394E3BD15AFFBA5 /* UITextField+BearLimitLength.m */,
-				53ADC9792AF89D2AA83EE4CE23A0F1B3 /* UIView+BearSet.h */,
-				78C746DB2AFBC29E808DA91996EEA2A8 /* UIView+BearSet.m */,
-				AED9C5ABCC4DFB64120AE6D1A9FFE246 /* Support Files */,
-			);
-			path = BearSkill;
-			sourceTree = "<group>";
-		};
-		CAA537619BDA3EA48752C40F8E2BBE30 /* ImageGradientView */ = {
-			isa = PBXGroup;
-			children = (
-				6277EF9DECC884AD9CEA73B7B0F0BAA2 /* ImageGradientView.h */,
-				9F5EBA2A37DE78189B2B81B03B855D70 /* ImageGradientView.m */,
-				F5D2E70C4894708B3BD42D20763B11FE /* InterimImageCellView.h */,
-				D90016B338097806717D6AA47A2DCAD3 /* InterimImageCellView.m */,
-			);
-			name = ImageGradientView;
 			sourceTree = "<group>";
 		};
 		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
@@ -395,53 +395,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B24356BA47A5D35E39325D19B1DC36D7 /* Headers */ = {
+		C0352B2C25D01D44C9ADEB7342991AE9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58586ED26BDB239754A463A6CD81E173 /* ImageGradientView.h in Headers */,
-				F829CB31BF498759576C6728C93D9CB9 /* InterimImageCellView.h in Headers */,
+				10115902682C5F06E62CFA6E9289360E /* CRImageGradientView.h in Headers */,
+				BFEA322CCB1C3A7DCDAECBFA43931961 /* CRInterimImageCellView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		609FDFDAFDE339E0E614277DBF18B20E /* BearAnimation */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 41343EE4B5F6E62014D7262A8E9F6943 /* Build configuration list for PBXNativeTarget "BearAnimation" */;
-			buildPhases = (
-				EC16F73C5B78FBA6ABBC205A79C20B43 /* Sources */,
-				3EF7936845853ABA45825CC420E66F82 /* Frameworks */,
-				B24356BA47A5D35E39325D19B1DC36D7 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BearAnimation;
-			productName = BearAnimation;
-			productReference = BFE45FB066F317103810D908BB523C96 /* libBearAnimation.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		61095CF8C93054D430B375CEC9D52F2D /* Pods-MusicWidgetAnimation */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5B3326A701CDE1BD2DE03E2465281518 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimation" */;
-			buildPhases = (
-				B8F450C5BD2E45BF4D69D0E7D8D16E16 /* Sources */,
-				C99A8B71AEC4F1034FD482FB6DD0AEB0 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				54A28C0077B7CEAF5B76603DBBA88904 /* PBXTargetDependency */,
-				799A1ED93FC19187935D3522F0F32946 /* PBXTargetDependency */,
-			);
-			name = "Pods-MusicWidgetAnimation";
-			productName = "Pods-MusicWidgetAnimation";
-			productReference = D0EFC9FDED935ADCF7DAD22070800634 /* libPods-MusicWidgetAnimation.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		6650DCC340B90AEA241B0997839E75BA /* BearSkill */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02E5426BD2CDC4ACEAF90AAED615B302 /* Build configuration list for PBXNativeTarget "BearSkill" */;
@@ -457,7 +422,42 @@
 			);
 			name = BearSkill;
 			productName = BearSkill;
-			productReference = 818F76ABDBA4EA8B4F7AE12649D17C59 /* libBearSkill.a */;
+			productReference = 36B2D20159597A8B19D4032409F2D7CF /* libBearSkill.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		761FC50CA79BABC8EAB17E11BEC8BBA5 /* CRAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8BE877ADFB143DC6A8D7A20B09FF7DEE /* Build configuration list for PBXNativeTarget "CRAnimation" */;
+			buildPhases = (
+				B0D36EA6F866978B08491EBD35664CB4 /* Sources */,
+				D4FCAEF6099E6BA2B76F4358ADBCB01F /* Frameworks */,
+				C0352B2C25D01D44C9ADEB7342991AE9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CRAnimation;
+			productName = CRAnimation;
+			productReference = 3A394237C80315B167DC6C7D7C9E6BD6 /* libCRAnimation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		84CA77BFD4E89CA7D51D54F71CE4DC85 /* Pods-MusicWidgetAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3989CA416DDC237677E86F3D372CB0D6 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimation" */;
+			buildPhases = (
+				3DA857EED9CF82A1CF7E5C259B3A9A87 /* Sources */,
+				4B428CED1F5BB3AA3AD25F2A2599B5BB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E2A1B09BB7619F6CD75323BB4D65C0A5 /* PBXTargetDependency */,
+				87D2AA76627BACCAE1D3DE936A756FF4 /* PBXTargetDependency */,
+			);
+			name = "Pods-MusicWidgetAnimation";
+			productName = "Pods-MusicWidgetAnimation";
+			productReference = 6061BA049E7AE7083FBA719950965123 /* libPods-MusicWidgetAnimation.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		92DAC08E856F55428CA1CA7602143E60 /* BearSkill-BearSkill */ = {
@@ -474,7 +474,7 @@
 			);
 			name = "BearSkill-BearSkill";
 			productName = "BearSkill-BearSkill";
-			productReference = 1B5D9E735E9E240BE0633C214F139348 /* BearSkill.bundle */;
+			productReference = 9518774FC5ED1B07EB5B8B953068D1D7 /* BearSkill.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		B8730B201C113CCEF7E67D3F84D223D4 /* Pods-MusicWidgetAnimationUITests */ = {
@@ -490,7 +490,7 @@
 			);
 			name = "Pods-MusicWidgetAnimationUITests";
 			productName = "Pods-MusicWidgetAnimationUITests";
-			productReference = 34CBE2DC7C4CD3B0C489C58615DB70DB /* libPods-MusicWidgetAnimationUITests.a */;
+			productReference = 0555485E2954EAFC4AC97A2A4D47C2DF /* libPods-MusicWidgetAnimationUITests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		EB31EE4078FD72D7916843F3DE2652AB /* Pods-MusicWidgetAnimationTests */ = {
@@ -506,7 +506,7 @@
 			);
 			name = "Pods-MusicWidgetAnimationTests";
 			productName = "Pods-MusicWidgetAnimationTests";
-			productReference = 63491BE3FF9E37ECD4452B34373D482E /* libPods-MusicWidgetAnimationTests.a */;
+			productReference = 9BF158CC36DF24DDA9AF8AD65968179D /* libPods-MusicWidgetAnimationTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -526,14 +526,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 95269CE717BD7683347341BBC5597377 /* Products */;
+			productRefGroup = B6CB9B5882116FB7A052EC5B38758892 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				609FDFDAFDE339E0E614277DBF18B20E /* BearAnimation */,
 				6650DCC340B90AEA241B0997839E75BA /* BearSkill */,
 				92DAC08E856F55428CA1CA7602143E60 /* BearSkill-BearSkill */,
-				61095CF8C93054D430B375CEC9D52F2D /* Pods-MusicWidgetAnimation */,
+				761FC50CA79BABC8EAB17E11BEC8BBA5 /* CRAnimation */,
+				84CA77BFD4E89CA7D51D54F71CE4DC85 /* Pods-MusicWidgetAnimation */,
 				EB31EE4078FD72D7916843F3DE2652AB /* Pods-MusicWidgetAnimationTests */,
 				B8730B201C113CCEF7E67D3F84D223D4 /* Pods-MusicWidgetAnimationUITests */,
 			);
@@ -551,6 +551,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3DA857EED9CF82A1CF7E5C259B3A9A87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09348C33B8D7FE6B00881421A888E216 /* Pods-MusicWidgetAnimation-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		657EF71C2A4263F90131387DBE73A691 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -585,21 +593,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B8F450C5BD2E45BF4D69D0E7D8D16E16 /* Sources */ = {
+		B0D36EA6F866978B08491EBD35664CB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70C77A7EC8F4E434339245800B476C01 /* Pods-MusicWidgetAnimation-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC16F73C5B78FBA6ABBC205A79C20B43 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6AEB0970490A399AC4C286DB6D97CDFD /* BearAnimation-dummy.m in Sources */,
-				1CF66BD4B43175FA49A6E18C23FA989E /* ImageGradientView.m in Sources */,
-				76056797923A2182DADA68547034F481 /* InterimImageCellView.m in Sources */,
+				0BFA08FA0473A81ED90CFCC084C3609B /* CRAnimation-dummy.m in Sources */,
+				5F08F8D7FD005BB3A97E6F35E813B9AE /* CRImageGradientView.m in Sources */,
+				44EBCDE10BE65F8E0E853C47C131B701 /* CRInterimImageCellView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,23 +614,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		54A28C0077B7CEAF5B76603DBBA88904 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BearAnimation;
-			target = 609FDFDAFDE339E0E614277DBF18B20E /* BearAnimation */;
-			targetProxy = C9281AD28261A6BFBD0C2162509FA1F6 /* PBXContainerItemProxy */;
-		};
-		799A1ED93FC19187935D3522F0F32946 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = BearSkill;
-			target = 6650DCC340B90AEA241B0997839E75BA /* BearSkill */;
-			targetProxy = 32D5A06954027EB3C8AB1D38B6390CBC /* PBXContainerItemProxy */;
-		};
 		7C3EECE4F1091183A346E76F15A9CCFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "BearSkill-BearSkill";
 			target = 92DAC08E856F55428CA1CA7602143E60 /* BearSkill-BearSkill */;
 			targetProxy = 7236880130177FDD69EF0FAA419E715E /* PBXContainerItemProxy */;
+		};
+		87D2AA76627BACCAE1D3DE936A756FF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CRAnimation;
+			target = 761FC50CA79BABC8EAB17E11BEC8BBA5 /* CRAnimation */;
+			targetProxy = D8356EEFCBD053139D37A793A51BC74B /* PBXContainerItemProxy */;
+		};
+		E2A1B09BB7619F6CD75323BB4D65C0A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BearSkill;
+			target = 6650DCC340B90AEA241B0997839E75BA /* BearSkill */;
+			targetProxy = 6701B1C497A301E2BBC947A8BE85FA19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -681,32 +681,9 @@
 			};
 			name = Release;
 		};
-		20FA58194F68D7C871348ED0C717B72B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A145E0B73926E59C97C60D814918E266 /* Pods-MusicWidgetAnimation.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		33550299D38AEC5B077D1B50D3575CF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			baseConfigurationReference = BAE08ADC4F585FA44DE2D3535E4F0C38 /* BearSkill.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -773,19 +750,19 @@
 			};
 			name = Debug;
 		};
-		4EC12919D5A1DB01CC883454D309D74F /* Release */ = {
+		4F5A79E7E40EC285C85914108FCBC504 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */;
+			baseConfigurationReference = 314F9863C0043BF35B5A769F9CE9F5C6 /* CRAnimation.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BearAnimation/BearAnimation-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/CRAnimation/CRAnimation-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -794,11 +771,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		5D1C257526C08C0E8B77BDDAA206D777 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			baseConfigurationReference = BAE08ADC4F585FA44DE2D3535E4F0C38 /* BearSkill.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -821,7 +798,7 @@
 		};
 		6A926F41AB08308903E8E2AF56711473 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			baseConfigurationReference = BAE08ADC4F585FA44DE2D3535E4F0C38 /* BearSkill.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BearSkill";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -876,55 +853,9 @@
 			};
 			name = Release;
 		};
-		9B4EBD80300409E461CDE06659D47D1B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D812F97F131F7F58B674E4F626B79814 /* BearAnimation.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BearAnimation/BearAnimation-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		B624C5E74CDB62631499FD83D6FCC5D3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFD39396EC57E7529FDE90C6EF968CA2 /* Pods-MusicWidgetAnimation.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		C7E15C5788A3B37DAE2B7CE54BFEADEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D22E269B0CC81A176A96151F550E66B /* BearSkill.xcconfig */;
+			baseConfigurationReference = BAE08ADC4F585FA44DE2D3535E4F0C38 /* BearSkill.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BearSkill";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -983,6 +914,75 @@
 			};
 			name = Debug;
 		};
+		EB6BF12FDB908173719442E3816D2CEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 314F9863C0043BF35B5A769F9CE9F5C6 /* CRAnimation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CRAnimation/CRAnimation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EDFBE66F36EB895AF7D805DBB8F30C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFD39396EC57E7529FDE90C6EF968CA2 /* Pods-MusicWidgetAnimation.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F4500B52BABFDB60BAF99ED3E57EB397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A145E0B73926E59C97C60D814918E266 /* Pods-MusicWidgetAnimation.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1004,20 +1004,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41343EE4B5F6E62014D7262A8E9F6943 /* Build configuration list for PBXNativeTarget "BearAnimation" */ = {
+		3989CA416DDC237677E86F3D372CB0D6 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9B4EBD80300409E461CDE06659D47D1B /* Debug */,
-				4EC12919D5A1DB01CC883454D309D74F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5B3326A701CDE1BD2DE03E2465281518 /* Build configuration list for PBXNativeTarget "Pods-MusicWidgetAnimation" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20FA58194F68D7C871348ED0C717B72B /* Debug */,
-				B624C5E74CDB62631499FD83D6FCC5D3 /* Release */,
+				F4500B52BABFDB60BAF99ED3E57EB397 /* Debug */,
+				EDFBE66F36EB895AF7D805DBB8F30C7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1027,6 +1018,15 @@
 			buildConfigurations = (
 				3D7B8F05E55E3B08E0E54A1E6B76CD63 /* Debug */,
 				0D23259F1705C6F9A2E61ED3525511B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8BE877ADFB143DC6A8D7A20B09FF7DEE /* Build configuration list for PBXNativeTarget "CRAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F5A79E7E40EC285C85914108FCBC504 /* Debug */,
+				EB6BF12FDB908173719442E3816D2CEB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

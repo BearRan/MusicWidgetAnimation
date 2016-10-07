@@ -1,5 +1,5 @@
 //
-//  InterimImageCellView.h
+//  CRInterimImageCellView.h
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/10/2.
@@ -11,7 +11,7 @@
 typedef void(^OpacityShowFinish_Block)();
 typedef void(^OpacityHideFinish_Block)();
 
-@interface InterimImageCellView : UIImageView
+@interface CRInterimImageCellView : UIImageView
 
 @property (assign, nonatomic) CGFloat   animationDuration_EX;
 @property (assign, nonatomic) BOOL      animationFinished;

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '609FDFDAFDE339E0E614277DBF18B20E'
-               BlueprintName = 'BearAnimation'
+               BlueprintIdentifier = '761FC50CA79BABC8EAB17E11BEC8BBA5'
+               BlueprintName = 'CRAnimation'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libBearAnimation.a'>
+               BuildableName = 'libCRAnimation.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

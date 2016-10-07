@@ -1,5 +1,5 @@
 //
-//  ImageGradientView.h
+//  CRImageGradientView.h
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/6/3.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ImageGradientView : UIView
+@interface CRImageGradientView : UIView
 
 @property (assign, nonatomic) CGFloat   animationDuration_EX;
 @property (strong, nonatomic) NSString  *nextImageName;

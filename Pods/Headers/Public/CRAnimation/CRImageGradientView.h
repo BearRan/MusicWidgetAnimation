@@ -1,0 +1,1 @@
+../../../CRAnimation/CRAnimation/CRWidget/CRImageGradientView/CRImageGradientView.h

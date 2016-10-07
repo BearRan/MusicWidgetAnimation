@@ -1,1 +1,0 @@
-../../../BearAnimation/BearAnimation/Widget/ImageGradientView/ImageGradientView.h
