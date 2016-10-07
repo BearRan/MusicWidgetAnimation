@@ -19,6 +19,12 @@
     "ios": "7.0"
   },
   "frameworks": "UIKit",
+  "dependencies": {
+    "BearSkill": [
+
+    ]
+  },
+  "prefix_header_file": "CRAnimation/CRPCH/CRPrefixHeader.pch",
   "subspecs": [
     {
       "name": "Widget",
@@ -26,6 +32,10 @@
         {
           "name": "CRImageGradientView",
           "source_files": "CRAnimation/CRWidget/CRImageGradientView/*"
+        },
+        {
+          "name": "CRCardAnimationView",
+          "source_files": "CRAnimation/CRWidget/CRCardAnimationView/*"
         }
       ]
     }

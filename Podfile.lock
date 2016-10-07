@@ -1,10 +1,16 @@
 PODS:
-  - BearSkill (0.1.6)
+  - BearSkill (0.2.0)
   - CRAnimation (0.1.0):
+    - BearSkill
     - CRAnimation/Widget (= 0.1.0)
   - CRAnimation/Widget (0.1.0):
+    - BearSkill
+    - CRAnimation/Widget/CRCardAnimationView (= 0.1.0)
     - CRAnimation/Widget/CRImageGradientView (= 0.1.0)
-  - CRAnimation/Widget/CRImageGradientView (0.1.0)
+  - CRAnimation/Widget/CRCardAnimationView (0.1.0):
+    - BearSkill
+  - CRAnimation/Widget/CRImageGradientView (0.1.0):
+    - BearSkill
 
 DEPENDENCIES:
   - BearSkill (from `git@github.com:BearRan/BearSkill.git`)
@@ -18,15 +24,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BearSkill:
-    :commit: 49ca595f82d5bac17e0890155c1fb48e5fc64b47
+    :commit: cbc13530bb127061f3c415f896f08ac77984e438
     :git: git@github.com:BearRan/BearSkill.git
   CRAnimation:
-    :commit: 10dff6eb6389fe61f15ec7d56e18c8ba6c392568
+    :commit: dfdb76411398345c32c665ca261c2290cd8ecb0a
     :git: git@github.com:BearRan/CRAnimation.git
 
 SPEC CHECKSUMS:
-  BearSkill: df366c1f09f0402036b0d53768160c0754f425d7
-  CRAnimation: 3d9b9d4be353134edab7f33ad8a33aa40f2405e1
+  BearSkill: 180b4d49cfae7466f65402eabcdb8d5a28665314
+  CRAnimation: e89a3f36c852bb5fcae7e0d7a203bfc847c95bc8
 
 PODFILE CHECKSUM: 77fb9e4fd85873959fcc206dbde3d9fa97e0d8c5
 

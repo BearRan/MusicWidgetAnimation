@@ -14,8 +14,6 @@
 		090DA02E1CDE0EF90017D3F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090DA02C1CDE0EF90017D3F0 /* LaunchScreen.storyboard */; };
 		090DA0391CDE0EF90017D3F0 /* MusicWidgetAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0381CDE0EF90017D3F0 /* MusicWidgetAnimationTests.m */; };
 		090DA0441CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */; };
-		090DA0561CDE13E90017D3F0 /* CRCardAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 090DA0551CDE13E90017D3F0 /* CRCardAnimationView.m */; };
-		092CB0151CF9CD2900827977 /* CRCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CB0141CF9CD2900827977 /* CRCardViewCell.m */; };
 		093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F4A951CE4A49C00DE4875 /* CardViewBack.m */; };
 		094608B41D05AC29008363B7 /* BottomPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094608B31D05AC29008363B7 /* BottomPageView.m */; };
 		097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 097A85AF1CFDD7D10082FA05 /* MyCardView.m */; };
@@ -60,10 +58,6 @@
 		090DA03F1CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MusicWidgetAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		090DA0431CDE0EF90017D3F0 /* MusicWidgetAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicWidgetAnimationUITests.m; sourceTree = "<group>"; };
 		090DA0451CDE0EF90017D3F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		090DA0541CDE13E90017D3F0 /* CRCardAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCardAnimationView.h; sourceTree = "<group>"; };
-		090DA0551CDE13E90017D3F0 /* CRCardAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCardAnimationView.m; sourceTree = "<group>"; };
-		092CB0131CF9CD2900827977 /* CRCardViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRCardViewCell.h; sourceTree = "<group>"; };
-		092CB0141CF9CD2900827977 /* CRCardViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRCardViewCell.m; sourceTree = "<group>"; };
 		093F4A941CE4A49C00DE4875 /* CardViewBack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardViewBack.h; sourceTree = "<group>"; };
 		093F4A951CE4A49C00DE4875 /* CardViewBack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardViewBack.m; sourceTree = "<group>"; };
 		094608B21D05AC29008363B7 /* BottomPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomPageView.h; sourceTree = "<group>"; };
@@ -140,7 +134,6 @@
 		090DA01D1CDE0EF90017D3F0 /* MusicWidgetAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				092CB0161CFA055C00827977 /* CRCardAnimationView */,
 				090DA0211CDE0EF90017D3F0 /* AppDelegate.h */,
 				090DA0221CDE0EF90017D3F0 /* AppDelegate.m */,
 				090DA0241CDE0EF90017D3F0 /* ViewController.h */,
@@ -189,17 +182,6 @@
 				090DA0451CDE0EF90017D3F0 /* Info.plist */,
 			);
 			path = MusicWidgetAnimationUITests;
-			sourceTree = "<group>";
-		};
-		092CB0161CFA055C00827977 /* CRCardAnimationView */ = {
-			isa = PBXGroup;
-			children = (
-				090DA0541CDE13E90017D3F0 /* CRCardAnimationView.h */,
-				090DA0551CDE13E90017D3F0 /* CRCardAnimationView.m */,
-				092CB0131CF9CD2900827977 /* CRCardViewCell.h */,
-				092CB0141CF9CD2900827977 /* CRCardViewCell.m */,
-			);
-			name = CRCardAnimationView;
 			sourceTree = "<group>";
 		};
 		0F026A2009B5B6F78710BA95 /* Frameworks */ = {
@@ -508,13 +490,11 @@
 			files = (
 				094608B41D05AC29008363B7 /* BottomPageView.m in Sources */,
 				097A85B51CFE64890082FA05 /* ViewController.m in Sources */,
-				090DA0561CDE13E90017D3F0 /* CRCardAnimationView.m in Sources */,
 				093F4A961CE4A49D00DE4875 /* CardViewBack.m in Sources */,
 				097A85B01CFDD7D10082FA05 /* MyCardView.m in Sources */,
 				097A85B31CFDDD510082FA05 /* CardViewFront.m in Sources */,
 				090DA0231CDE0EF90017D3F0 /* AppDelegate.m in Sources */,
 				090DA0201CDE0EF90017D3F0 /* main.m in Sources */,
-				092CB0151CF9CD2900827977 /* CRCardViewCell.m in Sources */,
 				09E44EA61CDE255400101712 /* AppConstant.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
