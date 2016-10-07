@@ -1,5 +1,5 @@
 //
-//  CardViewCell.h
+//  CRCardViewCell.h
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/5/28.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CardViewCell : UIView
+@interface CRCardViewCell : UIView
 
 @property (strong, nonatomic) NSString  *reuseIdentifier;
 

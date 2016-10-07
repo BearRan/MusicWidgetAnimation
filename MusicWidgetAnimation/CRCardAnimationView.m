@@ -1,17 +1,17 @@
 //
-//  CardAnimationView.m
+//  CRCardAnimationView.m
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/5/7.
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "CardAnimationView.h"
-#import "CardViewCell.h"
+#import "CRCardAnimationView.h"
+#import "CRCardViewCell.h"
 
 typedef void (^UpdateCardsAnimationFinish_Block)();
 
-@interface CardAnimationView ()
+@interface CRCardAnimationView ()
 {
     UIPanGestureRecognizer  *_panGesture;
     PanDirection            panDir;
@@ -29,11 +29,11 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 }
 
 @property (assign, nonatomic) int       cardIndex_show; //card显示索引
-@property (strong, nonatomic) CardViewCell  *cardView_Now;
+@property (strong, nonatomic) CRCardViewCell  *cardView_Now;
 
 @end
 
-@implementation CardAnimationView
+@implementation CRCardAnimationView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -85,9 +85,9 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     for (int i = 0 ; i < _cardShowInView_Count + 2; i++) {
         
-        CardViewCell *cardView;
+        CRCardViewCell *cardView;
         if ([_delegate respondsToSelector:@selector(cardViewInCardAnimationView:AtIndex:)]) {
-            cardView = (CardViewCell *)[_delegate cardViewInCardAnimationView:self AtIndex:i];
+            cardView = (CRCardViewCell *)[_delegate cardViewInCardAnimationView:self AtIndex:i];
         }
         _cardNextIndex_logic = _cardShowInView_Count;
         
@@ -143,7 +143,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     
     
     //  即将消失的cardView
-    CardViewCell *cardView_willDisappear = _cardDisplayArray[cardWillDisappear_index];
+    CRCardViewCell *cardView_willDisappear = _cardDisplayArray[cardWillDisappear_index];
     if (panDir == kPanDir_Left){
         [cardView_willDisappear setMaxX:0];
     }
@@ -152,7 +152,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     }
     
     //  旧的即将显示的view
-    CardViewCell *oldWillDisplayView = _cardDisplayArray[cardWillAppear_index];
+    CRCardViewCell *oldWillDisplayView = _cardDisplayArray[cardWillAppear_index];
     oldWillDisplayView.alpha = 0;
     
     if ([_delegate respondsToSelector:(@selector(cardViewWillShowWithIndex:))]) {
@@ -166,7 +166,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     }
     
     //  即将显示的cardView
-    CardViewCell *cardView_willAppear;
+    CRCardViewCell *cardView_willAppear;
     if (_cardNextIndex_logic < _cards_AllCount) {
         
         
@@ -180,7 +180,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
             }
         }
     }else{
-        _cardDisplayArray[cardWillAppear_index] = [CardViewCell new];
+        _cardDisplayArray[cardWillAppear_index] = [CRCardViewCell new];
     }
     cardView_willAppear.alpha = 1 - _cardShowInView_Count * _cardAlphaGapValue;
     [cardView_willAppear setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * _cardShowInView_Count, self.height / 2.0 - _cardOffSetPoint.y * _cardShowInView_Count)];
@@ -217,7 +217,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
             i -= cardAll_count;
         }
         
-        CardViewCell *cardView = _cardDisplayArray[i];
+        CRCardViewCell *cardView = _cardDisplayArray[i];
         cardView.hidden = NO;
         cardView.alpha = 1 - j * _cardAlphaGapValue;
         [cardView setCenter:CGPointMake(self.width / 2.0 - _cardOffSetPoint.x * j, self.height / 2.0 - _cardOffSetPoint.y * j)];
@@ -266,7 +266,7 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     CGPoint     position                    = [panGesture locationInView:self];
     CGPoint     position_translationInSelf  = [panGesture translationInView:self];
     CGFloat     rotationThreshold_degree    = 1.0 * _cardRotateMaxAngle / 180 * M_PI;
-    CardViewCell    *gestureView                = (CardViewCell *)panGesture.view;
+    CRCardViewCell    *gestureView                = (CRCardViewCell *)panGesture.view;
     
     //  禁止拖动模式，return
     if (_cardPanEnable == NO) {
@@ -461,17 +461,17 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
 }
 
 #pragma mark - reuse
-- (CardViewCell *)getCardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
+- (CRCardViewCell *)getCardViewInCardAnimationView:(CRCardAnimationView *)cardAnimationView AtIndex:(int)index
 {
-    CardViewCell *cardView;
+    CRCardViewCell *cardView;
     
     if ([_delegate respondsToSelector:@selector(cardViewInCardAnimationView:AtIndex:)]) {
-        cardView = (CardViewCell *)[_delegate cardViewInCardAnimationView:self AtIndex:index];
+        cardView = (CRCardViewCell *)[_delegate cardViewInCardAnimationView:self AtIndex:index];
     }
     
     BOOL needAdd = YES;
     for (int i = 0; i < [_reuseArray count]; i++) {
-        CardViewCell *tempCell = _reuseArray[i];
+        CRCardViewCell *tempCell = _reuseArray[i];
         if ([tempCell.reuseIdentifier isEqualToString:cardView.reuseIdentifier]) {
             needAdd = NO;
         }
@@ -484,9 +484,9 @@ typedef void (^UpdateCardsAnimationFinish_Block)();
     return cardView;
 }
 
-- (CardViewCell *)dequeueReusableCardViewCellWithIdentifier:(NSString *)CellIdentifier
+- (CRCardViewCell *)dequeueReusableCardViewCellWithIdentifier:(NSString *)CellIdentifier
 {
-    for (CardViewCell *cardViewCell in _reuseArray) {
+    for (CRCardViewCell *cardViewCell in _reuseArray) {
         if (cardViewCell != nil && ![self isDisplayedInSelf:cardViewCell]) {
             return cardViewCell;
         }

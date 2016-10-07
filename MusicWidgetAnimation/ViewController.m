@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "CardAnimationView.h"
+#import "CRCardAnimationView.h"
 #import "MyCardView.h"
 #import "ImageGradientView.h"
 #import "BottomPageView.h"
@@ -22,7 +22,7 @@
     
     ImageGradientView   *_bgImageView;
     BottomPageView      *_bottomPageView;
-    CardAnimationView   *_cardAnimationView;
+    CRCardAnimationView   *_cardAnimationView;
 }
 
 @end
@@ -131,7 +131,7 @@
     
     
     
-    _cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    _cardAnimationView = [[CRCardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     _cardAnimationView.delegate = self;
     _cardAnimationView.backgroundColor = [UIColor clearColor];
     _cardAnimationView.cardShowInView_Count = 3;
@@ -170,7 +170,7 @@
 
 
 #pragma mark - CardAnimationView delegate
-- (CardViewCell *)cardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index
+- (CRCardViewCell *)cardViewInCardAnimationView:(CRCardAnimationView *)cardAnimationView AtIndex:(int)index
 {
     CGFloat cardView_width = (1.0 * 540 / 640) * WIDTH;
     CGFloat cardView_height = (1.0 * 811 / 1134) * HEIGHT;
@@ -192,7 +192,7 @@
     return cardView;
 }
 
-- (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView
+- (NSInteger)numberOfCardsInCardAnimationView:(CRCardAnimationView *)cardAnimationView
 {
     return [_imageArray count];
 }

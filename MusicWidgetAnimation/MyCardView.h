@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "CardViewCell.h"
+#import "CRCardViewCell.h"
 #import "CardViewBack.h"
 #import "CardViewFront.h"
 @class MyCardView;
@@ -23,7 +23,7 @@ typedef enum {
 
 @end
 
-@interface MyCardView : CardViewCell
+@interface MyCardView : CRCardViewCell
 
 @property (assign, nonatomic) CGFloat   animationDuration_Flip;     //翻转动画时间
 

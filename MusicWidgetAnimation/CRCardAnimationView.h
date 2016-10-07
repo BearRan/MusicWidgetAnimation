@@ -1,5 +1,5 @@
 //
-//  CardAnimationView.h
+//  CRCardAnimationView.h
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/5/7.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-@class CardViewCell;
-@class CardAnimationView;
+@class CRCardViewCell;
+@class CRCardAnimationView;
 
 typedef enum {
     kPanDir_Null,
@@ -19,13 +19,13 @@ typedef enum {
 @protocol CardAnimationViewDelegate <NSObject>
 
 @required
-- (CardViewCell *)cardViewInCardAnimationView:(CardAnimationView *)cardAnimationView AtIndex:(int)index;
-- (NSInteger)numberOfCardsInCardAnimationView:(CardAnimationView *)cardAnimationView;
+- (CRCardViewCell *)cardViewInCardAnimationView:(CRCardAnimationView *)cardAnimationView AtIndex:(int)index;
+- (NSInteger)numberOfCardsInCardAnimationView:(CRCardAnimationView *)cardAnimationView;
 - (void)cardViewWillShowWithIndex:(NSInteger)index;
 
 @end
 
-@interface CardAnimationView : UIView
+@interface CRCardAnimationView : UIView
 
 @property (weak, nonatomic) id<CardAnimationViewDelegate> delegate;
 
@@ -44,6 +44,6 @@ typedef enum {
 
 
 //  reuse
-- (CardViewCell *)dequeueReusableCardViewCellWithIdentifier:(NSString *)CellIdentifier;
+- (CRCardViewCell *)dequeueReusableCardViewCellWithIdentifier:(NSString *)CellIdentifier;
 
 @end

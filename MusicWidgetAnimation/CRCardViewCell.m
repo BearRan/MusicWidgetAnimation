@@ -1,14 +1,14 @@
 //
-//  CardViewCell.m
+//  CRCardViewCell.m
 //  MusicWidgetAnimation
 //
 //  Created by Bear on 16/5/28.
 //  Copyright © 2016年 Bear. All rights reserved.
 //
 
-#import "CardViewCell.h"
+#import "CRCardViewCell.h"
 
-@implementation CardViewCell
+@implementation CRCardViewCell
 
 - (instancetype)initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)reuseIdentifier
 {
