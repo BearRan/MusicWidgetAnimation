@@ -12,7 +12,7 @@
 #import "ImageGradientView.h"
 #import "BottomPageView.h"
 
-@interface ViewController () <CardAnimationViewDelegate>
+@interface ViewController () <CardAnimationViewDelegate, MyCardViewDelegate>
 {
     NSArray             *_imageArray;
     NSArray             *_nameArray;
@@ -22,6 +22,7 @@
     
     ImageGradientView   *_bgImageView;
     BottomPageView      *_bottomPageView;
+    CardAnimationView   *_cardAnimationView;
 }
 
 @end
@@ -130,21 +131,21 @@
     
     
     
-    CardAnimationView *cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
-    cardAnimationView.delegate = self;
-    cardAnimationView.backgroundColor = [UIColor clearColor];
-    cardAnimationView.cardShowInView_Count = 3;
+    _cardAnimationView = [[CardAnimationView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
+    _cardAnimationView.delegate = self;
+    _cardAnimationView.backgroundColor = [UIColor clearColor];
+    _cardAnimationView.cardShowInView_Count = 3;
 //    cardAnimationView.animationDuration_Normal = 0.7;
 //    cardAnimationView.animationDuration_Flip = 1.0;
 //    cardAnimationView.cardRotateWhenPan = NO;
 //    cardAnimationView.cardRotateMaxAngle = 45;
 //    cardAnimationView.cardAlphaGapValue = 0.1;
-    cardAnimationView.cardOffSetPoint = CGPointMake(0, 30);
-    cardAnimationView.cardScaleRatio  = 0.09;
+    _cardAnimationView.cardOffSetPoint = CGPointMake(0, 30);
+    _cardAnimationView.cardScaleRatio  = 0.09;
 //    cardAnimationView.cardFlyMaxDistance = 80;
-    cardAnimationView.cardCycleShow = YES;
+    _cardAnimationView.cardCycleShow = YES;
 //    cardAnimationView.cardPanEnable = NO;
-    [self.view addSubview:cardAnimationView];
+    [self.view addSubview:_cardAnimationView];
     
     //  虚化背景
     UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
@@ -152,7 +153,7 @@
     visualEffectView.alpha = 0.8;
     visualEffectView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
     visualEffectView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.3];
-    [self.view insertSubview:visualEffectView belowSubview:cardAnimationView];
+    [self.view insertSubview:visualEffectView belowSubview:_cardAnimationView];
     
     //  图片切换view
     _bgImageView = [[ImageGradientView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
@@ -162,7 +163,7 @@
     _bottomPageView = [[BottomPageView alloc] initWithFrame:CGRectMake(0, 0, WIDTH, 30)];
     _bottomPageView.pageAll = [_imageArray count];
     _bottomPageView.pageNow = 0;
-    [self.view insertSubview:_bottomPageView belowSubview:cardAnimationView];
+    [self.view insertSubview:_bottomPageView belowSubview:_cardAnimationView];
     [_bottomPageView setMaxY:HEIGHT - 30];
 
 }
@@ -186,6 +187,7 @@
     cardView.cardViewFront.assignLabel_1.text = _artistNameArray[index];
     cardView.cardViewFront.assignLabel_2.text = _timeArray[index];
     cardView.cardViewFront.unitLabel.text = _unitArray[index];
+    cardView.delegate = self;
     
     return cardView;
 }
@@ -203,6 +205,22 @@
 //    _bgImageView.image = [UIImage imageNamed:_imageArray[index]];
 }
 
+#pragma mark - MyCardView delegate
+    
+- (void)myCardViewFlipAnimationDoing:(MyCardView *)cardView
+{
+    _cardAnimationView.cardPanEnable = NO;
+}
+
+- (void)myCardViewFlipAnimationFinished:(MyCardView *)cardView
+{
+    if (cardView.cardStatus == kCardStatus_Front) {
+        _cardAnimationView.cardPanEnable = YES;
+    }else{
+        _cardAnimationView.cardPanEnable = NO;
+    }
+}
+    
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -96,11 +96,17 @@
 
 - (void)flipAnimationWillStart_Event
 {
+    if ([_delegate respondsToSelector:@selector(myCardViewFlipAnimationDoing:)]) {
+        [_delegate myCardViewFlipAnimationDoing:self];
+    }
     //    [_cardView_Now removeGestureRecognizer:_panGesture];
 }
 
 - (void)flipAnimationDidStop_Event
 {
+    if ([_delegate respondsToSelector:@selector(myCardViewFlipAnimationFinished:)]) {
+        [_delegate myCardViewFlipAnimationFinished:self];
+    }
     //    [_cardView_Now addGestureRecognizer:_panGesture];
 }
 
